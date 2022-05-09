@@ -9,6 +9,8 @@ SRCS		= 	main.c \
 				check/check_file.c \
 				errors/print_error.c \
 				free/free.c \
+				game/keys.c \
+				init/init_game.c \
 				init/init_structs.c \
 				utils/utils_digits.c \
 				utils/utils_mem.c \

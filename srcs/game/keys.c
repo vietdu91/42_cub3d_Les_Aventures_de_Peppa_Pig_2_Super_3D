@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3D.h                                            :+:      :+:    :+:   */
+/*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/09 15:30:05 by emtran           ###   ########.fr       */
+/*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
+/*   Updated: 2022/05/09 14:51:07 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#include "../../includes/cub3D.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <limits.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include <math.h>
-
-# include "./init.h"
-# include "./game.h"
-# include "./free.h"
-# include "./utils.h"
-# include "./errors.h"
-# include "./check.h"
-# include "../mlx/mlx.h"
-
-#endif
+int	keys_main(int key_code, t_data *data)
+{
+	if (key_code == ESC)
+		free_all_and_exit(data);
+	return (0);
+}

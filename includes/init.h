@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/04/24 15:10:01 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/09 14:15:46 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_data
 {
 	char	**map;
 	int		lines;
+	int		max_len;
 	t_game	*game;
 	t_win	win;
 }	t_data;
@@ -36,7 +37,12 @@ typedef struct s_data
 /*			INIT_STRUCTS.C			*/
 
 void	init_data(t_data *data);
-void	init_game(t_game *game);
+void	init_struct_game(t_game *game);
 t_data	*init_struct(t_data *data);
+
+/*			INIT_STRUCTS.C			*/
+
+int		init_mlx_and_window(t_data *data, t_game *game, t_win *window);
+
 
 #endif

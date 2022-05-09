@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/04/24 15:10:33 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/09 14:29:44 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	main(int argc, char **argv)
 		data = init_struct(data);
 		check_extension_cub(argv[1], data);
 		check_file(argv, data);
+		init_mlx_and_window(data, data->game, &data->win);
+		free_all(data);
 	}
 	else
 		check_error_arg(argc);
