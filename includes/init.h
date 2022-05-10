@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/09 14:15:46 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 18:29:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,20 @@ typedef struct s_game
 	void	*win_ptr;
 }	t_game;
 
-typedef struct s_data
+typedef struct s_map
 {
 	char	**map;
-	int		lines;
-	int		max_len;
+	int		lines_map;
+	int		max_len_map;
+}	t_map;
+
+typedef struct s_data
+{
+	char	**file;
+	int		lines_file;
+	int		max_len_file;
 	t_game	*game;
+	t_map	*map;
 	t_win	win;
 }	t_data;
 

@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.h                                            :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 18:09:43 by emtran           ###   ########.fr       */
+/*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
+/*   Updated: 2022/05/10 19:42:50 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECK_H
-# define CHECK_H
+#ifndef PARSING_H
+# define PARSING_H
 
-# define CUB ".cub"
+/*          COLLECT_FILE.C           */
 
-/*			CHECK_FILE.C		    */
-
-int	check_file(char **argv, t_data *data);
-int	check_extension_cub(char *str, t_data *data);
-
-/*          COLLECT_DATAS.C           */
+int		collect_nb_lines_file(t_data *data, int fd);
+int		print_file(t_data *data, int fd, int i);
+int		collect_file(t_data *data, char **argv);
 
 #endif

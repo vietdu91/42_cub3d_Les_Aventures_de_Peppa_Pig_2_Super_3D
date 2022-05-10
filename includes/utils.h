@@ -6,18 +6,28 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/04/24 10:25:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 18:36:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
 
+# define BUFFER_SIZE 1
+
 /*			UTILS_DIGITS		*/
 
 int					ft_atoi(const char *str);
 int					ft_nbrlen(int n);
 unsigned long long	ft_atoull(const char *str);
+
+/*			UTILS_GET_NEXT_LINE			*/
+
+char				*ft_pushinyourline(char *save);
+int					ft_secu_av_tout(char *save);
+int					ft_n_ta_race(char *str);
+char				*ft_savebryan(char *save);
+int					get_next_line(int fd, char **line);
 
 /*			UTILS_MEM			*/
 

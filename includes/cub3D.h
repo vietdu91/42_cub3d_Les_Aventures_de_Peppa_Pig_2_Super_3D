@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/09 15:30:05 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 18:12:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # include "./utils.h"
 # include "./errors.h"
 # include "./check.h"
+# include "./parsing.h"
 # include "../mlx/mlx.h"
 
 #endif

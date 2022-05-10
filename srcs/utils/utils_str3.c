@@ -1,25 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.h                                            :+:      :+:    :+:   */
+/*   utils_str3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 18:09:43 by emtran           ###   ########.fr       */
+/*   Created: 2022/05/10 18:04:37 by emtran            #+#    #+#             */
+/*   Updated: 2022/05/10 18:36:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECK_H
-# define CHECK_H
-
-# define CUB ".cub"
-
-/*			CHECK_FILE.C		    */
-
-int	check_file(char **argv, t_data *data);
-int	check_extension_cub(char *str, t_data *data);
-
-/*          COLLECT_DATAS.C           */
-
-#endif
+#include "../../includes/cub3D.h"

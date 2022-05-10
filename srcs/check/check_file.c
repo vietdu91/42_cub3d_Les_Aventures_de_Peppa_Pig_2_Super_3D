@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:43:59 by emtran            #+#    #+#             */
-/*   Updated: 2022/04/24 14:53:20 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 19:50:36 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ int	check_file(char **argv, t_data *data)
 		return (print_error_and_exit(ERR_DIR, data));
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
-	{
-		close(fd);
 		return (print_error_and_exit(ERR_FILE, data));
-	}
+	collect_nb_lines_file(data, fd);
+	collect_file(data, argv);
 	return (0);
 }
 

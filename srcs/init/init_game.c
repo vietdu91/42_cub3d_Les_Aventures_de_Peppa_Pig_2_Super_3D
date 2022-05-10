@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/09 14:52:28 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 18:30:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	init_mlx_and_window(t_data *data, t_game *game, t_win *window)
 	if (!game->mlx_ptr)
 		return (-1);
 	/////////////////////////////////////////////
-	data->max_len = 20;
-	data->lines = 10;
+	data->map->max_len_map = 20;
+	data->map->lines_map = 10;
 	/////////////////////////////////////////////
-	window->win_height = data->max_len * 60;
-	window->win_width = data->lines * 60;
+	window->win_height = data->map->max_len_map * 60;
+	window->win_width = data->map->lines_map * 60;
 	game->win_ptr = mlx_new_window(game->mlx_ptr, window->win_width, \
 	window->win_height, "CUB3D SA MERE LA PUTA");
 	if (game->win_ptr == NULL)

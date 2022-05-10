@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/04/24 14:54:59 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/10 18:25:03 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ In fact, it is!\n"
 Naughty guy ! \n"
 # define ERR_DIR "Error\nDid you try to scam me with a file? You asshole.\n"
 # define ERR_FILE "Error\nBad boys, bad file!\n"
+# define ERR_READ "Error\nYour problem with reading file is that you get \
+distracted by your beautiful neighbour!\n"
 # define ERR_MALLOC "Error\nOur memory is not a more perfect world than the \
 universe\n"
 

@@ -12,10 +12,13 @@ SRCS		= 	main.c \
 				game/keys.c \
 				init/init_game.c \
 				init/init_structs.c \
+				parsing/collect_file.c \
 				utils/utils_digits.c \
+				utils/utils_gnl.c \
 				utils/utils_mem.c \
 				utils/utils_str.c \
 				utils/utils_str2.c \
+				utils/utils_str3.c \
 				utils/utils_write.c \
 
 INCLUDES 	= 	includes/cub3D.h
