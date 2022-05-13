@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.h                                             :+:      :+:    :+:   */
+/*   free_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 14:38:52 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:07:06 by emtran           ###   ########.fr       */
+/*   Created: 2022/05/13 11:46:20 by emtran            #+#    #+#             */
+/*   Updated: 2022/05/13 11:46:37 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FREE_H
-# define FREE_H
+#include "../../includes/cub3D.h"
 
-/*			FREE.C			*/
+void	free_d_tab(char **tb)
+{
+	int	i;
 
-int		free_all(t_data *data);
-int		free_all_and_exit(t_data *data);
+	i = -1;
+	if (!tb)
+		return ;
+	while (tb[++i])
+	{
+		if (tb[i])
+			free(tb[i]);
+	}
+	free(tb);
+	tb = NULL;
+}
 
-/*			FREE_IMG.C			*/
-
-void	free_img(t_game *game, t_img *img);
-
-/*			FREE_STRUCTS.C			*/
-
-void	free_maps(t_map *map);
-void	free_game_and_mlx(t_game *game);
-
-/*			FREE_UTILS.C			*/
-
-void	free_d_tab(char **tb);
-char	**free_split(char **split, int index);
-
-#endif
+char	**free_split(char **split, int index)
+{
+	while (index >= 0)
+		free(split[index--]);
+	free(split);
+	return (NULL);
+}

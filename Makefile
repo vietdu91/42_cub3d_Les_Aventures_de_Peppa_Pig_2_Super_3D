@@ -7,15 +7,24 @@ COMPILER	= 	cc
 	# Variables #
 SRCS		= 	main.c \
 				check/check_file.c \
+				check/check_walls.c \
 				errors/print_error.c \
 				free/free.c \
+				free/free_img.c \
+				free/free_structs.c \
+				free/free_utils.c \
 				game/keys.c \
 				init/init_game.c \
+				init/init_map.c \
 				init/init_structs.c \
+				init/init_structs2.c \
 				parsing/collect_file.c \
+				parsing/collect_walls.c \
 				utils/utils_digits.c \
 				utils/utils_gnl.c \
+				utils/utils_is.c \
 				utils/utils_mem.c \
+				utils/utils_split_charset.c \
 				utils/utils_str.c \
 				utils/utils_str2.c \
 				utils/utils_str3.c \

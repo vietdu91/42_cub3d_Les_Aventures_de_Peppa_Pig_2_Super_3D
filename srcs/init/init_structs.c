@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 18:29:09 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/13 15:48:00 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,19 @@ void	init_struct_game(t_game *game)
 	game->win_ptr = NULL;
 }
 
-void	init_struct_map(t_map *map)
-{
-	map->map = NULL;
-	map->lines_map = 0;
-	map->max_len_map = 0;
-}
-
 t_data	*init_struct(t_data *data)
 {
 	data = malloc(sizeof(t_data));
 	data->game = malloc(sizeof(t_game));
+	data->game->img = malloc(sizeof(t_img));
 	data->map = malloc(sizeof(t_map));
+	data->map->walls = malloc(sizeof(t_walls));
+	data->map->floor = malloc(sizeof(t_floor));
 	if (!data || !data->game || !data->map)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_data(data);
 	init_struct_game(data->game);
+	init_img(data->game->img);
 	init_struct_map(data->map);
 	return (data);
 }

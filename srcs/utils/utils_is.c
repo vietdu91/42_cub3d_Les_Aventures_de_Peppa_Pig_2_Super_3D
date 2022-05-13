@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.h                                             :+:      :+:    :+:   */
+/*   utils_is.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 14:38:52 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:07:06 by emtran           ###   ########.fr       */
+/*   Created: 2022/05/12 12:48:59 by emtran            #+#    #+#             */
+/*   Updated: 2022/05/13 15:24:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FREE_H
-# define FREE_H
+#include "../../includes/cub3D.h"
 
-/*			FREE.C			*/
+int	is_space(char c)
+{
+	int			a;
+	const char	*str = SPACES;
 
-int		free_all(t_data *data);
-int		free_all_and_exit(t_data *data);
+	a = -1;
+	while (str[++a] != '\0')
+	{
+		if (str[a] == c)
+			return (1);
+	}
+	return (0);
+}
 
-/*			FREE_IMG.C			*/
+int	is_digit(char c)
+{
+	int			a;
+	const char	*str = DIGITS;
 
-void	free_img(t_game *game, t_img *img);
-
-/*			FREE_STRUCTS.C			*/
-
-void	free_maps(t_map *map);
-void	free_game_and_mlx(t_game *game);
-
-/*			FREE_UTILS.C			*/
-
-void	free_d_tab(char **tb);
-char	**free_split(char **split, int index);
-
-#endif
+	a = -1;
+	while (str[++a] != '\0')
+	{
+		if (str[a] == c)
+			return (1);
+	}
+	return (0);
+}

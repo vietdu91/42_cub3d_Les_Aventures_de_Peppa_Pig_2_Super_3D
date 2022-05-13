@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:23 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 20:04:38 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/13 10:51:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	print_file(t_data *data, int fd, int i)
 	int		ret;
 	int		j;
 
-	j = -1;
+	j = 0;
 	ret = get_next_line(fd, &line);
 	if (ret < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 18:36:26 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/13 15:25:21 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define UTILS_H
 
 # define BUFFER_SIZE 1
+
+# define SPACES " \f\r\t\v"
+# define DIGITS "0123456789"
 
 /*			UTILS_DIGITS		*/
 
@@ -29,6 +32,11 @@ int					ft_n_ta_race(char *str);
 char				*ft_savebryan(char *save);
 int					get_next_line(int fd, char **line);
 
+/*			UTILS_IS		*/
+
+int					is_space(char c);
+int					is_digit(char c);
+
 /*			UTILS_MEM			*/
 
 void				*ft_memset(void *s, int a, int c);
@@ -37,6 +45,14 @@ void				*ft_memcpy_with_one_char(void *dest, const char c, \
 					size_t count);
 char				*ft_strcalloc(size_t size);
 void				*ft_calloc(size_t num, size_t size);
+
+/*			UTILS_SPLIT_CHARSET			*/
+
+int					is_charset(char c, char *charset);
+int					size_word(char *s, char *c);
+int					count_words(char *s, char *c);
+int					zap_charset(char *s, char *c);
+char				**ft_split_charset(char *s, char *c);
 
 /*			UTILS_STR			*/
 
