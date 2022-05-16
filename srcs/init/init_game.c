@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/10 18:30:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 19:00:37 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	init_mlx_and_window(t_data *data, t_game *game, t_win *window)
 {
-	game->mlx_ptr = mlx_init();
-	if (!game->mlx_ptr)
-		return (-1);
 	/////////////////////////////////////////////
 	data->map->max_len_map = 20;
 	data->map->lines_map = 10;

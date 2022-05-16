@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:37:19 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 13:51:23 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int	put_wall_in_structure(t_walls *walls, char **split, char *type)
 
 int	put_img_wall_to_mlx(t_data *data, char *path, t_pic *pic)
 {
+	pic->width = 512;
+	pic->height = 512;
+	///////////////////////////////////////
 	pic->img = mlx_xpm_file_to_image(data->game->mlx_ptr, path, \
 	&pic->width, &pic->height);
 	if (!pic->img)

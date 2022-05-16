@@ -6,14 +6,28 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:55:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:41:50 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 14:38:21 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
 
+void	free_color(t_color *color)
+{
+	if (color->path)
+		free(color->path);
+	if (color->hexa)
+		free(color->hexa);
+	if (color)
+		free(color);
+}
+
 void	free_img(t_game *game, t_img *img)
 {
+	if (img->floor)
+		free_color(img->floor);
+	if (img->celling)
+		free_color(img->celling);
 	if (img->wall_no->img)
 		mlx_destroy_image(game->mlx_ptr, img->wall_no->img);
 	if (img->wall_no)

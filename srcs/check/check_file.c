@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:43:59 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/12 13:02:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 17:04:19 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	check_file(char **argv, t_data *data)
 	collect_nb_lines_file(data, fd);
 	collect_file(data, argv);
 	check_walls(data, data->file);
+	check_celling_floor(data, data->file);
+	check_good_order_in_file(data, data->file);
 	return (0);
 }
 

@@ -6,17 +6,22 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 15:53:48 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:43:11 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
 
+// It's impossible to map out a route to your destination if you don't know where you're starting from.
+// Notre cerveau cartographie le monde. Cette carte est souvent déformée, mais c'est une carte avec des entrées sensorielles immédiates constantes.
+
 # define ERR_L_ARG "Error\nI think there is something missing... \
 Your self-esteem?\n"
 # define ERR_H_ARG "Error\nOne can never have too many arguments! \
 In fact, it is!\n"
+# define ERR_COLOR "Error\nBlack and white creates a strange dreamscape \
+that color never can.\n"
 # define ERR_CUB "Error\nBut ... Your .cub file is badly formatted ! \
 Naughty guy ! \n"
 # define ERR_DIR "Error\nDid you try to scam me with a file? You asshole.\n"
@@ -27,8 +32,12 @@ encule de pie!\n"
 # define ERR_ID_FC "Error\nYour ID of floor celling in map is wrong, bastard!\n"
 # define ERR_ID_FC_MISS "Error\nYour ID of floor celling in map is missing, \
 encule de pie!\n"
+# define ERR_MAP_LINE "Error\nAll you need is the plan, the road map, and the \
+courage to press on to your destination.\n"
 # define ERR_NB_ARG_WALLS "Error\nЕсть слишком много аргументов, чтобы оформить \
 твою стену, придурок!\n"
+# define ERR_NB_NB_COLOR "Error\nToo much color harms the viewer!\n"
+# define ERR_NB_ARG_COLOR "Error\n有太多关于颜色争论的争论了，婊子!\n"
 # define ERR_READ "Error\nYour problem with reading file is that you get \
 distracted by your beautiful neighbour!\n"
 # define ERR_MALLOC "Error\nOur memory is not a more perfect world than the \

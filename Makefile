@@ -6,7 +6,10 @@ COMPILER	= 	cc
 
 	# Variables #
 SRCS		= 	main.c \
+				check/check_celling_floor.c \
 				check/check_file.c \
+				check/check_order_in_file.c \
+				check/check_rgb.c \
 				check/check_walls.c \
 				errors/print_error.c \
 				free/free.c \
@@ -18,12 +21,14 @@ SRCS		= 	main.c \
 				init/init_map.c \
 				init/init_structs.c \
 				init/init_structs2.c \
+				parsing/collect_celling_floor.c \
 				parsing/collect_file.c \
 				parsing/collect_walls.c \
 				utils/utils_digits.c \
 				utils/utils_gnl.c \
 				utils/utils_is.c \
 				utils/utils_mem.c \
+				utils/utils_split.c \
 				utils/utils_split_charset.c \
 				utils/utils_str.c \
 				utils/utils_str2.c \

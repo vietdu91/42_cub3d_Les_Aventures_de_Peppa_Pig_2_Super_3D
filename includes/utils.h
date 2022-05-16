@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 15:25:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 15:49:16 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # define SPACES " \f\r\t\v"
 # define DIGITS "0123456789"
+# define HEXA "0123456789ABCDEF"
 
 /*			UTILS_DIGITS		*/
 
@@ -45,6 +46,13 @@ void				*ft_memcpy_with_one_char(void *dest, const char c, \
 					size_t count);
 char				*ft_strcalloc(size_t size);
 void				*ft_calloc(size_t num, size_t size);
+
+/*			UTILS_SPLIT					*/
+
+size_t				ft_wordcount(char const *s, char c);
+size_t				ft_wordlen(char const *s, char c);
+char				**ft_freetamere(char **array);
+char				**ft_split(char *s, char c);
 
 /*			UTILS_SPLIT_CHARSET			*/
 

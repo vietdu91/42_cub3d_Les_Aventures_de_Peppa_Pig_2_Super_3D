@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:51:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:19:41 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 14:37:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@ void	init_pic(t_pic *pic)
 	pic->height = 0;
 }
 
+void	init_color(t_color *color)
+{
+	color->path = NULL;
+	color->hexa = NULL;
+	color->r = 0;
+	color->g = 0;
+	color->b = 0;
+}
+
 void	init_img(t_img *img)
 {
 	img->wall_no = malloc(sizeof(t_pic));
@@ -29,4 +38,8 @@ void	init_img(t_img *img)
 	init_pic(img->wall_we);
 	img->wall_ea = malloc(sizeof(t_pic));
 	init_pic(img->wall_ea);
+	img->floor = malloc(sizeof(t_color));
+	init_color(img->floor);
+	img->celling = malloc(sizeof(t_color));
+	init_color(img->celling);
 }

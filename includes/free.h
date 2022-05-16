@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 14:38:52 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:07:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/16 14:23:30 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		free_all_and_exit(t_data *data);
 
 /*			FREE_IMG.C			*/
 
+void	free_color(t_color *color);
 void	free_img(t_game *game, t_img *img);
 
 /*			FREE_STRUCTS.C			*/
