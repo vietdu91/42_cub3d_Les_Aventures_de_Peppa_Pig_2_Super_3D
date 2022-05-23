@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 18:43:11 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 17:46:39 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,16 @@ encule de pie!\n"
 # define ERR_ID_FC "Error\nYour ID of floor celling in map is wrong, bastard!\n"
 # define ERR_ID_FC_MISS "Error\nYour ID of floor celling in map is missing, \
 encule de pie!\n"
+# define ERR_MAP "Error\nPas de map, ca derape !\n"
+# define ERR_MAP_CLOSE "Error\nIl convient de fermer les yeux lorsque ceux-ci \
+révèlent les pensées\n"
 # define ERR_MAP_LINE "Error\nAll you need is the plan, the road map, and the \
 courage to press on to your destination.\n"
+# define ERR_MAP_FIRST_LINE "Error\nEvery story has a beginning! Especially the \
+problems, especially if there is a problem in the first lines of the map!\n"
+# define ERR_MAP_LAST_LINE "Error\nEvery story has an ending! Especially the \
+problems, especially if there is a problem in the last lines of the map!\n"
+# define ERR_MAP_TOO_STRONG "Error\nYour map is too strong like a string!\n"
 # define ERR_NB_ARG_WALLS "Error\nЕсть слишком много аргументов, чтобы оформить \
 твою стену, придурок!\n"
 # define ERR_NB_NB_COLOR "Error\nToo much color harms the viewer!\n"
@@ -43,6 +51,7 @@ distracted by your beautiful neighbour!\n"
 # define ERR_MALLOC "Error\nOur memory is not a more perfect world than the \
 universe\n"
 # define ERR_MLC_IMG "Error\nNo good path, no good pic of dick\n"
+# define NO_ENV "Error\nOn est rien sans l'environnement... Sauvons la planete !\n"
 
 /*			PRINT_ERROR.C		*/
 

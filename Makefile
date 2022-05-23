@@ -8,6 +8,7 @@ COMPILER	= 	cc
 SRCS		= 	main.c \
 				check/check_celling_floor.c \
 				check/check_file.c \
+				check/check_map.c \
 				check/check_order_in_file.c \
 				check/check_rgb.c \
 				check/check_walls.c \
@@ -23,6 +24,8 @@ SRCS		= 	main.c \
 				init/init_structs2.c \
 				parsing/collect_celling_floor.c \
 				parsing/collect_file.c \
+				parsing/collect_map.c \
+				parsing/collect_map_lines.c \
 				parsing/collect_walls.c \
 				utils/utils_digits.c \
 				utils/utils_gnl.c \

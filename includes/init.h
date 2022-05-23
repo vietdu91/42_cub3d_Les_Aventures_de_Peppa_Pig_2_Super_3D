@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 17:03:50 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 12:24:59 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ typedef struct s_map
 {
 	char	**map;
 	int		first_line;
+	int		last_line;
 	int		lines_map;
 	int		max_len_map;
 	t_walls	*walls;

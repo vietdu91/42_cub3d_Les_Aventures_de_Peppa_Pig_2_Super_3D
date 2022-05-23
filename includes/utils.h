@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 15:49:16 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 11:20:15 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # define BUFFER_SIZE 1
 
-# define SPACES " \f\r\t\v"
+# define SPACES " \f\r\t\v\n"
 # define DIGITS "0123456789"
 # define HEXA "0123456789ABCDEF"
 

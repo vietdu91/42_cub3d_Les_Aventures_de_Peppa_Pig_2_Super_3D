@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 18:45:26 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 17:48:25 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ int		check_celling_floor(t_data *data, char **file);
 
 int		check_file(char **argv, t_data *data);
 int		check_extension_cub(char *str, t_data *data);
+
+/*			CHECK_MAP.C				*/
+
+int		check_first_and_last_letters_of_line(t_data *data, char **map);
+int		check_map(t_data *data, t_map *map);
 
 /*			CHECK_ORDER_IN_FILE.C	*/
 

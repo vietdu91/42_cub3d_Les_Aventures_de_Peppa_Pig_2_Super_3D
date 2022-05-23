@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 15:35:05 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 14:22:49 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,19 @@ int		collect_rgb(t_data *data, t_color *color);
 int		collect_nb_lines_file(t_data *data, int fd);
 int		print_file(t_data *data, int fd, int i);
 int		collect_file(t_data *data, char **argv);
+
+/*          COLLECT_MAP.C               */
+
+char	**save_map(t_data *data, t_map *map);
+int     collect_map(t_data *data, t_map *map);
+
+/*          COLLECT_MAP_LINES.C         */
+
+int		collect_gap_of_first_and_last_line(t_data *data, int first, int last);
+int		collect_max_width_map(t_data *data, t_map *map, int first, int last);
+int		check_line_is_infos(char *line);
+int     collect_first_line_map(t_data *data, t_map *map, char **file);
+int     collect_last_line_map(t_data *data, t_map *map, char **file);
 
 /*			COLLECT_WALLS.C				*/
 

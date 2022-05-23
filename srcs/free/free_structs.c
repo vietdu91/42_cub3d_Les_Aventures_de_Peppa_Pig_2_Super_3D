@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 11:45:14 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/23 17:06:18 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	free_maps(t_map *map)
 		free(map->walls);
 	if (map->floor)
 		free(map->floor);
+	if (map->map)
+		free_d_tab(map->map);
 	if (map)
 		free(map);
 }
