@@ -6,12 +6,16 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 14:22:49 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/24 09:00:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSING_H
 # define PARSING_H
+
+# define ACCEPTED_VALUES "0WSEN"
+# define ACCEPTED_VALUES_AND_WALLS " 01WSEN"
+# define POSITION "WSEN"
 
 /*			COLLECT_CELLING_FLOOR.C			*/
 

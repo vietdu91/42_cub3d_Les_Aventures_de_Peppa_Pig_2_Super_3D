@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 17:46:39 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/24 09:16:10 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 Your self-esteem?\n"
 # define ERR_H_ARG "Error\nOne can never have too many arguments! \
 In fact, it is!\n"
+# define ERR_CHAR "Error\nAn intruder is among us! Who is the guilty?\n"
 # define ERR_COLOR "Error\nBlack and white creates a strange dreamscape \
 that color never can.\n"
 # define ERR_CUB "Error\nBut ... Your .cub file is badly formatted ! \
@@ -33,6 +34,8 @@ encule de pie!\n"
 # define ERR_ID_FC_MISS "Error\nYour ID of floor celling in map is missing, \
 encule de pie!\n"
 # define ERR_MAP "Error\nPas de map, ca derape !\n"
+# define ERR_MAP_MANY_LINES "Error\nWOOOOW, you've a BIG height under your trousers\n"
+# define ERR_MAP_MANY_LEN "Error\nWOOOOW, you've a BIG width under your trousers\n"
 # define ERR_MAP_CLOSE "Error\nIl convient de fermer les yeux lorsque ceux-ci \
 révèlent les pensées\n"
 # define ERR_MAP_LINE "Error\nAll you need is the plan, the road map, and the \
@@ -46,6 +49,9 @@ problems, especially if there is a problem in the last lines of the map!\n"
 твою стену, придурок!\n"
 # define ERR_NB_NB_COLOR "Error\nToo much color harms the viewer!\n"
 # define ERR_NB_ARG_COLOR "Error\n有太多关于颜色争论的争论了，婊子!\n"
+# define ERR_PEPPA_MUCH "Error\nIt is impossible to have more than two Peppa Pigs \
+in this universe!\n"
+# define ERR_NO_PEPPA "Error\nThere's no game without a hero, like you... ❤️\n"
 # define ERR_READ "Error\nYour problem with reading file is that you get \
 distracted by your beautiful neighbour!\n"
 # define ERR_MALLOC "Error\nOur memory is not a more perfect world than the \

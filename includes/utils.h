@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 11:20:15 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/24 09:01:36 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ int					get_next_line(int fd, char **line);
 
 /*			UTILS_IS		*/
 
+int 				is_good_value(char c);
+int 				is_good_value_and_walls(char c);
+int					is_position(char c);
 int					is_space(char c);
 int					is_digit(char c);
 

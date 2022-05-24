@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 12:24:59 by emtran           ###   ########.fr       */
+/*   Updated: 2022/05/24 08:58:52 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,20 @@ typedef struct s_img
 	t_color	*celling;
 }	t_img;
 
+typedef struct s_peppa
+{
+	int		check_peppa;
+	char	pos_peppa;
+	int		x_peppa;
+	int		y_peppa;
+}	t_peppa;
+
 typedef struct s_game
 {
 	void	*mlx_ptr;
 	void	*win_ptr;
 	t_img	*img;
+	t_peppa	*peppa;
 }	t_game;
 
 typedef struct s_walls
@@ -105,6 +114,7 @@ void	init_struct_map(t_map *map);
 
 void	init_data(t_data *data);
 void	init_struct_game(t_game *game);
+void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
 void	init_img(t_img *img);
 void	init_pic(t_pic *pic);
