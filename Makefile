@@ -100,10 +100,20 @@ all:		${NAME}
 $(NAME):	${OBJS} ${INCLUDES}
 			@make -C ./mlx
 			${COMPILER} ${FLAGS} -I includes ${OBJS} -o $(NAME) $(FL_MLX)
-			@printf "\n$(GREEN)████████████████████████████████████████████████████████  ✨ ✨ ✨  C'EST MERVEILLEUSEMENT BIEN COMPILE  ✨ ✨ ✨  ████████████████████████████████████████████████████████$(RESET)"
-#			@printf	"\n\n\n"
+			@printf "\n$(GREEN)████████████████████████████████████████████████████████  ✨ ✨ ✨  C'EST MERVEILLEUSEMENT BIEN COMPILE  ✨ ✨ ✨  █████████████████████████████████████████████$(RESET)"
+			@printf	"\n\n\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                                                                                                                                                                $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)    $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                                  $(RESET)$(GRIS)  $(RESET)$(NOIR)        $(RESET)$(GRIS)  $(RESET)$(NOIR)                                                                                                                  $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+
+
 #			@printf "$(GRIS)                                                                                                                                                                  $(RESET)\n"
-#			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
+#			@printf "$(GRIS)                                                                                                                                                                $(RESET)$(GRIS)  $(RESET)\n"
 #			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
 #			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
 #			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
@@ -150,7 +160,7 @@ $(NAME):	${OBJS} ${INCLUDES}
 #			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
 #			@printf "$(GRIS)  $(RESET)$(NOIR)                                                                                                                                                              $(RESET)$(GRIS)  $(RESET)\n"
 #			@printf "$(GRIS)                                                                                                                                                                  $(RESET)\n"
-			@printf "\n\n$(SKY)█████████████████████████████████████████████████████████  😊 😊 😊  PENSEE DU JOUR POUR TE FAIRE SOURIRE  😊 😊 😊  ████████████████████████████████████████████████████$(RESET)"
+			@printf "\n\n$(SKY)█████████████████████████████████████████████████████████  😊 😊 😊  PENSEE DU JOUR POUR TE FAIRE SOURIRE  😊 😊 😊  ███████████████████████████████████████████$(RESET)"
 			@printf "\n\n$(BLUE_B)If it bleeds 🩸, we can kill it 💀 !\n\n$(RESET)"
 			@printf "$(YELLOW)============$(RESET)"
 			@printf "\e[38;5;227m============$(RESET)"
@@ -166,7 +176,7 @@ objs/%.o:		srcs/%.c
 					@mkdir -p $(dir $@)
 					@${COMPILER} -MMD ${FLAGS} -I includes -o $@ -c $<
 # -lmlx -lbass
-norme:		
+norme:
 			@norminette srcs/*
 			@norminette includes/*
 			@printf "$(YELLOW)\nLa normalité est une expérience plus extrême que ce que les gens veulent communément admettre.\n$(RESET)"
@@ -210,5 +220,5 @@ re:			fclean all
 			@printf "\e[38;5;229m============$(RESET)"
 			@printf "\e[38;5;230m============$(RESET)"
 			@printf "\e[38;5;231m============\n$(RESET)"
-			
+
 .PHONY: 	all norme clean fclean re
