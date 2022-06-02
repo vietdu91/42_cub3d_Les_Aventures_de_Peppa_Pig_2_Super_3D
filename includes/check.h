@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 08:54:16 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/02 15:13:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 int		is_it_an_id_celling_floor_in_file(t_data *data, char **file, char *id, \
 		int i);
+int		check_path_arg_color_is_good(t_data *data, char *line_file, char **split);
 int		check_good_path_floor(t_data *data, t_color *color, char *line_file, \
 		char *type);
 int		are_check_all_floor_celling_is_ok(t_data *data, t_floor *floor);

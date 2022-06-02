@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:28:40 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 14:32:11 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/02 15:15:12 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,21 @@ int i)
 	return (-1);
 }
 
+int	check_path_arg_color_is_good(t_data *data, char *line_file, char **split)
+{
+	int	len;
+	int	i;
+
+	i = 1;
+	len = ft_strlen(line_file);
+	if (line_file[len - 1] == ',')
+	{
+		free_d_tab(split);
+		print_error_and_exit(ERR_NB_ARG_COLOR, data);
+	}
+	return (0);
+}
+
 int	check_good_path_floor(t_data *data, t_color *color, char *line_file, \
 char *type)
 {
@@ -31,6 +46,7 @@ char *type)
 
 	split = NULL;
 	split = ft_split_charset(line_file, SPACES);
+	check_path_arg_color_is_good(data, line_file, split);
 	if (!split[1] || split[2])
 	{
 		free_d_tab(split);

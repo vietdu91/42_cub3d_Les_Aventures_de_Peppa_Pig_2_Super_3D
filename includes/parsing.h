@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:00:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/02 15:16:04 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 /*			COLLECT_CELLING_FLOOR.C			*/
 
+int		check_collect_rgb_is_good(t_data *data, char **split);
 int		collect_celling_floor(t_data *data, char **file);
 int		collect_rgb(t_data *data, t_color *color);
 

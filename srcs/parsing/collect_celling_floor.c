@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:06:26 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 15:35:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/02 15:17:07 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,36 @@ int	collect_celling_floor(t_data *data, char **file)
 	return (0);
 }
 
+int	check_collect_rgb_is_good(t_data *data, char **split)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (split[i])
+	{
+		j = 0;
+		while(split[i][j])
+		{
+			if (!is_digit(split[i][j]))
+			{
+				free_d_tab(split);
+				print_error_and_exit(ERR_NB_ARG_COLOR, data);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
 int	collect_rgb(t_data *data, t_color *color)
 {
 	char	**split;
 
 	split = NULL;
 	split = ft_split(color->path, ',');
+	check_collect_rgb_is_good(data, split);
 	if (!split[0] || !split[1] || !split[2] || split[3])
 	{
 		free_d_tab(split);
