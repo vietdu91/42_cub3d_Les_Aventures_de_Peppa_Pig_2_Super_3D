@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 08:58:52 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/07 23:19:35 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INIT_H
 # define INIT_H
+
+#define WHITE 0xFFFFFF
+#define RED 0xFF0000
+#define WINDOW_WIDTH 1200
+#define	WINDOW_HEIGHT 800
 
 typedef struct s_win
 {
@@ -53,12 +58,25 @@ typedef struct s_peppa
 	int		y_peppa;
 }	t_peppa;
 
+typedef struct s_player
+{
+	double	posX;
+	double	posY;
+	double	dirX;
+	double	dirY;
+	double	planeX;
+	double	planeY;
+	double	time;
+	double	oldtime;
+}	t_player;
+
 typedef struct s_game
 {
-	void	*mlx_ptr;
-	void	*win_ptr;
-	t_img	*img;
-	t_peppa	*peppa;
+	void		*mlx_ptr;
+	void		*win_ptr;
+	t_img		*img;
+	t_peppa		*peppa;
+	t_player	*p1;
 }	t_game;
 
 typedef struct s_walls
@@ -90,14 +108,15 @@ typedef struct s_map
 	t_floor	*floor;
 }	t_map;
 
+
 typedef struct s_data
 {
-	char	**file;
-	int		lines_file;
-	int		max_len_file;
-	t_game	*game;
-	t_map	*map;
-	t_win	win;
+	char		**file;
+	int			lines_file;
+	int			max_len_file;
+	t_game		*game;
+	t_map		*map;
+	t_win		win;
 }	t_data;
 
 /*			INIT_GAME.C			*/

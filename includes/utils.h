@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:01:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/07 18:54:42 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@
 int					ft_atoi(const char *str);
 int					ft_nbrlen(int n);
 unsigned long long	ft_atoull(const char *str);
+
+/*			UTILS_DTAB.C				*/
+int 				size_dtab(char **tab);
 
 /*			UTILS_GET_NEXT_LINE			*/
 
