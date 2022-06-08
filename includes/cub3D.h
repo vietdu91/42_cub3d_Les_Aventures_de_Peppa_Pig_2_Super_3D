@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/07 16:14:45 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/08 16:26:22 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include "./errors.h"
 # include "./check.h"
 # include "./map.h"
+# include "./maths.h"
 # include "./parsing.h"
 # include "../mlx/mlx.h"
 

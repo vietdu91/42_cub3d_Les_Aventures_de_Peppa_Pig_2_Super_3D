@@ -23,11 +23,14 @@ SRCS		= 	main.c \
 				init/init_structs.c \
 				init/init_structs2.c \
 				map/draw_map.c \
+				map/draw_lines.c \
+				maths/find_size.c \
 				parsing/collect_celling_floor.c \
 				parsing/collect_file.c \
 				parsing/collect_map.c \
 				parsing/collect_map_lines.c \
 				parsing/collect_walls.c \
+				utils/recognize_elements.c \
 				utils/utils_digits.c \
 				utils/utils_dtab.c \
 				utils/utils_gnl.c \

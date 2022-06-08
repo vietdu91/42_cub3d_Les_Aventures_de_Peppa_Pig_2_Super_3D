@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/07 18:54:42 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/08 18:12:56 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@
 # define DIGITS "0123456789"
 # define HEXA "0123456789ABCDEF"
 
-/*			UTILS_DIGITS		*/
+/*			RECOGNIZE_ELEMENTS.C		*/
+int					is_player(char c);
+int					is_a_space_or_is_wall(char c);
+
+/*			UTILS_DIGITS				*/
 
 int					ft_atoi(const char *str);
 int					ft_nbrlen(int n);

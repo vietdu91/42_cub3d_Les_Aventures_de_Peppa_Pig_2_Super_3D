@@ -6,15 +6,17 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/07 23:19:35 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/08 20:17:17 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INIT_H
 # define INIT_H
 
+#define OKAY 0
 #define WHITE 0xFFFFFF
 #define RED 0xFF0000
+#define GREEN 0x008000
 #define WINDOW_WIDTH 1200
 #define	WINDOW_HEIGHT 800
 

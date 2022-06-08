@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/07 23:25:21 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/08 17:10:00 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 int	game_start(t_data *data)
 {
+	int x;
+	int	y;
+
+	y = 0;
+	x = 0;
 	printf("game start\n");
-	// size_map(data);
+	size_map(data,&x, &y);
 	mlx_loop_hook(data->game->mlx_ptr, &render, data);
 	mlx_key_hook(data->game->win_ptr, &keys_main, data);
 	// mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);
