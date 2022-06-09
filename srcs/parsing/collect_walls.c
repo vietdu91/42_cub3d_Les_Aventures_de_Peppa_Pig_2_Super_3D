@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collect_walls.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 13:51:23 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/09 17:19:37 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	put_img_wall_to_mlx(t_data *data, char *path, t_pic *pic)
 	return (0);
 }
 
-int	create_img_of_walls(t_data *data, t_walls *walls, t_img *img)
+int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 {
 	if (walls->path_no)
 		put_img_wall_to_mlx(data, walls->path_no, img->wall_no);

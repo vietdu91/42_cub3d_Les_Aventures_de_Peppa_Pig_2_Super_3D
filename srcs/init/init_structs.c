@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/04 19:05:22 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/09 18:16:22 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	init_struct_game(t_game *game)
 {
 	game->mlx_ptr = NULL;
 	game->win_ptr = NULL;
-	init_img(game->img);
+	init_texture(game->img);
 	init_struct_peppa(game->peppa);
 }
 
@@ -58,6 +58,8 @@ t_data	*init_struct(t_data *data)
 	data->map = malloc(sizeof(t_map));
 	data->map->walls = malloc(sizeof(t_walls));
 	data->map->floor = malloc(sizeof(t_floor));
+	data->img = malloc(sizeof(t_img));
+	init_img(data); //futur tableau.
 	if (!data || !data->game || !data->map)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_data(data);

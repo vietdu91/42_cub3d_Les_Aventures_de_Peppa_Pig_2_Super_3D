@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_img.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:55:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 14:38:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/09 17:18:58 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	free_color(t_color *color)
 		free(color);
 }
 
-void	free_img(t_game *game, t_img *img)
+void	free_img(t_game *game, t_texture *img)
 {
 	if (img->floor)
 		free_color(img->floor);

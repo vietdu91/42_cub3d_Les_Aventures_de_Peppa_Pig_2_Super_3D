@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:51:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/16 14:37:51 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/09 17:45:15 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	init_color(t_color *color)
 	color->b = 0;
 }
 
-void	init_img(t_img *img)
+void	init_texture(t_texture *img)
 {
 	img->wall_no = malloc(sizeof(t_pic));
 	init_pic(img->wall_no);

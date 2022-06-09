@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/08 20:17:17 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/09 17:46:11 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@
 #define GREEN 0x008000
 #define WINDOW_WIDTH 1200
 #define	WINDOW_HEIGHT 800
+
+typedef	struct s_img
+{
+	void	*mlx_img;
+	char	*addr;
+	int		bpp;
+	int 	line_len;
+	int		endian;
+}	t_img;
 
 typedef struct s_win
 {
@@ -42,7 +51,7 @@ typedef struct s_pic
 	int		height;
 }	t_pic;
 
-typedef struct s_img
+typedef struct s_texture
 {
 	t_pic	*wall_no;
 	t_pic	*wall_so;
@@ -50,7 +59,7 @@ typedef struct s_img
 	t_pic	*wall_ea;
 	t_color	*floor;
 	t_color	*celling;
-}	t_img;
+}	t_texture;
 
 typedef struct s_peppa
 {
@@ -76,7 +85,7 @@ typedef struct s_game
 {
 	void		*mlx_ptr;
 	void		*win_ptr;
-	t_img		*img;
+	t_texture		*img;
 	t_peppa		*peppa;
 	t_player	*p1;
 }	t_game;
@@ -110,7 +119,6 @@ typedef struct s_map
 	t_floor	*floor;
 }	t_map;
 
-
 typedef struct s_data
 {
 	char		**file;
@@ -119,11 +127,16 @@ typedef struct s_data
 	t_game		*game;
 	t_map		*map;
 	t_win		win;
+	t_img		*img;//potentiel tableau
 }	t_data;
 
 /*			INIT_GAME.C			*/
 
 int		init_mlx_and_window(t_data *data, t_game *game, t_win *window);
+
+/*	INIT_IMG.C					*/
+int		init_img(t_data *data);
+
 
 /*			INIT_MAP.C			*/
 
@@ -137,7 +150,7 @@ void	init_data(t_data *data);
 void	init_struct_game(t_game *game);
 void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
-void	init_img(t_img *img);
+void	init_texture(t_texture *img);
 void	init_pic(t_pic *pic);
 void	init_color(t_color *color);
 

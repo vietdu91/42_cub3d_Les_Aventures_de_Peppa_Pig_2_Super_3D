@@ -6,12 +6,21 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/08 20:11:17 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/09 19:01:55 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
+// map to image
+
+// width * 4 ici 600 => 2400
+
+// line len == amount of bytes taken by one line our image 
+// image_width * (bpp / 8);
+// 
+// 2400 * 10  + (5 index la ligne * 4 (nbr pixel))
+// du coup len = len * 4 + (line * 4); 
 int	find_width(char **map)
 {
 	int	i;

@@ -18,7 +18,9 @@ SRCS		= 	main.c \
 				free/free_structs.c \
 				free/free_utils.c \
 				game/keys.c \
+				images/map.c \
 				init/init_game.c \
+				init/init_img.c \
 				init/init_map.c \
 				init/init_structs.c \
 				init/init_structs2.c \
