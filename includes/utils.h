@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:49:56 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:46:26 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int					ft_nbrlen(int n);
 unsigned long long	ft_atoull(const char *str);
 
 /*			UTILS_DTAB.C				*/
-int 				size_dtab(char **tab);
+int					size_dtab(char **tab);
 
 /*			UTILS_GET_NEXT_LINE			*/
 
@@ -42,8 +42,8 @@ int					get_next_line(int fd, char **line);
 
 /*			UTILS_IS		*/
 
-int 				is_good_value(char c);
-int 				is_good_value_and_walls(char c);
+int					is_good_value(char c);
+int					is_good_value_and_walls(char c);
 int					is_position(char c);
 int					is_space(char c);
 int					is_digit(char c);

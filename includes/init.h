@@ -3,29 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:00:30 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:50:03 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INIT_H
 # define INIT_H
 
-#define OKAY 0
-#define WHITE 0xFFFFFF
-#define RED 0xFF0000
-#define GREEN 0x008000
-#define WINDOW_WIDTH 1200
-#define	WINDOW_HEIGHT 800
+# define OKAY 0
+# define WHITE 0xFFFFFF
+# define RED 0xFF0000
+# define GREEN 0x008000
+# define BLACK 0x000000
+# define WINDOW_WIDTH 1200
+# define WINDOW_HEIGHT 800
+# define MAP_WIDTH 400
+# define MAP_HEIGHT 200
 
-typedef	struct s_img
+typedef struct s_img
 {
 	void	*mlx_img;
 	char	*addr;
 	int		bpp;
-	int 	line_len;
+	int		line_len;
 	int		endian;
 }	t_img;
 

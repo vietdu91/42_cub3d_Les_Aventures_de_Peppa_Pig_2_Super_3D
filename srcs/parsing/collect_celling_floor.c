@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collect_celling_floor.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:06:26 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 12:42:28 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:53:06 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ int	collect_celling_floor(t_data *data, char **file)
 	while (i < data->lines_file)
 	{
 		if (!is_it_an_id_celling_floor_in_file(data, file, "C", i))
-			check_good_path_floor(data, data->game->texture->celling, file[i], "C");
+			check_good_path_floor(data, data->game->texture->celling, \
+			file[i], "C");
 		else if (!is_it_an_id_celling_floor_in_file(data, file, "F", i))
-			check_good_path_floor(data, data->game->texture->floor, file[i], "F");
+			check_good_path_floor(data, data->game->texture->floor, \
+			file[i], "F");
 		i++;
 	}
 	return (0);

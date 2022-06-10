@@ -6,15 +6,15 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:42:09 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/07 18:52:55 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:54:52 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
 
-int size_dtab(char **tab)
+int	size_dtab(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (tab[i])

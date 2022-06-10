@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:48:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:57:03 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 int		is_it_an_id_celling_floor_in_file(t_data *data, char **file, char *id, \
 		int i);
-int		check_path_arg_color_is_good(t_data *data, char *line_file, char **split);
+int		check_path_arg_color_is_good(t_data *data, char *line_file, \
+		char **split);
 int		check_good_path_floor(t_data *data, t_color *color, char *line_file, \
 		char *type);
 int		are_check_all_floor_celling_is_ok(t_data *data, t_floor *floor);

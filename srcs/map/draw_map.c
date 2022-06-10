@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/08 20:24:52 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:56:33 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 int	render(t_data *data)
 {
-	int x;
+	int	x;
 	int	y;
-	
+
 	x = 0;
 	y = 0;
 	if (data->game->win_ptr != NULL)
 	{
-		// size_map(data, &x, &y);
+		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
+			data->img->mlx_img, 0, 0);
 	}
 	return (0);
 }
 
 void	place_player(t_data *data, int size_x, int size_y)
 {
-	int i;
+	int	i;
 	int	j;
 	int	x;
 	int	y;
@@ -43,7 +44,7 @@ void	place_player(t_data *data, int size_x, int size_y)
 		{
 			if (is_player(data->map->map[i][j]) == OKAY)
 			{
-				draw_player(data, x + size_x / 2, y + size_y / 2);
+				draw_player(data, x + size_x / 2, y + size_y / 2, RED);
 				return ;
 			}
 			x += size_x;

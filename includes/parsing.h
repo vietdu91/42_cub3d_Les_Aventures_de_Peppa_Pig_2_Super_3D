@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 17:19:14 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 21:46:55 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ int		collect_file(t_data *data, char **argv);
 /*          COLLECT_MAP.C               */
 
 char	**save_map(t_data *data, t_map *map);
-int     collect_map(t_data *data, t_map *map);
+int		collect_map(t_data *data, t_map *map);
 
 /*          COLLECT_MAP_LINES.C         */
 
 int		collect_gap_of_first_and_last_line(t_data *data, int first, int last);
 int		collect_max_width_map(t_data *data, t_map *map, int first, int last);
 int		check_line_is_infos(char *line);
-int     collect_first_line_map(t_data *data, t_map *map, char **file);
-int     collect_last_line_map(t_data *data, t_map *map, char **file);
+int		collect_first_line_map(t_data *data, t_map *map, char **file);
+int		collect_last_line_map(t_data *data, t_map *map, char **file);
 
 /*			COLLECT_WALLS.C				*/
 

@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:13:06 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/08 20:10:39 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 20:20:28 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	place_player(t_data *data, int size_x, int size_y);
 int		draw_bottom(t_data *data, int *x, int *y, int size_x);
 int		draw_right_wall(t_data *data, int *x, int *y, int size_y);
 void	distinct_walls(t_data *data, int *x, int y, int size_x);
-void	draw_player(t_data *data, int x, int y);
+void	draw_player(t_data *data, int x, int y, int color);
 
 #endif
