@@ -37,6 +37,7 @@ SRCS		= 	main.c \
 				utils/utils_dtab.c \
 				utils/utils_gnl.c \
 				utils/utils_is.c \
+				utils/utils_is2.c \
 				utils/utils_mem.c \
 				utils/utils_split.c \
 				utils/utils_split_charset.c \

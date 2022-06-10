@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 22:55:19 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:51:23 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	img_pix_put(t_img *img, int x, int y, int color)
 {
 	char	*pixel;
 	int		i;
-	
+
 	i = img->bpp - 8;
 	pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
 	while (i >= 0)

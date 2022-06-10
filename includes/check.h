@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/02 15:13:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:48:58 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		check_extension_cub(char *str, t_data *data);
 
 /*			CHECK_MAP.C				*/
 
+int		second_check_map_is_close(t_data *data, char **map);
 int		check_map_is_close(t_data *data, char **map);
 int		check_letters_of_map(t_data *data, char **map);
 int		check_first_and_last_letters_of_line(t_data *data, char **map);
