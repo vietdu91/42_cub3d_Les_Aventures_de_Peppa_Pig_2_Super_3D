@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   free_img.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:55:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 17:18:58 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:50:44 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
+
+void	free_img(t_game *game, t_img *img)
+{
+	if (img->mlx_img)
+		mlx_destroy_image(game->mlx_ptr, img->mlx_img);
+	if (img)
+		free(img);
+}
 
 void	free_color(t_color *color)
 {
@@ -22,28 +30,28 @@ void	free_color(t_color *color)
 		free(color);
 }
 
-void	free_img(t_game *game, t_texture *img)
+void	free_texture(t_game *game, t_texture *texture)
 {
-	if (img->floor)
-		free_color(img->floor);
-	if (img->celling)
-		free_color(img->celling);
-	if (img->wall_no->img)
-		mlx_destroy_image(game->mlx_ptr, img->wall_no->img);
-	if (img->wall_no)
-		free(img->wall_no);
-	if (img->wall_so->img)
-		mlx_destroy_image(game->mlx_ptr, img->wall_so->img);
-	if (img->wall_so)
-		free(img->wall_so);
-	if (img->wall_we->img)
-		mlx_destroy_image(game->mlx_ptr, img->wall_we->img);
-	if (img->wall_we)
-		free(img->wall_we);
-	if (img->wall_ea->img)
-		mlx_destroy_image(game->mlx_ptr, img->wall_ea->img);
-	if (img->wall_ea)
-		free(img->wall_ea);
-	if (img)
-		free(img);
+	if (texture->floor)
+		free_color(texture->floor);
+	if (texture->celling)
+		free_color(texture->celling);
+	if (texture->wall_no->img)
+		mlx_destroy_image(game->mlx_ptr, texture->wall_no->img);
+	if (texture->wall_no)
+		free(texture->wall_no);
+	if (texture->wall_so->img)
+		mlx_destroy_image(game->mlx_ptr, texture->wall_so->img);
+	if (texture->wall_so)
+		free(texture->wall_so);
+	if (texture->wall_we->img)
+		mlx_destroy_image(game->mlx_ptr, texture->wall_we->img);
+	if (texture->wall_we)
+		free(texture->wall_we);
+	if (texture->wall_ea->img)
+		mlx_destroy_image(game->mlx_ptr, texture->wall_ea->img);
+	if (texture->wall_ea)
+		free(texture->wall_ea);
+	if (texture)
+		free(texture);
 }

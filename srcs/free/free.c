@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 14:39:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 16:57:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:57:08 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	free_all(t_data *data)
 {
 	free_maps(data->map);
-	free_img(data->game, data->game->img);
+	free_texture(data->game, data->game->texture);
+	free_img(data->game, data->img);
 	free_game_and_mlx(data->game);
 	if (data->game)
 		free(data->game);
@@ -29,7 +30,8 @@ int	free_all(t_data *data)
 int	free_all_and_exit(t_data *data)
 {
 	free_maps(data->map);
-	free_img(data->game, data->game->img);
+	free_texture(data->game, data->game->texture);
+	free_img(data->game, data->img);
 	free_game_and_mlx(data->game);
 	if (data->game)
 		free(data->game);

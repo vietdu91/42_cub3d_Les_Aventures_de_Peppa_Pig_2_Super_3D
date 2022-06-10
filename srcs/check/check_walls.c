@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:40:02 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 14:23:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:39:42 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ int	check_walls(t_data *data, char **file)
 	}
 	are_check_all_walls_is_ok(data, data->map->walls);
 	collect_walls(data, file);
-	create_img_of_walls(data, data->map->walls, data->game->img);
+	create_img_of_walls(data, data->map->walls, data->game->texture);
 	return (0);
 }

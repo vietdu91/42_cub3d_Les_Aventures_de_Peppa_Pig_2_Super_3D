@@ -6,11 +6,26 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:40:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:14:47 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:49:32 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
+
+int	second_check_map_is_close(t_data *data, char **map)
+{
+	int	y;
+
+	y = 0;
+	while (map[++y])
+	{
+		if (has_str_only_spaces(map[y]))
+			if (!has_str_only_walls(map[y - 1]) || \
+			!has_str_only_walls(map[y + 1]))
+				print_error_and_exit(ERR_MAP_CLOSE, data);
+	}
+	return (0);
+}
 
 int	check_map_is_close(t_data *data, char **map)
 {
@@ -31,6 +46,7 @@ int	check_map_is_close(t_data *data, char **map)
 			}
 		}
 	}
+	second_check_map_is_close(data, map);
 	return (0);
 }
 

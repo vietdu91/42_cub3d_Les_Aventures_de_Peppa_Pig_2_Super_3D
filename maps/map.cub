@@ -1,22 +1,14 @@
 
 
 
-NO ./textures/test_no.xpm
-SO ./textures/test_so.xpm
+NO ./textures/paint_wall.xpm
+SO ./textures/window_wall.xpm
 
-WE ./textures/test_we.xpm
-EA ./textures/test_ea.xpm
+WE ./textures/calendar_wall.xpm
+EA ./textures/clock_wall.xpm
 
 F 220,100,0
 C 225,30,0
-
-
-
-      1111111111
-      1000000001
-      1111111111     111111
-                     100001
-                     111111
 
  11111111111111111111111
 1000000000110000000000001

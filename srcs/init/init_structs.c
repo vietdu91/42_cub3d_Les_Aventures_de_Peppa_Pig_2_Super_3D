@@ -3,14 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 18:16:22 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:02:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
+
+void	init_struct_malloc(t_data *data)
+{
+	data->game = malloc(sizeof(t_game));
+	if (!data->game)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->game->texture = malloc(sizeof(t_texture));
+	if (!data->game->texture)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->game->peppa = malloc(sizeof(t_peppa));
+	if (!data->game->peppa)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->game->p1 = malloc(sizeof(t_player));
+	if (!data->game->p1)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->map = malloc(sizeof(t_map));
+	if (!data->map)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->map->walls = malloc(sizeof(t_walls));
+	if (!data->map->walls)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->map->floor = malloc(sizeof(t_floor));
+	if (!data->map->floor)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->img = malloc(sizeof(t_img));
+	if (!data->img)
+		print_error_and_exit(ERR_MALLOC, data);
+}
 
 void	init_data(t_data *data)
 {
@@ -28,14 +56,6 @@ void	init_struct_peppa(t_peppa *peppa)
 	peppa->y_peppa = 0;
 }
 
-void	init_struct_game(t_game *game)
-{
-	game->mlx_ptr = NULL;
-	game->win_ptr = NULL;
-	init_texture(game->img);
-	init_struct_peppa(game->peppa);
-}
-
 void	init_player(t_player *p1)
 {
 	p1->posX = 0;
@@ -51,17 +71,10 @@ void	init_player(t_player *p1)
 t_data	*init_struct(t_data *data)
 {
 	data = malloc(sizeof(t_data));
-	data->game = malloc(sizeof(t_game));
-	data->game->img = malloc(sizeof(t_img));
-	data->game->peppa = malloc(sizeof(t_peppa));
-	data->game->p1 = malloc(sizeof(t_player));
-	data->map = malloc(sizeof(t_map));
-	data->map->walls = malloc(sizeof(t_walls));
-	data->map->floor = malloc(sizeof(t_floor));
-	data->img = malloc(sizeof(t_img));
-	init_img(data); //futur tableau.
-	if (!data || !data->game || !data->map)
+	if (!data)
 		print_error_and_exit(ERR_MALLOC, data);
+	init_struct_malloc(data);
+	init_img(data); //futur tableau.
 	init_data(data);
 	init_struct_game(data->game);
 	init_player(data->game->p1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 17:46:11 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:00:30 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ typedef struct s_game
 {
 	void		*mlx_ptr;
 	void		*win_ptr;
-	t_texture		*img;
+	t_texture	*texture;
 	t_peppa		*peppa;
 	t_player	*p1;
 }	t_game;
@@ -133,10 +133,11 @@ typedef struct s_data
 /*			INIT_GAME.C			*/
 
 int		init_mlx_and_window(t_data *data, t_game *game, t_win *window);
+void	init_struct_game(t_game *game);
 
-/*	INIT_IMG.C					*/
+/*			INIT_IMG.C			*/
+
 int		init_img(t_data *data);
-
 
 /*			INIT_MAP.C			*/
 
@@ -146,8 +147,8 @@ void	init_struct_map(t_map *map);
 
 /*			INIT_STRUCTS.C			*/
 
+void	init_struct_malloc(t_data *data);
 void	init_data(t_data *data);
-void	init_struct_game(t_game *game);
 void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
 void	init_texture(t_texture *img);

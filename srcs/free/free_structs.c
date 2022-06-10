@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:10:13 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:34:23 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,6 @@ void	free_game_and_mlx(t_game *game)
 	}
 	if (game->peppa)
 		free(game->peppa);
+	if (game->p1)
+		free(game->p1);
 }

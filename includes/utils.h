@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/08 18:12:56 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 13:49:56 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int 				is_good_value_and_walls(char c);
 int					is_position(char c);
 int					is_space(char c);
 int					is_digit(char c);
+int					has_str_only_spaces(char *str);
+int					has_str_only_walls(char *str);
 
 /*			UTILS_MEM			*/
 
