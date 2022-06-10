@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/09 15:29:48 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/10 16:54:20 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@
 #  define ESC 53
 # endif
 
+void	img_pix_put(t_img *img, int x, int y, int color);
 /*          KEYS.C          */
-
 int	keys_main(int key_code, t_data *data);
 
 #endif

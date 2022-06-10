@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/08 20:41:58 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/10 16:56:17 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int draw_bottom(t_data *data, int *x, int *y, int size_x)
 	i = 0;
 	while (i < size_x)
 	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, \
+		img_pix_put(data->game->mlx_ptr, \
 		(*x + i), *y, WHITE);
 		i++;
 	}
