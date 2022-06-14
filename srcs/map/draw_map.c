@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/10 21:56:33 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/14 21:30:31 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	render(t_data *data)
 	return (0);
 }
 
-void	place_player(t_data *data, int size_x, int size_y)
+int	place_player(t_data *data, int size_x, int size_y)
 {
 	int	i;
 	int	j;
@@ -45,21 +45,22 @@ void	place_player(t_data *data, int size_x, int size_y)
 			if (is_player(data->map->map[i][j]) == OKAY)
 			{
 				draw_player(data, x + size_x / 2, y + size_y / 2, RED);
-				return ;
+				return (data->map->map[i][j]);
 			}
 			x += size_x;
 		}
 		y += size_y;
 	}
+	return (0);
 }
 
 int	draw_map(t_data *data, int size_x, int size_y)
 {
 	int	x;
 	int	y;
-	int i;
+	int	i;
 	int	j;
-	int z;
+	int	z;
 
 	y = 0;
 	i = -1;

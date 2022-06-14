@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:02:51 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/11 22:08:41 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,11 @@ void	init_player(t_player *p1)
 	p1->planeY = 0;
 	p1->time = 0;
 	p1->oldtime = 0;
+	p1->px = 0;
+	p1->py = 0;
+	p1->pdx = 0;
+	p1->pdy = 0;
+	p1->pa = 0.0;	
 }
 
 t_data	*init_struct(t_data *data)

@@ -6,13 +6,14 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:25:06 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/10 21:45:43 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/11 21:45:25 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATHS_H
 # define MATHS_H
 
+# define PI 3.141592
 int	size_map(t_data *data, int *x, int *y);
 
 #endif

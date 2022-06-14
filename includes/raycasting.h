@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   recognize_elements.c                                :+:      :+:    :+:   */
+/*   raycasting.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 18:00:15 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/08 18:11:38 by dyoula           ###   ########.fr       */
+/*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
+/*   Updated: 2022/06/14 23:01:25 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3D.h"
+#ifndef RAYCASTING_H
+# define RAYCASTING_H
 
-int is_player(char c)
-{
-	if (c == 'N')
-		return (0);
-	else if (c == 'S')
-		return (0);
-	else if (c == 'E')
-		return (0);
-	else if (c == 'W')
-		return (0);
-	return (-1);
-}
+# define CUB ".cub"
 
-int	is_a_space_or_is_wall(char c)
-{
-	if ((c >= 9 && c <= 13 ) || c == 32)
-		return (0);
-	else if (c == '1')
-		return (0);
-	return (-1);
-}
+void	translate_direction_player(t_player *p1, char c);
+void	init_direction_player(t_data *data, int direction);
+int		draw_first_vector(t_data *data, int size_x, int size_y, int direction);
+
+#endif

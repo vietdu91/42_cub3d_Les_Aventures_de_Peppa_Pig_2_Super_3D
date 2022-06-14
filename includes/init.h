@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:50:03 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/14 17:43:34 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # define RED 0xFF0000
 # define GREEN 0x008000
 # define BLACK 0x000000
+# define LOOK_LEFT 65361
+# define LOOK_RIGHT 65363
 # define WINDOW_WIDTH 1200
 # define WINDOW_HEIGHT 800
 # define MAP_WIDTH 400
@@ -82,6 +84,12 @@ typedef struct s_player
 	double	planeY;
 	double	time;
 	double	oldtime;
+	// tuto youtube;
+	double	px;
+	double	py;
+	double	pdx;
+	double	pdy;
+	double	pa; // payer angle;
 }	t_player;
 
 typedef struct s_game
@@ -118,6 +126,8 @@ typedef struct s_map
 	int		last_line;
 	int		lines_map;
 	int		max_len_map;
+	int		size_x;
+	int		size_y;
 	t_walls	*walls;
 	t_floor	*floor;
 }	t_map;

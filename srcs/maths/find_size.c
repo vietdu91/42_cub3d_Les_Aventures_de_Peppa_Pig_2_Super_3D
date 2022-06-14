@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/10 21:51:27 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/14 23:02:33 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,13 @@ int	find_width(char **map)
 int	size_map(t_data *data, int *x, int *y)
 {
 	int	len_max;
+	int	direction;
 
 	len_max = find_width(data->map->map);
 	*x = MAP_WIDTH / len_max;
 	*y = MAP_HEIGHT / size_dtab(data->map->map);
-    printf("x = %d et y = %d\n", *x, *y);
 	draw_map(data, *x, *y);
-	place_player(data, *x, *y);
+	direction = place_player(data, *x, *y);
+	draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
 	return (0);
 }
