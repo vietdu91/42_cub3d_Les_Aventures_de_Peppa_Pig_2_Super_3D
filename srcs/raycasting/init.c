@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 20:45:45 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/14 23:06:04 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/15 18:43:27 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,17 @@ int	draw_first_vector(t_data *data, int size_x, int size_y, int direction)
 {
 	int	vector;
 
-	vector = 0;
+	data->game->p1->dirY = data->game->p1->posY + 1;
+	vector = data->game->p1->dirY;
+	printf("data->game->p1->dirY = %f\n", data->game->p1->dirY);
 	if (direction == 'N')
 	{
-		while (wall_touched(data, size_x, size_y, KEY_A))
+		while (vector_has_touched(data, size_x, size_y, KEY_W) < 0)
 		{
-			img_pix_put(data->img, data->game->p1->posX, (data->game->p1->posY - 1) + vector, GREEN);
-			vector++;
+			printf("salut %f\n", data->game->p1->dirY);
+			img_pix_put(data->img, data->game->p1->posX, (data->game->p1->dirY - 1), GREEN);
+			// vector++;
+			data->game->p1->dirY -= 1;
 		}
 	}
 	return (0);
@@ -55,6 +59,6 @@ int	draw_first_vector(t_data *data, int size_x, int size_y, int direction)
 void	init_direction_player(t_data *data, int direction)
 {
 	translate_direction_player(data->game->p1, direction);
-	// draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
+	draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
 }
 

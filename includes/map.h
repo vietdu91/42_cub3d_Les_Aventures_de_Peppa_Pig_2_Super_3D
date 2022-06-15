@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:13:06 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/14 21:30:38 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/15 18:04:33 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	draw_player(t_data *data, int x, int y, int color);
 
 /*						VERIFICATIONS.C					*/
 int		wall_touched(t_data *data, int size_x, int size_y, int key);
+int		vector_has_touched(t_data *data, int size_x, int size_y, int dir);
 
 #endif
