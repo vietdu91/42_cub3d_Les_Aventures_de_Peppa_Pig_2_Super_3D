@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 15:51:16 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/23 17:21:20 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,23 @@ void	verLine(t_data *data, int x, int y1, int y2, int color)
 {
 	int	y;
 
-	y = y1;
+	y = 0;
+	printf("Celling : %s\n", data->game->texture->celling->hexa);
+	printf("Floor : %s\n", data->game->texture->floor->hexa);
+	while (y <= y1)
+	{
+		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
+		y++;		
+	}
 	while (y <= y2)
 	{
 		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, color);
 		y++;
+	}
+	while (y <= WINDOW_HEIGHT)
+	{
+		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
+		y++;		
 	}
 }
 
@@ -119,16 +131,15 @@ int		colors(t_data *data, t_player *p1)
 		if (data->map->map[p1->mapY][p1->mapX] == '1')
 			color = RED;
 		else if (data->map->map[p1->mapY][p1->mapX] == '0')
-			color = 0x00FF00;
-		else if (data->map->map[p1->mapY][p1->mapX] == 3)
-			color = 0x0000FF;
-		else if (data->map->map[p1->mapY][p1->mapX] == 4)
-			color = 0xFFFFFF;
+			color = BLUE;
+		// else if (data->map->map[p1->mapY][p1->mapX] == 3)
+		// 	color = 0x0000FF;
+		// else if (data->map->map[p1->mapY][p1->mapX] == 4)
+		// 	color = 0xFFFFFF;
 		else
 			color = WHITE;
-		
 		if (p1->side == 1)
-			color = color / 2;
+			color = GREEN;
 		return (color);
 }
 int	game_running(t_data *data)
@@ -153,6 +164,7 @@ int	game_running(t_data *data)
 		draw_end = line_Height / 2 + WINDOW_HEIGHT / 2;
 		if (draw_end >= WINDOW_HEIGHT)
 			draw_end = WINDOW_HEIGHT - 1;
+	//	verLine(data, x, )
 		verLine(data, x, draw_start, draw_end, colors(data, data->game->p1));
 		x++;
 		//printf()

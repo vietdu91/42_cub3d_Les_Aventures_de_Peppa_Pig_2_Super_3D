@@ -7,7 +7,7 @@ SO ./textures/window_wall.xpm
 WE ./textures/calendar_wall.xpm
 EA ./textures/clock_wall.xpm
 
-F 220,100,0
+F 176,224,230
 C 225,30,0
 
  11111111111111111111111

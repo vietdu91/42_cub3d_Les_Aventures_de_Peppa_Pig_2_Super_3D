@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/21 00:17:28 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/23 16:52:44 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define RED 0xFF0000
 # define GREEN 0x008000
 # define BLACK 0x000000
+# define BLUE 0xB0E0E6
 # define LOOK_LEFT 65361
 # define LOOK_RIGHT 65363
 # define WINDOW_WIDTH 1200
