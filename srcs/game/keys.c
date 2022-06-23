@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 15:50:47 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/23 18:36:24 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,23 +83,23 @@ int	key_press(int key, t_data *data)
 	if (key == KEY_W)
 	{
 		printf("movespeed = %f\n", data->game->p1->moveSpeed);
-		if (data->map->map[(int)(data->game->p1->posX + data->game->p1->dirX * data->game->p1->moveSpeed)][(int)(data->game->p1->posY)] == '0')
+		if (data->map->map[(int)(data->game->p1->posY)][(int)(data->game->p1->posX + data->game->p1->dirX * data->game->p1->moveSpeed)] == '0')
 		{
 			printf("dirx = %f\n", data->game->p1->dirX);
 			printf("rez = %f\n", data->game->p1->dirX * data->game->p1->moveSpeed);
 			data->game->p1->posX += data->game->p1->dirX * data->game->p1->moveSpeed;
 		}
 		printf("X %f & Y = %f\n", data->game->p1->posX, data->game->p1->posY);
-		if (data->map->map[(int)(data->game->p1->posX)][(int)(data->game->p1->posY + data->game->p1->dirY * data->game->p1->moveSpeed)] == '0')
+		if (data->map->map[(int)(data->game->p1->posY + data->game->p1->dirY * data->game->p1->moveSpeed)][(int)(data->game->p1->posX)] == '0')
 			data->game->p1->posY += data->game->p1->dirY * data->game->p1->moveSpeed;
 	}
 	//move backwards if no wall behind you
 	else if (key == KEY_S)
 	{
 		printf("resukt = %d\n", (int)(data->game->p1->posX + data->game->p1->dirX * data->game->p1->moveSpeed));
-		if (!data->map->map[(int)(data->game->p1->posX - data->game->p1->dirX * data->game->p1->moveSpeed)][(int)(data->game->p1->posY)])
+		if (data->map->map[(int)(data->game->p1->posY)][(int)(data->game->p1->posX - data->game->p1->dirX * data->game->p1->moveSpeed)] == '0')
 			data->game->p1->posX -= data->game->p1->dirX * data->game->p1->moveSpeed;
-		if (!data->map->map[(int)(data->game->p1->posX)][(int)(data->game->p1->posY - data->game->p1->dirY * data->game->p1->moveSpeed)])
+		if (data->map->map[(int)(data->game->p1->posY - data->game->p1->dirY * data->game->p1->moveSpeed)][(int)(data->game->p1->posX)] == '0')
 			data->game->p1->posY -= data->game->p1->dirY * data->game->p1->moveSpeed;
 	}
 	//rotate to the right

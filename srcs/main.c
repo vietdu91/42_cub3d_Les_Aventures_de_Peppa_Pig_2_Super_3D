@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 17:21:20 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/23 18:38:13 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	verLine(t_data *data, int x, int y1, int y2, int color)
 	int	y;
 
 	y = 0;
-	printf("Celling : %s\n", data->game->texture->celling->hexa);
-	printf("Floor : %s\n", data->game->texture->floor->hexa);
+//	printf("Celling : %s\n", data->game->texture->celling->hexa);
+//	printf("Floor : %s\n", data->game->texture->floor->hexa);
 	while (y <= y1)
 	{
 		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
@@ -189,7 +189,7 @@ void	init_val(t_player *p1)
 	p1->dirY = 0;
 	p1->planeX = 0;
 	p1->planeY = 0.66;
-	p1->moveSpeed = 0.05;
+	p1->moveSpeed = 0.3;
 	p1->rotSpeed = 0.05;
 	p1->cameraX = 0;
 	p1->mapX = 0;
