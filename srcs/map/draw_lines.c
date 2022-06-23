@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/14 21:00:27 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/20 18:41:25 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,10 @@ void	draw_player(t_data *data, int x, int y, int color)
 	int	j;
 
 	j = -1;
-	data->game->p1->posX = x;
-	data->game->p1->posY = y;
+	// data->game->p1->posX = x;
+	// data->game->p1->posY = y;
+	data->game->p1->posX = 12;
+	data->game->p1->posY = 5;
 	while (j < 2)
 	{
 		i = 0;

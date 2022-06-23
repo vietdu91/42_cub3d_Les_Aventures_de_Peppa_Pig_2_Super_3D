@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/14 23:02:33 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/23 14:18:06 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,16 @@ int	size_map(t_data *data, int *x, int *y)
 	len_max = find_width(data->map->map);
 	*x = MAP_WIDTH / len_max;
 	*y = MAP_HEIGHT / size_dtab(data->map->map);
-	draw_map(data, *x, *y);
+	// draw_map(data, *x, *y);
 	direction = place_player(data, *x, *y);
-	draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
+	// draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
+	// draw_right_vector(data);
+	// int n = 30;
+	// printf("%d degres = %f radians\n", n, to_radian(n));
 	return (0);
+}
+
+float to_radian(int degrees)
+{
+	return ((PI / 180) * degrees);
 }

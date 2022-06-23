@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/14 17:43:34 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/21 00:17:28 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define WINDOW_HEIGHT 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
-
+# define FOV 60
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -89,7 +89,36 @@ typedef struct s_player
 	double	py;
 	double	pdx;
 	double	pdy;
-	double	pa; // payer angle;
+	double	pa; // player angle;
+	double	rayDirX;
+	double	rayDirY;
+
+	//length of ray from current position to next x or y-side
+	double	sideDistX;
+	double	sideDistY;
+
+	//length of ray from one x or y-side to next x or y-side
+	double	deltaDistX;
+	double	deltaDistY;
+	double	perpWallDist;
+
+	//which box of the map we're in
+	int		mapX;
+	int		mapY;
+	
+	//what direction to step in x or y-direction (either +1 or -1)
+	int 	stepX;
+	int 	stepY;
+	int		hit; //was there a wall hit?
+	int		side; // was a NS or a EW wall hit?
+
+	double	cameraX; //x-coordinate in camera space
+
+	double	rotSpeed;
+	double	moveSpeed;
+
+	double oldDirX;
+	double oldPlaneX;
 }	t_player;
 
 typedef struct s_game

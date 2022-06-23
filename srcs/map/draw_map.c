@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/14 21:30:31 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/18 20:17:40 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 int	render(t_data *data)
 {
-	int	x;
-	int	y;
-
-	x = 0;
-	y = 0;
 	if (data->game->win_ptr != NULL)
 	{
 		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\

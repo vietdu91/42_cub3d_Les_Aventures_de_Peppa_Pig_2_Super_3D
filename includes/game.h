@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/11 23:24:20 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/21 00:14:25 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	img_pix_put(t_img *img, int x, int y, int color);
 int		keys_main(int key_code, t_data *data);
 int		key_release_main(int keysym, void *data);
 int		angle_manager(int keysim, t_player *p1);
+int		key_press(int key, t_data *data);
 
 #endif
