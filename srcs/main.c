@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 18:38:13 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 16:15:39 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,20 @@ void	verLine(t_data *data, int x, int y1, int y2, int color)
 	int	y;
 
 	y = 0;
-//	printf("Celling : %s\n", data->game->texture->celling->hexa);
-//	printf("Floor : %s\n", data->game->texture->floor->hexa);
 	while (y <= y1)
 	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
-		y++;		
+		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, data->game->texture->celling->hexa);
+		y++;
 	}
 	while (y <= y2)
 	{
 		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, color);
 		y++;
 	}
-	while (y <= WINDOW_HEIGHT)
+	while (y <= WINDOW_GAME)
 	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
-		y++;		
+		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, data->game->texture->floor->hexa);
+		y++;
 	}
 }
 
@@ -124,6 +122,39 @@ void	check_side(t_player *p1)
 		p1->rayDirY;
 }
 
+int		set_view_of_peppa(t_data *data, t_player *p1)
+{
+	if (data->game->peppa->pos_peppa == 'N')
+	{
+		p1->dirX = 1;
+		p1->dirY = 0;
+		p1->planeX = 0;
+		p1->planeY = -0.66;
+	}
+	else if (data->game->peppa->pos_peppa == 'S')
+	{
+		p1->dirX = 0;
+		p1->dirY = 1;
+		p1->planeX = -0.66;
+		p1->planeY = 0;
+	}
+	else if (data->game->peppa->pos_peppa == 'W')
+	{
+		p1->dirX = -1;
+		p1->dirY = 0;
+		p1->planeX = 0;
+		p1->planeY = -0.66;
+	}
+	else if (data->game->peppa->pos_peppa == 'E')
+	{
+		p1->dirX = 0;
+		p1->dirY = -1;
+		p1->planeX = -0.66;
+		p1->planeY = 0;
+	}
+	return (0);
+}
+
 int		colors(t_data *data, t_player *p1)
 {
 		int	color;
@@ -152,22 +183,21 @@ int	game_running(t_data *data)
 	x = 0;
 	while (x < WINDOW_WIDTH)
 	{
+		set_view_of_peppa(data, data->game->p1);
 		reset_values(data->game->p1, x);
 		step_manager(data->game->p1);
 		while (data->game->p1->hit == 0)
 			jump_next_map_square(data, data->game->p1);
 		check_side(data->game->p1);
-		line_Height = (int)(WINDOW_HEIGHT / data->game->p1->perpWallDist);
-		draw_start = -line_Height / 2 + WINDOW_HEIGHT / 2;
+		line_Height = (int)(WINDOW_GAME / data->game->p1->perpWallDist);
+		draw_start = -line_Height / 2 + WINDOW_GAME / 2;
 		if(draw_start < 0)
 			draw_start = 0;
-		draw_end = line_Height / 2 + WINDOW_HEIGHT / 2;
-		if (draw_end >= WINDOW_HEIGHT)
-			draw_end = WINDOW_HEIGHT - 1;
-	//	verLine(data, x, )
+		draw_end = line_Height / 2 + WINDOW_GAME / 2;
+		if (draw_end >= WINDOW_GAME)
+			draw_end = WINDOW_GAME - 1;
 		verLine(data, x, draw_start, draw_end, colors(data, data->game->p1));
 		x++;
-		//printf()
 	}
 	return (0);
 }
@@ -185,10 +215,10 @@ void	init_val(t_player *p1)
 {
 	p1->posX = 0;
 	p1->posY = 0;
-	p1->dirX = -1;
+	p1->dirX = 0;
 	p1->dirY = 0;
 	p1->planeX = 0;
-	p1->planeY = 0.66;
+	p1->planeY = 0;
 	p1->moveSpeed = 0.3;
 	p1->rotSpeed = 0.05;
 	p1->cameraX = 0;
@@ -198,7 +228,7 @@ void	init_val(t_player *p1)
 	p1->deltaDistY = 0;
 	p1->hit = 0;
 	p1->rayDirX = 0;
-	p1->rayDirY = 0;	
+	p1->rayDirY = 0;
 }
 
 int	game_start(t_data *data)
@@ -207,8 +237,8 @@ int	game_start(t_data *data)
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
 	init_val(data->game->p1);
 	// size_map(data, &data->map->size_x, &data->map->size_y);
-	data->game->p1->posX = 5;
-	data->game->p1->posY = 6;
+	data->game->p1->posX = data->game->peppa->x_peppa;
+	data->game->p1->posY = data->game->peppa->y_peppa;
 	// printf("size_x = %d && size_y = %d", data->map->size_x, data->map->size_y);
 	// exit (0);
 	// int i;

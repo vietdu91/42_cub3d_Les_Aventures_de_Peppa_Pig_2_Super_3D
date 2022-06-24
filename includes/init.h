@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 16:52:44 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 16:15:07 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 # define LOOK_LEFT 65361
 # define LOOK_RIGHT 65363
 # define WINDOW_WIDTH 1200
-# define WINDOW_HEIGHT 800
+# define WINDOW_HEIGHT 1000
+# define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
 # define FOV 60
@@ -44,7 +45,7 @@ typedef struct s_win
 typedef struct s_color
 {
 	char	*path;
-	char	*hexa;
+	int		hexa;
 	int		r;
 	int		g;
 	int		b;
@@ -106,7 +107,7 @@ typedef struct s_player
 	//which box of the map we're in
 	int		mapX;
 	int		mapY;
-	
+
 	//what direction to step in x or y-direction (either +1 or -1)
 	int 	stepX;
 	int 	stepY;

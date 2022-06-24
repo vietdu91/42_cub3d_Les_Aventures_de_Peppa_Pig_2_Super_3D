@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:57:03 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 11:45:47 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ int		check_good_order_in_file(t_data *data, char **file);
 /*			CHECK_RGB.C				*/
 
 int		check_color(int n);
-char	convert_to_hex(int n, char *base);
-char	*ft_rgb_to_hex(t_data *data, int r, int g, int b);
+int		ft_rgb_to_hex(t_data *data, int r, int g, int b);
 
 /*          CHECK_WALLS.C           */
 
