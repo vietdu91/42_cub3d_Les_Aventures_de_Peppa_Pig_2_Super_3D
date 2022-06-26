@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 18:38:13 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 20:15:53 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,7 @@ void	init_val(t_player *p1)
 	p1->planeX = 0;
 	p1->planeY = 0.66;
 	p1->moveSpeed = 0.3;
-	p1->rotSpeed = 0.05;
+	p1->rotSpeed = 0.15;
 	p1->cameraX = 0;
 	p1->mapX = 0;
 	p1->mapY = 0;
@@ -209,20 +209,7 @@ int	game_start(t_data *data)
 	// size_map(data, &data->map->size_x, &data->map->size_y);
 	data->game->p1->posX = 5;
 	data->game->p1->posY = 6;
-	// printf("size_x = %d && size_y = %d", data->map->size_x, data->map->size_y);
-	// exit (0);
-	// int i;
-	// int v;
-
-	// i = 0;
-	// while (++i < 300)
-	// {
-	// 	v = 2 * i * PI;
-	// 	printf("salut v = %d\n", v);
-	// 	mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, i, v, RED);
-	// }
 	// mlx_loop_hook(data->game->mlx_ptr, &render, data);
-	printf("resukt = %f\n", data->game->p1->posX);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, KeyRelease, KeyPressMask, &key_press, data);
 	// mlx_mouse_hook (data->game->win_ptr, &mouse_manager, data);
