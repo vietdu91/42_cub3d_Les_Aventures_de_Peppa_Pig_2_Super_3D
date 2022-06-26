@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:51:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/09 17:45:15 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 11:46:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	init_pic(t_pic *pic)
 void	init_color(t_color *color)
 {
 	color->path = NULL;
-	color->hexa = NULL;
+	color->hexa = 0;
 	color->r = 0;
 	color->g = 0;
 	color->b = 0;

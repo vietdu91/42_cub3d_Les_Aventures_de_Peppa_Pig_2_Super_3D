@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/23 16:52:44 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:11:47 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 # define LOOK_LEFT 65361
 # define LOOK_RIGHT 65363
 # define WINDOW_WIDTH 1200
-# define WINDOW_HEIGHT 800
+# define WINDOW_HEIGHT 1000
+# define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
 # define FOV 60
@@ -44,7 +45,7 @@ typedef struct s_win
 typedef struct s_color
 {
 	char	*path;
-	char	*hexa;
+	int		hexa;
 	int		r;
 	int		g;
 	int		b;
@@ -106,7 +107,7 @@ typedef struct s_player
 	//which box of the map we're in
 	int		mapX;
 	int		mapY;
-	
+
 	//what direction to step in x or y-direction (either +1 or -1)
 	int 	stepX;
 	int 	stepY;
@@ -126,6 +127,10 @@ typedef struct s_game
 {
 	void		*mlx_ptr;
 	void		*win_ptr;
+	int			step_of_game;
+	t_pic		*intro;
+	t_pic		*credit;
+	t_pic		*overlay_happy;
 	t_texture	*texture;
 	t_peppa		*peppa;
 	t_player	*p1;
@@ -176,7 +181,7 @@ typedef struct s_data
 /*			INIT_GAME.C			*/
 
 int		init_mlx_and_window(t_data *data, t_game *game, t_win *window);
-void	init_struct_game(t_game *game);
+void	init_struct_game(t_data *data, t_game *game);
 
 /*			INIT_IMG.C			*/
 

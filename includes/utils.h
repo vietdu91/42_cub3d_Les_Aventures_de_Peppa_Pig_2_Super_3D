@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:46:26 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/24 11:37:12 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int					is_a_space_or_is_wall(char c);
 /*			UTILS_DIGITS				*/
 
 int					ft_atoi(const char *str);
+int					ft_atoi_hexa(const char *str);
 int					ft_nbrlen(int n);
 unsigned long long	ft_atoull(const char *str);
 

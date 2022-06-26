@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/11 22:08:41 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:23:20 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	init_player(t_player *p1)
 	p1->py = 0;
 	p1->pdx = 0;
 	p1->pdy = 0;
-	p1->pa = 0.0;	
+	p1->pa = 0.0;
 }
 
 t_data	*init_struct(t_data *data)
@@ -79,9 +79,9 @@ t_data	*init_struct(t_data *data)
 	if (!data)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_struct_malloc(data);
-	init_img(data); //futur tableau.
+	init_img(data);
 	init_data(data);
-	init_struct_game(data->game);
+	init_struct_game(data, data->game);
 	init_player(data->game->p1);
 	init_struct_map(data->map);
 	return (data);

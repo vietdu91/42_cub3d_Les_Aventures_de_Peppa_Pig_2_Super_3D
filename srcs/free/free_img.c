@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:55:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 12:50:44 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/24 11:46:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void	free_color(t_color *color)
 {
 	if (color->path)
 		free(color->path);
-	if (color->hexa)
-		free(color->hexa);
 	if (color)
 		free(color);
 }

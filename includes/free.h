@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 14:38:52 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 12:49:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 12:06:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	free_texture(t_game *game, t_texture *img);
 /*			FREE_STRUCTS.C			*/
 
 void	free_maps(t_map *map);
+void	free_pics(t_game *game, t_pic *pic);
 void	free_game_and_mlx(t_game *game);
 
 /*			FREE_UTILS.C			*/

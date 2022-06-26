@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 20:15:09 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/26 19:17:54 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	keys_main(int key_code, t_data *data)
 		move_player(data, key_code);
 	else if (key_code == KEY_D)
 		move_player(data, key_code);
-	// printf("pos x = %f pos = %f\n", data->game->p1->posX, data->game->p1->posY);
 	return (0);
 }
 
@@ -76,15 +75,19 @@ int	angle_manager(int keysim, t_player *p1)
 
 int	key_press(int key, t_data *data)
 {
-	if (key == KEY_W)
+	if (key == KEY_W && data->game->step_of_game == 3)
 		w_key(data);
-	else if (key == KEY_S)
+	else if (key == KEY_S && data->game->step_of_game == 3)
 		s_key(data);
-	else if (key == KEY_D)
+	else if (key == KEY_D && data->game->step_of_game == 3)
 		d_key(data);
-	else if (key == KEY_A)
+	else if (key == KEY_A && data->game->step_of_game == 3)
 		a_key(data);
+	else if (key == ESP && data->game->step_of_game == 1)
+		credit_of_game(data, data->game);
+	else if (key == ESP && data->game->step_of_game == 2)
+		game_start(data);
 	else if (key == ESC)
-		exit(0);
+		free_all_and_exit(data);
 	return (0);
 }

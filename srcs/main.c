@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 20:15:53 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/26 20:42:09 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,6 @@ void	img_pix_put(t_img *img, int x, int y, int color)
 	// 		*pixel++ = (color >> (img->bpp - 8 - i)) & 0xFF;
 	// 	i -= 8;
 	// }
-}
-
-void	verLine(t_data *data, int x, int y1, int y2, int color)
-{
-	int	y;
-
-	y = 0;
-//	printf("Celling : %s\n", data->game->texture->celling->hexa);
-//	printf("Floor : %s\n", data->game->texture->floor->hexa);
-	while (y <= y1)
-	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
-		y++;		
-	}
-	while (y <= y2)
-	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, color);
-		y++;
-	}
-	while (y <= WINDOW_HEIGHT)
-	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, ft_atoi(data->game->texture->celling->hexa));
-		y++;		
-	}
 }
 
 void	reset_values(t_player *p1, int x)
@@ -110,7 +86,7 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 	// printf("posY : %f\n", p1->posY);
 	// printf("MAPY : %d\n", p1->mapY);
 
-	if (data->map->map[p1->mapY][p1->mapX] > '0')
+	if (data->map->map[p1->mapY][p1->mapX] == '1')
 		p1->hit = 1;
 }
 
@@ -124,6 +100,39 @@ void	check_side(t_player *p1)
 		p1->rayDirY;
 }
 
+int		set_view_of_peppa(t_data *data, t_player *p1)
+{
+	if (data->game->peppa->pos_peppa == 'N')
+	{
+		p1->dirX = 0;
+		p1->dirY = 1;
+		p1->planeX = -0.66;
+		p1->planeY = 0;
+	}
+	else if (data->game->peppa->pos_peppa == 'S')
+	{
+		p1->dirX = 1;
+		p1->dirY = 0;
+		p1->planeX = 0;
+		p1->planeY = -0.66;
+	}
+	else if (data->game->peppa->pos_peppa == 'W')
+	{
+		p1->dirX = 0;
+		p1->dirY = -1;
+		p1->planeX = -0.66;
+		p1->planeY = 0;
+	}
+	else if (data->game->peppa->pos_peppa == 'E')
+	{
+		p1->dirX = -1;
+		p1->dirY = 0;
+		p1->planeX = 0;
+		p1->planeY = -0.66;
+	}
+	return (0);
+}
+
 int		colors(t_data *data, t_player *p1)
 {
 		int	color;
@@ -132,6 +141,8 @@ int		colors(t_data *data, t_player *p1)
 			color = RED;
 		else if (data->map->map[p1->mapY][p1->mapX] == '0')
 			color = BLUE;
+		else if (is_player(data->map->map[p1->mapY][p1->mapX]) == OKAY)
+			return (0);
 		// else if (data->map->map[p1->mapY][p1->mapX] == 3)
 		// 	color = 0x0000FF;
 		// else if (data->map->map[p1->mapY][p1->mapX] == 4)
@@ -142,6 +153,7 @@ int		colors(t_data *data, t_player *p1)
 			color = GREEN;
 		return (color);
 }
+
 int	game_running(t_data *data)
 {
 	int x;
@@ -157,18 +169,18 @@ int	game_running(t_data *data)
 		while (data->game->p1->hit == 0)
 			jump_next_map_square(data, data->game->p1);
 		check_side(data->game->p1);
-		line_Height = (int)(WINDOW_HEIGHT / data->game->p1->perpWallDist);
-		draw_start = -line_Height / 2 + WINDOW_HEIGHT / 2;
+		line_Height = (int)(WINDOW_GAME / data->game->p1->perpWallDist);
+		draw_start = -line_Height / 2 + WINDOW_GAME / 2;
 		if(draw_start < 0)
 			draw_start = 0;
-		draw_end = line_Height / 2 + WINDOW_HEIGHT / 2;
-		if (draw_end >= WINDOW_HEIGHT)
-			draw_end = WINDOW_HEIGHT - 1;
-	//	verLine(data, x, )
+		draw_end = line_Height / 2 + WINDOW_GAME / 2;
+		if (draw_end >= WINDOW_GAME)
+			draw_end = WINDOW_GAME - 1;
 		verLine(data, x, draw_start, draw_end, colors(data, data->game->p1));
 		x++;
-		//printf()
 	}
+	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
+			data->game->overlay_happy->img, 0, 800);
 	return (0);
 }
 
@@ -185,10 +197,10 @@ void	init_val(t_player *p1)
 {
 	p1->posX = 0;
 	p1->posY = 0;
-	p1->dirX = -1;
+	p1->dirX = 0;
 	p1->dirY = 0;
 	p1->planeX = 0;
-	p1->planeY = 0.66;
+	p1->planeY = 0;
 	p1->moveSpeed = 0.3;
 	p1->rotSpeed = 0.15;
 	p1->cameraX = 0;
@@ -198,20 +210,22 @@ void	init_val(t_player *p1)
 	p1->deltaDistY = 0;
 	p1->hit = 0;
 	p1->rayDirX = 0;
-	p1->rayDirY = 0;	
+	p1->rayDirY = 0;
 }
 
 int	game_start(t_data *data)
 {
+	data->game->step_of_game = 3;
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
 	init_val(data->game->p1);
 	// size_map(data, &data->map->size_x, &data->map->size_y);
-	data->game->p1->posX = 5;
-	data->game->p1->posY = 6;
-	// mlx_loop_hook(data->game->mlx_ptr, &render, data);
+	data->game->p1->posX = data->game->peppa->x_peppa;
+	data->game->p1->posY = data->game->peppa->y_peppa;
+	set_view_of_peppa(data, data->game->p1);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, KeyRelease, KeyPressMask, &key_press, data);
+//	mlx_key_hook(data->game->win_ptr, &key_press, data);
 	// mlx_mouse_hook (data->game->win_ptr, &mouse_manager, data);
 	// render(data);
 	// mlx_hook(data->game->win_ptr, KeyRelease, KeyReleaseMask, &keys_main, data);
@@ -235,7 +249,10 @@ int	main(int argc, char **argv)
 		check_extension_cub(argv[1], data);
 		check_file(argv, data);
 		check_map(data, data->map);
+		assign_img_intro(data, data->game);
+		assign_img_overlay(data, data->game);
 		init_mlx_and_window(data, data->game, &data->win);
+		introduction_of_game(data, data->game);
 		game_start(data);
 		free_all(data);
 	}

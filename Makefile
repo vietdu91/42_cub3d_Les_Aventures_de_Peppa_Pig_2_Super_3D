@@ -17,8 +17,10 @@ SRCS		= 	main.c \
 				free/free_img.c \
 				free/free_structs.c \
 				free/free_utils.c \
+				game/introduction.c \
 				game/keys.c \
 				game/move.c \
+				images/assign_img.c \
 				images/map.c \
 				init/init_game.c \
 				init/init_img.c \
@@ -35,6 +37,7 @@ SRCS		= 	main.c \
 				parsing/collect_map_lines.c \
 				parsing/collect_walls.c \
 				raycasting/init.c \
+				raycasting/draw.c\
 				utils/recognize_elements.c \
 				utils/utils_digits.c \
 				utils/utils_dtab.c \
