@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 16:15:39 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 14:43:25 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,8 @@ int	game_running(t_data *data)
 		verLine(data, x, draw_start, draw_end, colors(data, data->game->p1));
 		x++;
 	}
+	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
+			data->game->overlay_happy->img, 0, 800);
 	return (0);
 }
 
@@ -233,6 +235,7 @@ void	init_val(t_player *p1)
 
 int	game_start(t_data *data)
 {
+	data->game->step_of_game = 3;
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
 	init_val(data->game->p1);
@@ -255,6 +258,7 @@ int	game_start(t_data *data)
 	printf("resukt = %f\n", data->game->p1->posX);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, KeyRelease, KeyPressMask, &key_press, data);
+//	mlx_key_hook(data->game->win_ptr, &key_press, data);
 	// mlx_mouse_hook (data->game->win_ptr, &mouse_manager, data);
 	// render(data);
 	// mlx_hook(data->game->win_ptr, KeyRelease, KeyReleaseMask, &keys_main, data);
@@ -278,7 +282,10 @@ int	main(int argc, char **argv)
 		check_extension_cub(argv[1], data);
 		check_file(argv, data);
 		check_map(data, data->map);
+		assign_img_intro(data, data->game);
+		assign_img_overlay(data, data->game);
 		init_mlx_and_window(data, data->game, &data->win);
+		introduction_of_game(data, data->game);
 		game_start(data);
 		free_all(data);
 	}

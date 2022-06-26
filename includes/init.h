@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 16:15:07 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:11:47 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,10 @@ typedef struct s_game
 {
 	void		*mlx_ptr;
 	void		*win_ptr;
+	int			step_of_game;
+	t_pic		*intro;
+	t_pic		*credit;
+	t_pic		*overlay_happy;
 	t_texture	*texture;
 	t_peppa		*peppa;
 	t_player	*p1;
@@ -177,7 +181,7 @@ typedef struct s_data
 /*			INIT_GAME.C			*/
 
 int		init_mlx_and_window(t_data *data, t_game *game, t_win *window);
-void	init_struct_game(t_game *game);
+void	init_struct_game(t_data *data, t_game *game);
 
 /*			INIT_IMG.C			*/
 

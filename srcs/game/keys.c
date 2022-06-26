@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 14:23:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:17:38 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	key_press(int key, t_data *data)
 	//printf("salut %d\n", key);
 	// printf("%f\n", data->game->p1->moveSpeed);
 //	printf("resukt = %f\n", data->game->p1->posX);
-	if (key == KEY_W)
+	if (key == KEY_W && data->game->step_of_game == 3)
 	{
 		printf("movespeed = %f\n", data->game->p1->moveSpeed);
 		printf("MAP[X = %d][Y = %d]\n", (int)(data->game->p1->posY), (int)(data->game->p1->posX + data->game->p1->dirX * data->game->p1->moveSpeed));
@@ -95,7 +95,7 @@ int	key_press(int key, t_data *data)
 			data->game->p1->posY += data->game->p1->dirY * data->game->p1->moveSpeed;
 	}
 	//move backwards if no wall behind you
-	else if (key == KEY_S)
+	else if (key == KEY_S && data->game->step_of_game == 3)
 	{
 		printf("resukt = %d\n", (int)(data->game->p1->posX + data->game->p1->dirX * data->game->p1->moveSpeed));
 		if (data->map->map[(int)(data->game->p1->posY)][(int)(data->game->p1->posX - data->game->p1->dirX * data->game->p1->moveSpeed)] != '1')
@@ -104,7 +104,7 @@ int	key_press(int key, t_data *data)
 			data->game->p1->posY -= data->game->p1->dirY * data->game->p1->moveSpeed;
 	}
 	//rotate to the right
-	else if (key == KEY_D)
+	else if (key == KEY_D && data->game->step_of_game == 3)
 	{
 		//both camera direction and camera plane must be rotated
 		data->game->p1->oldDirX = data->game->p1->dirX;
@@ -115,7 +115,7 @@ int	key_press(int key, t_data *data)
 		data->game->p1->planeY = data->game->p1->oldPlaneX * sin(-data->game->p1->rotSpeed) + data->game->p1->planeY * cos(-data->game->p1->rotSpeed);
 	}
 	//rotate to the left
-	else if (key == KEY_A)
+	else if (key == KEY_A && data->game->step_of_game == 3)
 	{
 		//both camera direction and camera plane must be rotated
 		data->game->p1->oldDirX = data->game->p1->dirX;
@@ -125,7 +125,11 @@ int	key_press(int key, t_data *data)
 		data->game->p1->planeX = data->game->p1->planeX * cos(data->game->p1->rotSpeed) - data->game->p1->planeY * sin(data->game->p1->rotSpeed);
 		data->game->p1->planeY = data->game->p1->oldPlaneX * sin(data->game->p1->rotSpeed) + data->game->p1->planeY * cos(data->game->p1->rotSpeed);
 	}
+	else if (key == ESP && data->game->step_of_game == 1)
+		credit_of_game(data, data->game);
+	else if (key == ESP && data->game->step_of_game == 2)
+		game_start(data);
 	else if (key == ESC)
-		exit(0);
+		free_all_and_exit(data);
 	return (0);
 }

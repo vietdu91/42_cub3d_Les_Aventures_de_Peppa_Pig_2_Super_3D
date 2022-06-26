@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:40:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:49:32 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 16:11:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ int	check_first_and_last_letters_of_line(t_data *data, char **map)
 	int	y;
 	int	x;
 
-	y = 0;
-	while (map[y])
+	y = -1;
+	while (map[++y])
 	{
 		x = ft_strlen(map[y]);
 		if (x > 0)
@@ -108,17 +108,15 @@ int	check_first_and_last_letters_of_line(t_data *data, char **map)
 			x--;
 		if (map[y][x] != '1' && !is_space(map[y][x]) && map[y][x] != '\0')
 			print_error_and_exit(ERR_MAP_CLOSE, data);
-		y++;
 	}
-	y = 0;
-	while (map[y])
+	y = -1;
+	while (map[++y])
 	{
 		x = 0;
 		while (is_space(map[y][x]))
 			x++;
 		if (map[y][x] != '1' && !is_space(map[y][x]) && map[y][x] != '\0')
 			print_error_and_exit(ERR_MAP_CLOSE, data);
-		y++;
 	}
 	return (0);
 }

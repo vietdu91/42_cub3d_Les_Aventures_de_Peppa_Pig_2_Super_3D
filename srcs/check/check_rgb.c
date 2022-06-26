@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 11:12:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 11:45:32 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:25:20 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@ int	check_color(int n)
 		return (1);
 	return (0);
 }
-
-// char	convert_to_hex(int n, char *base)
-// {
-// 	char	res;
-
-// 	res = base[n % 16];
-// 	return (res);
-// }
 
 int		ft_rgb_to_hex(t_data *data, int r, int g, int b)
 {

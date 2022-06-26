@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 12:34:23 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/26 15:13:57 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,19 @@ void	free_maps(t_map *map)
 		free(map);
 }
 
+void	free_pics(t_game *game, t_pic *pic)
+{
+	if (pic->img)
+		mlx_destroy_image(game->mlx_ptr, pic->img);
+	if (pic)
+		free(pic);
+}
+
 void	free_game_and_mlx(t_game *game)
 {
+	free_pics(game, game->overlay_happy);
+	free_pics(game, game->intro);
+	free_pics(game, game->credit);
 	if (game->win_ptr)
 		mlx_destroy_window(game->mlx_ptr, game->win_ptr);
 	if (game->mlx_ptr)
