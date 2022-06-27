@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 19:17:54 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/27 10:53:10 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,14 @@ int	key_press(int key, t_data *data)
 		w_key(data);
 	else if (key == KEY_S && data->game->step_of_game == 3)
 		s_key(data);
-	else if (key == KEY_D && data->game->step_of_game == 3)
-		d_key(data);
 	else if (key == KEY_A && data->game->step_of_game == 3)
 		a_key(data);
+	else if (key == KEY_D && data->game->step_of_game == 3)
+		d_key(data);
+	else if (key == KEY_RIGHT && data->game->step_of_game == 3)
+		right_key(data);
+	else if (key == KEY_LEFT && data->game->step_of_game == 3)
+		left_key(data);
 	else if (key == ESP && data->game->step_of_game == 1)
 		credit_of_game(data, data->game);
 	else if (key == ESP && data->game->step_of_game == 2)

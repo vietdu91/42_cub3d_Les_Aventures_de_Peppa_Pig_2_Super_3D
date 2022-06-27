@@ -17,6 +17,7 @@ SRCS		= 	main.c \
 				free/free_img.c \
 				free/free_structs.c \
 				free/free_utils.c \
+				game/camera.c \
 				game/introduction.c \
 				game/keys.c \
 				game/move.c \

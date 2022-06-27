@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 20:42:09 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/27 15:10:48 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,7 +224,8 @@ int	game_start(t_data *data)
 	data->game->p1->posY = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
-	mlx_hook(data->game->win_ptr, KeyRelease, KeyPressMask, &key_press, data);
+	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
+	/////// J'ai retire KeyRelease dans la hook pour avoir plus de fluidite ///////
 //	mlx_key_hook(data->game->win_ptr, &key_press, data);
 	// mlx_mouse_hook (data->game->win_ptr, &mouse_manager, data);
 	// render(data);

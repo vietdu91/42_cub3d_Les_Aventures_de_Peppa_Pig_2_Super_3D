@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 15:13:28 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/27 15:47:40 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,41 @@ int	init_mlx_and_window(t_data *data, t_game *game, t_win *window)
 	return (0);
 }
 
-void	init_pics(t_data *data, t_game *game)
+void	init_overlays(t_data *data, t_game *game)
 {
 	game->overlay_happy = malloc(sizeof(t_pic));
+	init_pic(game->overlay_happy);
 	if (!game->overlay_happy)
 		print_error_and_exit(ERR_MALLOC, data);
-	init_pic(game->overlay_happy);
+	game->overlay_scared = malloc(sizeof(t_pic));
+	init_pic(game->overlay_scared);
+	if (!game->overlay_scared)
+		print_error_and_exit(ERR_MALLOC, data);
+	game->overlay_panic = malloc(sizeof(t_pic));
+	init_pic(game->overlay_panic);
+	if (!game->overlay_panic)
+		print_error_and_exit(ERR_MALLOC, data);
+}
+
+void	init_pics(t_data *data, t_game *game)
+{
 	game->intro = malloc(sizeof(t_pic));
+	init_pic(game->intro);
 	if (!game->intro)
 		print_error_and_exit(ERR_MALLOC, data);
-	init_pic(game->intro);
 	game->credit = malloc(sizeof(t_pic));
+	init_pic(game->credit);
 	if (!game->credit)
 		print_error_and_exit(ERR_MALLOC, data);
-	init_pic(game->credit);
+	game->game_over = malloc(sizeof(t_pic));
+	init_pic(game->game_over);
+	if (!game->game_over)
+		print_error_and_exit(ERR_MALLOC, data);
+	game->dylan_the_butcher = malloc(sizeof(t_pic));
+	init_pic(game->dylan_the_butcher);
+	if (!game->dylan_the_butcher)
+		print_error_and_exit(ERR_MALLOC, data);
+	init_overlays(data, data->game);
 }
 
 void	init_struct_game(t_data *data, t_game *game)
