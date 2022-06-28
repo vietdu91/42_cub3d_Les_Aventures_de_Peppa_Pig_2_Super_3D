@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 20:42:09 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/28 19:24:08 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,17 +81,13 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 		p1->mapY += p1->stepY;
 		p1->side = 1;
 	}
-	//Check if ray has hit a wall
-	// printf("MAPX : %d\n", p1->mapX);
-	// printf("posY : %f\n", p1->posY);
-	// printf("MAPY : %d\n", p1->mapY);
-
 	if (data->map->map[p1->mapY][p1->mapX] == '1')
 		p1->hit = 1;
 }
 
 void	check_side(t_player *p1)
 {
+	// printf("%d\n", p1->mapX);
 	if (p1->side == 0)
 		p1->perpWallDist = (p1->mapX - \
 		p1->posX + (1 - p1->stepX) / 2) / p1->rayDirX;

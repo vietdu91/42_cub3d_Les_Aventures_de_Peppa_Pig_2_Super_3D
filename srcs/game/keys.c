@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 19:17:54 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/28 19:31:57 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ int	angle_manager(int keysim, t_player *p1)
 
 int	key_press(int key, t_data *data)
 {
+	printf("X = %f\n", data->game->p1->posX);
+	printf("Y = %f\n", data->game->p1->posY);
 	if (key == KEY_W && data->game->step_of_game == 3)
 		w_key(data);
 	else if (key == KEY_S && data->game->step_of_game == 3)
