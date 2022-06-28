@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:47:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/28 13:47:11 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,30 @@ typedef struct s_peppa
 	int		y_peppa;
 }	t_peppa;
 
+typedef struct s_ray
+{
+	int				pos_x;
+	int				pos_y;
+	double			dir_x;
+	double			dir_y;
+	int				ext_x;
+	int				ext_y;
+	double			dist_from_x;
+	double			dist_from_y;
+	double			dist_to_x;
+	double			dist_to_y;
+	int				card;
+	double			wall_dist;
+	int				wall_height;
+	int				wall_start;
+	int				wall_end;
+	double			wall_coord;
+	int				text_x;
+	int				text_y;
+	double			text_pos;
+	double			text_step;
+}	t_ray;
+
 typedef struct s_player
 {
 	double	posX;
@@ -84,43 +108,6 @@ typedef struct s_player
 	double	dirY;
 	double	planeX;
 	double	planeY;
-	double	time;
-	double	oldtime;
-	// tuto youtube;
-	double	px;
-	double	py;
-	double	pdx;
-	double	pdy;
-	double	pa; // player angle;
-	double	rayDirX;
-	double	rayDirY;
-
-	//length of ray from current position to next x or y-side
-	double	sideDistX;
-	double	sideDistY;
-
-	//length of ray from one x or y-side to next x or y-side
-	double	deltaDistX;
-	double	deltaDistY;
-	double	perpWallDist;
-
-	//which box of the map we're in
-	int		mapX;
-	int		mapY;
-
-	//what direction to step in x or y-direction (either +1 or -1)
-	int 	stepX;
-	int 	stepY;
-	int		hit; //was there a wall hit?
-	int		side; // was a NS or a EW wall hit?
-
-	double	cameraX; //x-coordinate in camera space
-
-	double	rotSpeed;
-	double	moveSpeed;
-
-	double oldDirX;
-	double oldPlaneX;
 }	t_player;
 
 typedef struct s_game
