@@ -6,21 +6,12 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 19:21:50 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 21:56:08 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-// map to image
-
-// width * 4 ici 600 => 2400
-
-// line len == amount of bytes taken by one line our image 
-// image_width * (bpp / 8);
-// 
-// 2400 * 10  + (5 index la ligne * 4 (nbr pixel))
-// du coup len = len * 4 + (line * 4); 
 int	find_width(char **map)
 {
 	int	i;
@@ -40,6 +31,7 @@ int	find_width(char **map)
 	}
 	return (max);
 }
+
 int	size_map(t_data *data, int *x, int *y)
 {
 	int	len_max;
@@ -50,14 +42,10 @@ int	size_map(t_data *data, int *x, int *y)
 	*y = 200 / size_dtab(data->map->map);
 	draw_map(data, *x, *y);
 	direction = place_player(data, *x, *y);
-	// draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
-	// draw_right_vector(data);
-	// int n = 30;
-	// printf("%d degres = %f radians\n", n, to_radian(n));
 	return (0);
 }
 
-float to_radian(int degrees)
+float	to_radian(int degrees)
 {
 	return ((PI / 180) * degrees);
 }

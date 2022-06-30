@@ -22,6 +22,7 @@ SRCS		= 	main.c \
 				game/introduction.c \
 				game/keys.c \
 				game/move.c \
+				game/transformation.c \
 				images/assign_img.c \
 				images/map.c \
 				init/init_game.c \
@@ -40,6 +41,8 @@ SRCS		= 	main.c \
 				parsing/collect_walls.c \
 				raycasting/init.c \
 				raycasting/draw.c \
+				raycasting/raycasting.c \
+				raycasting/set_view.c \
 				raycasting/textures.c \
 				utils/recognize_elements.c \
 				utils/utils_digits.c \

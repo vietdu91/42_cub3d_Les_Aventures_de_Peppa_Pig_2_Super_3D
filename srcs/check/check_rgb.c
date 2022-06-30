@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 11:12:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 15:08:28 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 18:35:16 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	check_color(int n)
 	return (0);
 }
 
-int		ft_rgb_to_hex(t_data *data, int r, int g, int b)
+int	ft_rgb_to_hex(t_data *data, int r, int g, int b)
 {
 	int		hex;
 

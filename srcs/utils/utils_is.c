@@ -6,13 +6,13 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 12:48:59 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:01:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 18:34:25 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
 
-int is_good_value(char c)
+int	is_good_value(char c)
 {
 	int			a;
 	const char	*str = ACCEPTED_VALUES;
@@ -26,7 +26,7 @@ int is_good_value(char c)
 	return (0);
 }
 
-int is_good_value_and_walls(char c)
+int	is_good_value_and_walls(char c)
 {
 	int			a;
 	const char	*str = ACCEPTED_VALUES_AND_WALLS;

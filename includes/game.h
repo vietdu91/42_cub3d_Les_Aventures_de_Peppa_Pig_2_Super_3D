@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:36:52 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 19:36:23 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@
 #  define ESC 53
 # endif
 
-int	to_the_house_of_peppa(t_data *data);
-int	to_the_house_of_butcher(t_data *data);
+int		to_the_house_of_peppa(t_data *data);
+int		to_the_house_of_butcher(t_data *data);
 void	img_pix_put(t_img *img, int x, int y, int color);
 int		game_start(t_data *data);
 
@@ -84,4 +84,10 @@ void	a_key(t_data *data);
 void	d_key(t_data *data);
 void	right_key(t_data *data);
 void	left_key(t_data *data);
+
+/*			TRANSFORMATION.C		*/
+
+int		to_the_house_of_peppa(t_data *data);
+int		to_the_house_of_butcher(t_data *data);
+
 #endif

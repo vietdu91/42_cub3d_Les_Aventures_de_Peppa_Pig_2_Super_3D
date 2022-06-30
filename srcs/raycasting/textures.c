@@ -6,13 +6,13 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 16:27:16 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 19:35:18 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-int		rgb_to_hex_text(int red, int green, int blue)
+int	rgb_to_hex_text(int red, int green, int blue)
 {
 	int	color;
 
@@ -39,7 +39,8 @@ int	get_text_rgb(char *addr, t_data *data, int add, int y)
 
 	rgb = addr[(int)(data->game->p1->textX * T_WIDTH) * \
 		(data->game->texture->wall_no->bpp >> 3) + add + \
-		(int)((y - data->game->p1->textStart * 1.0)	/ data->game->p1->lineHeight * T_HEIGHT) * \
+		(int)((y - data->game->p1->textStart * 1.0)	/ \
+		data->game->p1->lineHeight * T_HEIGHT) * \
 		data->game->texture->wall_no->line_len];
 	return (rgb);
 }
