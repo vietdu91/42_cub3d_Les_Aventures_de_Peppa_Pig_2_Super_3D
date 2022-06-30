@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:29:27 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:42:49 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,8 +147,12 @@ int	game_running(t_data *data)
 		verLine(data, x, draw_start, draw_end, colors(data, data->game->p1));
 		x++;
 	}
-	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
-			data->game->overlay_happy->img, 0, 800);
+	if (data->game->good_or_bad == true)
+		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
+				data->game->overlay_happy->img, 0, 800);
+	else
+		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
+				data->game->overlay_scared->img, 0, 800);
 	return (0);
 }
 
@@ -160,9 +164,21 @@ int loop(t_data *data)
 	return (0);
 }
 
+int	to_the_house_of_peppa(t_data *data)
+{
+	data->game->good_or_bad = true;
+	create_img_of_walls(data, data->map->walls, data->game->texture);
+	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
+	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
+	mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);
+	mlx_loop(data->game->mlx_ptr);
+	return(0);
+}
+
 int	to_the_house_of_butcher(t_data *data)
 {
 	data->game->good_or_bad = false;
+	data->game->step_of_game = 4;
 	create_img_of_walls(data, data->map->walls, data->game->texture);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);

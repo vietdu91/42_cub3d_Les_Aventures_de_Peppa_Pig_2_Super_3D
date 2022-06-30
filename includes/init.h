@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 16:33:44 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:40:41 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 # define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
-# define T_WIDTH 150
-# define T_HEIGHT 150
+# define T_WIDTH 175
+# define T_HEIGHT 175
 # define FOV 60
 
 enum	e_side
