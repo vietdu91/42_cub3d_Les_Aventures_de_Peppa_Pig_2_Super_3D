@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:10:05 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:29:27 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,6 @@ int	game_running(t_data *data)
 	int	draw_end;
 
 	x = 0;
-	create_img_of_walls(data, data->map->walls, data->game->texture);
 	while (x < WINDOW_WIDTH)
 	{
 		reset_values(data->game->p1, x);
@@ -164,6 +163,7 @@ int loop(t_data *data)
 int	to_the_house_of_butcher(t_data *data)
 {
 	data->game->good_or_bad = false;
+	create_img_of_walls(data, data->map->walls, data->game->texture);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
 	mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);
@@ -180,6 +180,7 @@ int	game_start(t_data *data)
 	data->game->p1->posX = data->game->peppa->x_peppa;
 	data->game->p1->posY = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
+	create_img_of_walls(data, data->map->walls, data->game->texture);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
 	mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);

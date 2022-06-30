@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:24:31 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:26:32 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 	{
 		if (walls->path_no)
 			put_img_wall_to_mlx(data, walls->path_no, img->wall_no);
-		printf("LOL 1 : %p\n", walls->path_no);
+		printf("LOL 1 : %p\n", img->wall_no->mlx_img);
 		if (walls->path_so)
 			put_img_wall_to_mlx(data, walls->path_so, img->wall_so);
 		if (walls->path_we)
@@ -74,12 +74,15 @@ int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 	}
 	else
 	{
+		printf("LOL 2 : %p\n", img->wall_no->mlx_img);
 		mlx_destroy_image(data->game->mlx_ptr, img->wall_no->mlx_img);
 		mlx_destroy_image(data->game->mlx_ptr, img->wall_so->mlx_img);
 		mlx_destroy_image(data->game->mlx_ptr, img->wall_we->mlx_img);
 		mlx_destroy_image(data->game->mlx_ptr, img->wall_ea->mlx_img);
+		printf("LOL 3 : %p\n", img->wall_no->mlx_img);
 		if (walls->path_no)
 			put_img_wall_to_mlx(data, BUTCHER_NO, img->wall_no);
+		printf("LOL 4 : %p\n", img->wall_no->mlx_img);
 		if (walls->path_so)
 			put_img_wall_to_mlx(data, BUTCHER_SO, img->wall_so);
 		if (walls->path_we)
