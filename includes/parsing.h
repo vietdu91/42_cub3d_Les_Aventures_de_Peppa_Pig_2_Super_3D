@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:46:55 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:40:22 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define ACCEPTED_VALUES "0WSEN"
 # define ACCEPTED_VALUES_AND_WALLS " 01WSEN"
 # define POSITION "WSEN"
+# define BIN "01"
 
 /*			COLLECT_CELLING_FLOOR.C			*/
 

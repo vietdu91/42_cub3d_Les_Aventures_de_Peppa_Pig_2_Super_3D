@@ -10,6 +10,7 @@ SRCS		= 	main.c \
 				check/check_file.c \
 				check/check_map.c \
 				check/check_order_in_file.c \
+				check/check_peppa.c \
 				check/check_rgb.c \
 				check/check_walls.c \
 				errors/print_error.c \

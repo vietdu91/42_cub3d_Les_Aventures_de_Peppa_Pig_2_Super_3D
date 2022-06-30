@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:10:48 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:36:21 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,27 +105,27 @@ int		set_view_of_peppa(t_data *data, t_player *p1)
 	if (data->game->peppa->pos_peppa == 'N')
 	{
 		p1->dirX = 0;
-		p1->dirY = 1;
+		p1->dirY = -1;
 		p1->planeX = -0.66;
 		p1->planeY = 0;
 	}
 	else if (data->game->peppa->pos_peppa == 'S')
 	{
-		p1->dirX = 1;
+		p1->dirX = 0;
+		p1->dirY = 1;
+		p1->planeX = -0.66;
+		p1->planeY = 0;
+	}
+	else if (data->game->peppa->pos_peppa == 'W')
+	{
+		p1->dirX = -1;
 		p1->dirY = 0;
 		p1->planeX = 0;
 		p1->planeY = -0.66;
 	}
-	else if (data->game->peppa->pos_peppa == 'W')
-	{
-		p1->dirX = 0;
-		p1->dirY = -1;
-		p1->planeX = -0.66;
-		p1->planeY = 0;
-	}
 	else if (data->game->peppa->pos_peppa == 'E')
 	{
-		p1->dirX = -1;
+		p1->dirX = 1;
 		p1->dirY = 0;
 		p1->planeX = 0;
 		p1->planeY = -0.66;

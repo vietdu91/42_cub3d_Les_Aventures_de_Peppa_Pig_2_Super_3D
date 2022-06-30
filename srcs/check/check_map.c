@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:40:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 16:11:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:42:15 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,33 +63,6 @@ int	check_letters_of_map(t_data *data, char **map)
 			if (!is_good_value_and_walls(map[y][x]))
 				print_error_and_exit(ERR_CHAR, data);
 	}
-	return (0);
-}
-
-int	check_position_of_peppa(t_data *data, t_peppa *peppa, char **map)
-{
-	int	y;
-	int	x;
-
-	y = 0;
-	while (map[++y])
-	{
-		x = 0;
-		while (map[y][++x])
-		{
-			if (is_position(map[y][x]))
-			{
-				peppa->check_peppa++;
-				if (peppa->check_peppa > 1)
-					print_error_and_exit(ERR_PEPPA_MUCH, data);
-				peppa->pos_peppa = map[y][x];
-				peppa->x_peppa = x;
-				peppa->y_peppa = y;
-			}
-		}
-	}
-	if (!peppa->check_peppa)
-		print_error_and_exit(ERR_NO_PEPPA, data);
 	return (0);
 }
 

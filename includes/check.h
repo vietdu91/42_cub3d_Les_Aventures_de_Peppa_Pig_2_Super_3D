@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 11:45:47 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:46:42 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ int		check_infos_in_first(char *line, int *count_info);
 int		check_line_is_empty(char *line);
 int		check_one_delimiter_line_of_map(char *line);
 int		check_good_order_in_file(t_data *data, char **file);
+
+/*			CHECK_PEPPA.C				*/
+
+int		check_peppa_is_not_in_void(t_data *data, t_peppa *peppa, char **map);
+int		check_position_of_peppa(t_data *data, t_peppa *peppa, char **map);
 
 /*			CHECK_RGB.C				*/
 

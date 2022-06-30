@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 12:48:59 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:43:55 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:41:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,18 @@ int	has_str_only_walls(char *str)
 			return (0);
 	}
 	return (1);
+}
+
+int	is_bin(char c)
+{
+	int			a;
+	const char	*str = BIN;
+
+	a = -1;
+	while (str[++a] != '\0')
+	{
+		if (str[a] == c)
+			return (1);
+	}
+	return (0);
 }
