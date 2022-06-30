@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:05:36 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 13:50:11 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 19:07:22 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	**save_map(t_data *data, t_map *map)
 	return (mappy);
 }
 
-int collect_map(t_data *data, t_map *map)
+int	collect_map(t_data *data, t_map *map)
 {
 	int	i;
-	int j;
-	int k;
+	int	j;
+	int	k;
 
 	collect_first_line_map(data, map, data->file);
 	collect_last_line_map(data, map, data->file);

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 10:34:49 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:50:11 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,11 @@
 # include "./parsing.h"
 # include <X11/keysym.h>
 # include "raycasting.h"
+
+/*			MAIN.C		*/
+
+int	game_start(t_data *data);
+int	game_running(t_data *data);
+int loop(t_data *data);
+
 #endif

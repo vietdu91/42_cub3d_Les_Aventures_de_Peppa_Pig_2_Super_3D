@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 18:47:49 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 11:36:52 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 18:32:08 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,29 +33,6 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		a = a * 10 + str[i++] - 48;
 	return (a * signe);
-}
-
-int	ft_atoi_hexa(const char *str)
-{
-	int	i;
-	int	a;
-//	int	signe;
-
-	i = 2;
-	a = 0;
-//	signe = 1;
-//	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-//		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
-//		i++;
-//	if (str[i] == '-' || str[i] == '+')
-//	{
-//		if (str[i] == '-')
-//			signe = -1;
-//		i++;
-//	}
-	while ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'F'))
-		a = a * 10 + str[i++] - 48;
-	return (a);
 }
 
 int	ft_nbrlen(int n)
