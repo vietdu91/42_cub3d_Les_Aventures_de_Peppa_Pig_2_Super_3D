@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:07:19 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 11:17:49 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # define INTRO "./textures/intro.xpm"
 # define CREDIT "./textures/credit.xpm"
+# define GAMEOVER "./textures/game_over.xpm"
+# define BUTCHER "./textures/butcher.xpm"
 # define OVERLAY_HAPPY "./textures/Peppa_is_happy.xpm"
-# define OVERLAY_SCARED "./textures/Peppa_is_scared.xpm"
+# define OVERLAY_SCARED "./textures/Peppa_has_peur.xpm"
+# define OVERLAY_PANIC "./textures/Peppa_is_panic.xpm"
 
 # ifdef __linux__
 #  define KEY_W 119

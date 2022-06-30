@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:47:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 12:25:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@
 # define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
+# define T_WIDTH 150
+# define T_HEIGHT 150
 # define FOV 60
+
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -34,6 +37,10 @@ typedef struct s_img
 	int		bpp;
 	int		line_len;
 	int		endian;
+	int		x;
+	int		y;
+	int		width;
+	int		height;
 }	t_img;
 
 typedef struct s_win
@@ -60,10 +67,10 @@ typedef struct s_pic
 
 typedef struct s_texture
 {
-	t_pic	*wall_no;
-	t_pic	*wall_so;
-	t_pic	*wall_we;
-	t_pic	*wall_ea;
+	int		*wall_no;
+	int		*wall_so;
+	int		*wall_we;
+	int		*wall_ea;
 	t_color	*floor;
 	t_color	*celling;
 }	t_texture;
@@ -179,7 +186,7 @@ typedef struct s_data
 	t_game		*game;
 	t_map		*map;
 	t_win		win;
-	t_img		*img;//potentiel tableau
+	t_img		*img;
 }	t_data;
 
 /*			INIT_GAME.C			*/
@@ -190,7 +197,10 @@ void	init_struct_game(t_data *data, t_game *game);
 
 /*			INIT_IMG.C			*/
 
-int		init_img(t_data *data);
+int		init_img(t_img *img);
+void	init_texture(t_data *data, t_texture *text);
+int		load_xpm(t_data *data, char *path, int *tex_buf, t_img *img);
+int		load_textures(t_data *data, t_walls *walls, t_texture *texture);
 
 /*			INIT_MAP.C			*/
 
@@ -204,7 +214,6 @@ void	init_struct_malloc(t_data *data);
 void	init_data(t_data *data);
 void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
-void	init_texture(t_texture *img);
 void	init_pic(t_pic *pic);
 void	init_color(t_color *color);
 
