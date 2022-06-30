@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 14:55:52 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:26:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		draw_right_vector(t_data *data);
 
 /*					DRAW.C					*/
 
+int		colors(t_data *data, t_player *p1);
 void	verLine(t_data *data, int x, int y1, int y2, int color);
 void	img_pix_put(t_img *img, int x, int y, int color);
 

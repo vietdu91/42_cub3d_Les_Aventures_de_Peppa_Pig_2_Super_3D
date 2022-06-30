@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 14:43:48 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:33:44 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ typedef struct s_player
 	double	cameraX; //x-coordinate in camera space
 
 	int		lineHeight;
-	
+
 	double	textStart;
 	double	textX;
 
@@ -146,6 +146,7 @@ typedef struct s_game
 	void		*mlx_ptr;
 	void		*win_ptr;
 	int			step_of_game;
+	bool		good_or_bad;
 	t_pic		*intro;
 	t_pic		*credit;
 	t_pic		*game_over;
@@ -209,6 +210,7 @@ void	init_struct_game(t_data *data, t_game *game);
 /*			INIT_IMG.C			*/
 
 int		init_img(t_img *img);
+void	init_val(t_player *p1);
 void	init_texture(t_data *data, t_texture *text);
 
 /*			INIT_MAP.C			*/

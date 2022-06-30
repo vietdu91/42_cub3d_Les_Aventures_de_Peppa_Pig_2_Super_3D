@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 13:56:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:24:31 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,34 @@ int	put_img_wall_to_mlx(t_data *data, char *path, t_img *img)
 
 int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 {
-	if (walls->path_no)
-		put_img_wall_to_mlx(data, walls->path_no, img->wall_no);
-	if (walls->path_so)
-		put_img_wall_to_mlx(data, walls->path_so, img->wall_so);
-	if (walls->path_we)
-		put_img_wall_to_mlx(data, walls->path_we, img->wall_we);
-	if (walls->path_ea)
-		put_img_wall_to_mlx(data, walls->path_ea, img->wall_ea);
+	if (data->game->good_or_bad == true)
+	{
+		if (walls->path_no)
+			put_img_wall_to_mlx(data, walls->path_no, img->wall_no);
+		printf("LOL 1 : %p\n", walls->path_no);
+		if (walls->path_so)
+			put_img_wall_to_mlx(data, walls->path_so, img->wall_so);
+		if (walls->path_we)
+			put_img_wall_to_mlx(data, walls->path_we, img->wall_we);
+		if (walls->path_ea)
+			put_img_wall_to_mlx(data, walls->path_ea, img->wall_ea);
+	}
+	else
+	{
+		mlx_destroy_image(data->game->mlx_ptr, img->wall_no->mlx_img);
+		mlx_destroy_image(data->game->mlx_ptr, img->wall_so->mlx_img);
+		mlx_destroy_image(data->game->mlx_ptr, img->wall_we->mlx_img);
+		mlx_destroy_image(data->game->mlx_ptr, img->wall_ea->mlx_img);
+		if (walls->path_no)
+			put_img_wall_to_mlx(data, BUTCHER_NO, img->wall_no);
+		if (walls->path_so)
+			put_img_wall_to_mlx(data, BUTCHER_SO, img->wall_so);
+		if (walls->path_we)
+			put_img_wall_to_mlx(data, BUTCHER_WE, img->wall_we);
+		if (walls->path_ea)
+			put_img_wall_to_mlx(data, BUTCHER_EA, img->wall_ea);
+		data->game->texture->floor->hexa = 0x800000;
+		data->game->texture->celling->hexa = 0x000000;
+	}
 	return (0);
 }

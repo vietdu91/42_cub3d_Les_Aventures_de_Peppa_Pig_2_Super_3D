@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:39:42 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 13:56:47 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:43:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,26 @@ int	init_img(t_img *img)
 	img->width = 0;
 	img->height = 0;
 	return (0);
+}
+
+void	init_val(t_player *p1)
+{
+	p1->posX = 0;
+	p1->posY = 0;
+	p1->dirX = 0;
+	p1->dirY = 0;
+	p1->planeX = 0;
+	p1->planeY = 0;
+	p1->moveSpeed = 0.3;
+	p1->rotSpeed = 0.15;
+	p1->cameraX = 0;
+	p1->mapX = 0;
+	p1->mapY = 0;
+	p1->deltaDistX = 0;
+	p1->deltaDistY = 0;
+	p1->hit = 0;
+	p1->rayDirX = 0;
+	p1->rayDirY = 0;
 }
 
 void	init_texture(t_data *data, t_texture *text)
@@ -42,7 +62,6 @@ void	init_texture(t_data *data, t_texture *text)
 	if (!text->wall_ea)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_img(text->wall_ea);
-	//////////////////////////////////////////////////
 	text->floor = malloc(sizeof(t_color));
 	if (!text->floor)
 		print_error_and_exit(ERR_MALLOC, data);
@@ -52,3 +71,8 @@ void	init_texture(t_data *data, t_texture *text)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_color(text->celling);
 }
+
+// void	init_cached_texture(t_data *data, t_texture *text)
+// {
+
+// }

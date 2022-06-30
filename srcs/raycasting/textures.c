@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 15:51:44 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:27:16 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,9 @@ int	display_wall(t_data *data, int x, int *y, int y2)
 	while (*y < y2)
 	{
 		r = get_text_rgb(addr, data, 2, *y);
-	//	printf("R : %d\n", r);
 		g = get_text_rgb(addr, data, 1, *y);
-	//	printf("G : %d\n", g);
 		b = get_text_rgb(addr, data, 0, *y);
-	//	printf("B : %d\n", b);
 		color = rgb_to_hex_text(r, g, b);
-	//	img_pix_put(data->game->texture->wall_no, x, *y, color);
 		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
 		(*y)++;
 	}

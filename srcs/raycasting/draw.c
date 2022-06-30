@@ -6,11 +6,28 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 15:03:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:28:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
+
+int		colors(t_data *data, t_player *p1)
+{
+		int	color;
+
+		if (data->map->map[p1->mapY][p1->mapX] == '1')
+			color = RED;
+		else if (data->map->map[p1->mapY][p1->mapX] == '0')
+			color = BLUE;
+		else if (is_player(data->map->map[p1->mapY][p1->mapX]) == OKAY)
+			return (0);
+		else
+			color = WHITE;
+		if (p1->side == 1)
+			color = GREEN;
+		return (color);
+}
 
 void	img_pix_put(t_img *img, int x, int y, int color)
 {

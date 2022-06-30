@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 10:53:10 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:34:44 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ int	key_press(int key, t_data *data)
 		a_key(data);
 	else if (key == KEY_D && data->game->step_of_game == 3)
 		d_key(data);
+	else if (key == KEY_P && data->game->step_of_game == 3 && data->game->good_or_bad == true)
+		to_the_house_of_butcher(data);
 	else if (key == KEY_RIGHT && data->game->step_of_game == 3)
 		right_key(data);
 	else if (key == KEY_LEFT && data->game->step_of_game == 3)

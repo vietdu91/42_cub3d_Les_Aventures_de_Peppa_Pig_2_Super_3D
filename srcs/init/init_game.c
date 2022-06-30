@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 13:33:45 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:34:02 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	init_struct_game(t_data *data, t_game *game)
 	game->mlx_ptr = NULL;
 	game->win_ptr = NULL;
 	game->step_of_game = 0;
+	game->good_or_bad = true;
 	init_pics(data, game);
 	init_texture(data, game->texture);
 	init_struct_peppa(game->peppa);

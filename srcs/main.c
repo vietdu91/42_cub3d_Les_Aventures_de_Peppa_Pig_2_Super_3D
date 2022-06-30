@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 14:54:46 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:10:05 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	step_manager(t_player *p1)
 
 void	jump_next_map_square(t_data *data, t_player *p1)
 {
-	//jump to next map square, OR in x-direction, OR in y-direction
 	while (p1->hit == 0)
 	{
 		if (p1->sideDistX < p1->sideDistY)
@@ -123,27 +122,6 @@ int		set_view_of_peppa(t_data *data, t_player *p1)
 	return (0);
 }
 
-int		colors(t_data *data, t_player *p1)
-{
-		int	color;
-	//	printf("%c\n", data->map->map[p1->mapY][p1->mapX]);
-		if (data->map->map[p1->mapY][p1->mapX] == '1')
-			color = RED;
-		else if (data->map->map[p1->mapY][p1->mapX] == '0')
-			color = BLUE;
-		else if (is_player(data->map->map[p1->mapY][p1->mapX]) == OKAY)
-			return (0);
-		// else if (data->map->map[p1->mapY][p1->mapX] == 3)
-		// 	color = 0x0000FF;
-		// else if (data->map->map[p1->mapY][p1->mapX] == 4)
-		// 	color = 0xFFFFFF;
-		else
-			color = WHITE;
-		if (p1->side == 1)
-			color = GREEN;
-		return (color);
-}
-
 int	game_running(t_data *data)
 {
 	int x;
@@ -152,6 +130,7 @@ int	game_running(t_data *data)
 	int	draw_end;
 
 	x = 0;
+	create_img_of_walls(data, data->map->walls, data->game->texture);
 	while (x < WINDOW_WIDTH)
 	{
 		reset_values(data->game->p1, x);
@@ -180,27 +159,16 @@ int loop(t_data *data)
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
 			data->img->mlx_img, 0, 0);
 	return (0);
-	// mlx_put_image_to_window(info->mlx, info->win, &info->img, 0, 0);
 }
 
-void	init_val(t_player *p1)
+int	to_the_house_of_butcher(t_data *data)
 {
-	p1->posX = 0;
-	p1->posY = 0;
-	p1->dirX = 0;
-	p1->dirY = 0;
-	p1->planeX = 0;
-	p1->planeY = 0;
-	p1->moveSpeed = 0.3;
-	p1->rotSpeed = 0.15;
-	p1->cameraX = 0;
-	p1->mapX = 0;
-	p1->mapY = 0;
-	p1->deltaDistX = 0;
-	p1->deltaDistY = 0;
-	p1->hit = 0;
-	p1->rayDirX = 0;
-	p1->rayDirY = 0;
+	data->game->good_or_bad = false;
+	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
+	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
+	mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);
+	mlx_loop(data->game->mlx_ptr);
+	return(0);
 }
 
 int	game_start(t_data *data)
@@ -209,18 +177,11 @@ int	game_start(t_data *data)
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
 	init_val(data->game->p1);
-	// size_map(data, &data->map->size_x, &data->map->size_y);
 	data->game->p1->posX = data->game->peppa->x_peppa;
 	data->game->p1->posY = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
-	/////// J'ai retire KeyRelease dans la hook pour avoir plus de fluidite ///////
-//	mlx_key_hook(data->game->win_ptr, &key_press, data);
-	// mlx_mouse_hook (data->game->win_ptr, &mouse_manager, data);
-	// render(data);
-	// mlx_hook(data->game->win_ptr, KeyRelease, KeyReleaseMask, &keys_main, data);
-	// mlx_hook(data->game->win_ptr, KeyPress, KeyPressMask, &angle_manager, data->game->p1);
 	mlx_hook(data->game->win_ptr, 33, 131072, &free_all_and_exit, data);
 	mlx_loop(data->game->mlx_ptr);
 	return (0);
