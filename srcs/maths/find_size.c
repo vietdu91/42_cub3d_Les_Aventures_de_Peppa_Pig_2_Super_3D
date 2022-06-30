@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/23 14:18:06 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 19:21:50 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ int	size_map(t_data *data, int *x, int *y)
 	int	direction;
 
 	len_max = find_width(data->map->map);
-	*x = MAP_WIDTH / len_max;
-	*y = MAP_HEIGHT / size_dtab(data->map->map);
-	// draw_map(data, *x, *y);
+	*x = 300 / len_max;
+	*y = 200 / size_dtab(data->map->map);
+	draw_map(data, *x, *y);
 	direction = place_player(data, *x, *y);
 	// draw_first_vector(data, data->map->size_x, data->map->size_y, direction);
 	// draw_right_vector(data);

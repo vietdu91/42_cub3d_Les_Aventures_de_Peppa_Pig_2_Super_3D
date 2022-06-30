@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:34 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/28 19:57:29 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 17:53:47 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	left_key(t_data *data)
 {
-	printf("salut\n");
 	data->game->p1->oldDirX = data->game->p1->dirX;
 	data->game->p1->dirX = data->game->p1->dirX * cos(-data->game->p1->rotSpeed) - data->game->p1->dirY * sin(-data->game->p1->rotSpeed);
 	data->game->p1->dirY = data->game->p1->oldDirX * sin(-data->game->p1->rotSpeed) + data->game->p1->dirY * cos(-data->game->p1->rotSpeed);

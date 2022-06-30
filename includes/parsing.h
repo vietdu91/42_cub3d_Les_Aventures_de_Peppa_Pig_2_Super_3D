@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:48 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:46:55 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 11:52:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define ACCEPTED_VALUES "0WSEN"
 # define ACCEPTED_VALUES_AND_WALLS " 01WSEN"
 # define POSITION "WSEN"
+# define BIN "01"
 
 /*			COLLECT_CELLING_FLOOR.C			*/
 
@@ -46,7 +47,7 @@ int		collect_last_line_map(t_data *data, t_map *map, char **file);
 
 int		collect_walls(t_data *data, char **file);
 int		put_wall_in_structure(t_walls *walls, char **split, char *type);
-int		put_img_wall_to_mlx(t_data *data, char *path, t_pic *pic);
+int		put_img_wall_to_mlx(t_data *data, char *path, t_img *img);
 int		create_img_of_walls(t_data *data, t_walls *walls, t_texture *img);
 
 #endif

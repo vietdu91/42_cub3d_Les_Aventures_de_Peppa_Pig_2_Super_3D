@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:20:32 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/24 11:37:12 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 10:41:31 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int					is_space(char c);
 int					is_digit(char c);
 int					has_str_only_spaces(char *str);
 int					has_str_only_walls(char *str);
+int					is_bin(char c);
 
 /*			UTILS_MEM			*/
 

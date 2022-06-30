@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:47:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 18:55:09 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,18 @@
 # define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
+# define T_WIDTH 175
+# define T_HEIGHT 175
 # define FOV 60
+
+enum	e_side
+{
+	NO,
+	SO,
+	WE,
+	EA
+};
+
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -34,6 +45,8 @@ typedef struct s_img
 	int		bpp;
 	int		line_len;
 	int		endian;
+	int		width;
+	int		height;
 }	t_img;
 
 typedef struct s_win
@@ -60,10 +73,10 @@ typedef struct s_pic
 
 typedef struct s_texture
 {
-	t_pic	*wall_no;
-	t_pic	*wall_so;
-	t_pic	*wall_we;
-	t_pic	*wall_ea;
+	t_img	*wall_no;
+	t_img	*wall_so;
+	t_img	*wall_we;
+	t_img	*wall_ea;
 	t_color	*floor;
 	t_color	*celling;
 }	t_texture;
@@ -116,6 +129,11 @@ typedef struct s_player
 
 	double	cameraX; //x-coordinate in camera space
 
+	int		lineHeight;
+
+	double	textStart;
+	double	textX;
+
 	double	rotSpeed;
 	double	moveSpeed;
 
@@ -128,6 +146,7 @@ typedef struct s_game
 	void		*mlx_ptr;
 	void		*win_ptr;
 	int			step_of_game;
+	bool		good_or_bad;
 	t_pic		*intro;
 	t_pic		*credit;
 	t_pic		*game_over;
@@ -169,6 +188,7 @@ typedef struct s_map
 	int		size_y;
 	t_walls	*walls;
 	t_floor	*floor;
+	
 }	t_map;
 
 typedef struct s_data
@@ -179,7 +199,7 @@ typedef struct s_data
 	t_game		*game;
 	t_map		*map;
 	t_win		win;
-	t_img		*img;//potentiel tableau
+	t_img		*img;
 }	t_data;
 
 /*			INIT_GAME.C			*/
@@ -190,7 +210,9 @@ void	init_struct_game(t_data *data, t_game *game);
 
 /*			INIT_IMG.C			*/
 
-int		init_img(t_data *data);
+int		init_img(t_img *img);
+void	init_val(t_player *p1);
+void	init_texture(t_data *data, t_texture *text);
 
 /*			INIT_MAP.C			*/
 
@@ -204,7 +226,6 @@ void	init_struct_malloc(t_data *data);
 void	init_data(t_data *data);
 void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
-void	init_texture(t_texture *img);
 void	init_pic(t_pic *pic);
 void	init_color(t_color *color);
 
