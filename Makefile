@@ -39,7 +39,8 @@ SRCS		= 	main.c \
 				parsing/collect_map_lines.c \
 				parsing/collect_walls.c \
 				raycasting/init.c \
-				raycasting/draw.c\
+				raycasting/draw.c \
+				raycasting/textures.c \
 				utils/recognize_elements.c \
 				utils/utils_digits.c \
 				utils/utils_dtab.c \

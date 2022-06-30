@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 12:25:33 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 14:43:48 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@
 # define T_HEIGHT 150
 # define FOV 60
 
+enum	e_side
+{
+	NO,
+	SO,
+	WE,
+	EA
+};
+
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -37,8 +45,6 @@ typedef struct s_img
 	int		bpp;
 	int		line_len;
 	int		endian;
-	int		x;
-	int		y;
 	int		width;
 	int		height;
 }	t_img;
@@ -67,10 +73,10 @@ typedef struct s_pic
 
 typedef struct s_texture
 {
-	int		*wall_no;
-	int		*wall_so;
-	int		*wall_we;
-	int		*wall_ea;
+	t_img	*wall_no;
+	t_img	*wall_so;
+	t_img	*wall_we;
+	t_img	*wall_ea;
 	t_color	*floor;
 	t_color	*celling;
 }	t_texture;
@@ -122,6 +128,11 @@ typedef struct s_player
 	int		side; // was a NS or a EW wall hit?
 
 	double	cameraX; //x-coordinate in camera space
+
+	int		lineHeight;
+	
+	double	textStart;
+	double	textX;
 
 	double	rotSpeed;
 	double	moveSpeed;
@@ -199,8 +210,6 @@ void	init_struct_game(t_data *data, t_game *game);
 
 int		init_img(t_img *img);
 void	init_texture(t_data *data, t_texture *text);
-int		load_xpm(t_data *data, char *path, int *tex_buf, t_img *img);
-int		load_textures(t_data *data, t_walls *walls, t_texture *texture);
 
 /*			INIT_MAP.C			*/
 

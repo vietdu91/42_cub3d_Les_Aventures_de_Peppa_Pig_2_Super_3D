@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycasting.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/26 20:19:02 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/30 14:55:52 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@ int		draw_first_vector(t_data *data, int size_x, int size_y, int direction);
 int		draw_right_vector(t_data *data);
 
 /*					DRAW.C					*/
+
 void	verLine(t_data *data, int x, int y1, int y2, int color);
+void	img_pix_put(t_img *img, int x, int y, int color);
+
+/*				TEXTURES.C				*/
+
+char	*set_wall_direction(t_texture *text, t_player *peppa);
+int		get_text_rgb(char *addr, t_data *data, int add, int y);
+int		display_wall(t_data *data, int x, int *y, int y2);
 
 #endif

@@ -6,29 +6,11 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 12:26:25 by emtran           ###   ########.fr       */
+/*   Updated: 2022/06/30 14:54:46 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
-
-void	img_pix_put(t_img *img, int x, int y, int color)
-{
-	void    *pixel;
-	int		i;
-
-	i = img->bpp - 8;
-    pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
-	*(unsigned int*)pixel = color;
-	// while (i >= 0)
-	// {
-	// 	if (img->endian != 0)
-	// 		*pixel++ = (color >> i) & 0xFF;
-	// 	else
-	// 		*pixel++ = (color >> (img->bpp - 8 - i)) & 0xFF;
-	// 	i -= 8;
-	// }
-}
 
 void	reset_values(t_player *p1, int x)
 {
@@ -40,6 +22,9 @@ void	reset_values(t_player *p1, int x)
 	p1->deltaDistX = fabs(1 / p1->rayDirX);
 	p1->deltaDistY = fabs(1 / p1->rayDirY);
 	p1->hit = 0;
+	p1->textX = 0;
+	p1->textStart = 0;
+	p1->lineHeight = 0;
 }
 
 void	step_manager(t_player *p1)
@@ -69,35 +54,40 @@ void	step_manager(t_player *p1)
 void	jump_next_map_square(t_data *data, t_player *p1)
 {
 	//jump to next map square, OR in x-direction, OR in y-direction
-	if (p1->sideDistX < p1->sideDistY)
+	while (p1->hit == 0)
 	{
-		p1->sideDistX += p1->deltaDistX;
-		p1->mapX += p1->stepX;
-		p1->side = 0;
+		if (p1->sideDistX < p1->sideDistY)
+		{
+			p1->sideDistX += p1->deltaDistX;
+			p1->mapX += p1->stepX;
+			if (p1->rayDirX > 0)
+				p1->side = EA;
+			else
+				p1->side = WE;
+		}
+		else
+		{
+			p1->sideDistY += p1->deltaDistY;
+			p1->mapY += p1->stepY;
+			p1->side = 1;
+			if (p1->rayDirY > 0)
+				p1->side = SO;
+			else
+				p1->side = NO;
+		}
+		if (data->map->map[p1->mapY][p1->mapX] == '1')
+			p1->hit = 1;
 	}
-	else
-	{
-		p1->sideDistY += p1->deltaDistY;
-		p1->mapY += p1->stepY;
-		p1->side = 1;
-	}
-	//Check if ray has hit a wall
-	// printf("MAPX : %d\n", p1->mapX);
-	// printf("posY : %f\n", p1->posY);
-	// printf("MAPY : %d\n", p1->mapY);
-
-	if (data->map->map[p1->mapY][p1->mapX] == '1')
-		p1->hit = 1;
 }
 
 void	check_side(t_player *p1)
 {
-	if (p1->side == 0)
+	if (p1->side == EA || p1->side == WE)
 		p1->perpWallDist = (p1->mapX - \
 		p1->posX + (1 - p1->stepX) / 2) / p1->rayDirX;
 	else
-		p1->perpWallDist = (p1->mapY - p1->posY + (1 - p1->stepY) / 2) /\
-		p1->rayDirY;
+		p1->perpWallDist = (p1->mapY - p1->posY + (1 - p1->stepY) / 2) / p1->rayDirY;
+	p1->lineHeight = (int)(WINDOW_HEIGHT / p1->perpWallDist);
 }
 
 int		set_view_of_peppa(t_data *data, t_player *p1)
@@ -222,7 +212,6 @@ int	game_start(t_data *data)
 	// size_map(data, &data->map->size_x, &data->map->size_y);
 	data->game->p1->posX = data->game->peppa->x_peppa;
 	data->game->p1->posY = data->game->peppa->y_peppa;
-	load_textures(data, data->map->walls, data->game->texture);
 	set_view_of_peppa(data, data->game->p1);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);
 	mlx_hook(data->game->win_ptr, 0, KeyPressMask, &key_press, data);
