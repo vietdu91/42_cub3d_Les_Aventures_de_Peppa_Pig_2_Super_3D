@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 17:47:53 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/06/27 15:07:19 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,18 @@ int		angle_manager(int keysim, t_player *p1);
 int		key_press(int key, t_data *data);
 
 
+/*			CAMERA.C		*/
+
+void	right_key(t_data *data);
+void	left_key(t_data *data);
+
+
 /*			MOVE.C			*/
 
 void	w_key(t_data *data);
 void	s_key(t_data *data);
-void	d_key(t_data *data);
 void	a_key(t_data *data);
+void	d_key(t_data *data);
+void	right_key(t_data *data);
+void	left_key(t_data *data);
 #endif
