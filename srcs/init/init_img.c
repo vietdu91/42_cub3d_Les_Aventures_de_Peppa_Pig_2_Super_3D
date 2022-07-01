@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:39:42 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 16:43:26 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:52:32 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,3 @@ void	init_texture(t_data *data, t_texture *text)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_color(text->celling);
 }
-
-// void	init_cached_texture(t_data *data, t_texture *text)
-// {
-
-// }

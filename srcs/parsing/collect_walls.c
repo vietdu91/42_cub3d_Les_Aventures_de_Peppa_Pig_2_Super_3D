@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:35:08 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:45:36 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,29 @@ int	put_img_wall_to_mlx(t_data *data, char *path, t_img *img)
 	return (0);
 }
 
+int	walls_butcher(t_data *data, t_walls *walls, t_texture *img)
+{
+	destroy_walls(data, img);
+	if (walls->path_no)
+		put_img_wall_to_mlx(data, BUTCHER_NO, img->wall_no);
+	if (walls->path_so)
+		put_img_wall_to_mlx(data, BUTCHER_SO, img->wall_so);
+	if (walls->path_we)
+		put_img_wall_to_mlx(data, BUTCHER_WE, img->wall_we);
+	if (walls->path_ea)
+		put_img_wall_to_mlx(data, BUTCHER_EA, img->wall_ea);
+	data->game->texture->floor->hexa = 0x800000;
+	data->game->texture->celling->hexa = 0x000000;
+	return (0);
+}
+
 int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 {
 	if (data->game->good_or_bad == true)
 	{
 		if (data->game->step_of_game == 4)
 		{
-			mlx_destroy_image(data->game->mlx_ptr, img->wall_no->mlx_img);
-			mlx_destroy_image(data->game->mlx_ptr, img->wall_so->mlx_img);
-			mlx_destroy_image(data->game->mlx_ptr, img->wall_we->mlx_img);
-			mlx_destroy_image(data->game->mlx_ptr, img->wall_ea->mlx_img);
+			destroy_walls(data, img);
 			data->game->texture->floor->hexa = ft_rgb_to_hex(data, img->floor->r, img->floor->g, img->floor->b);
 			data->game->texture->celling->hexa = ft_rgb_to_hex(data, img->celling->r, img->celling->g, img->celling->b);
 		}
@@ -81,21 +94,6 @@ int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 			put_img_wall_to_mlx(data, walls->path_ea, img->wall_ea);
 	}
 	else
-	{
-		mlx_destroy_image(data->game->mlx_ptr, img->wall_no->mlx_img);
-		mlx_destroy_image(data->game->mlx_ptr, img->wall_so->mlx_img);
-		mlx_destroy_image(data->game->mlx_ptr, img->wall_we->mlx_img);
-		mlx_destroy_image(data->game->mlx_ptr, img->wall_ea->mlx_img);
-		if (walls->path_no)
-			put_img_wall_to_mlx(data, BUTCHER_NO, img->wall_no);
-		if (walls->path_so)
-			put_img_wall_to_mlx(data, BUTCHER_SO, img->wall_so);
-		if (walls->path_we)
-			put_img_wall_to_mlx(data, BUTCHER_WE, img->wall_we);
-		if (walls->path_ea)
-			put_img_wall_to_mlx(data, BUTCHER_EA, img->wall_ea);
-		data->game->texture->floor->hexa = 0x800000;
-		data->game->texture->celling->hexa = 0x000000;
-	}
+		walls_butcher(data, walls, img);
 	return (0);
 }

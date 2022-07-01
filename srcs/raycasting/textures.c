@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 09:21:58 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 12:13:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int	get_text_rgb(char *addr, t_data *data, int add, int y)
 	rgb = addr[(int)(data->game->p1->textX * T_WIDTH) \
 		* (data->game->texture->wall_no->bpp >> 3) \
 		+ add + (int)((y - data->game->p1->textStart * 1.0) \
-		/ data->game->p1->lineHeight * T_HEIGHT) * data->game->texture->wall_no->line_len];
+		/ data->game->p1->lineHeight * T_HEIGHT) \
+		*data->game->texture->wall_no->line_len];
 	return (rgb);
 }
 

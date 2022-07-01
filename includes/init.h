@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 09:52:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 15:35:49 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # define GREEN 0x008000
 # define BLACK 0x000000
 # define BLUE 0xB0E0E6
+# define VIOLET 0xC014BC
 # define LOOK_LEFT 65361
 # define LOOK_RIGHT 65363
 # define WINDOW_WIDTH 1200
@@ -28,7 +29,11 @@
 # define MAP_HEIGHT 200
 # define T_WIDTH 150
 # define T_HEIGHT 150
+# define SPRITE_W 150
+# define SPRITE_H 150
 # define FOV 60
+
+# define NUM_SPRITES 1
 
 enum	e_side
 {
@@ -191,6 +196,36 @@ typedef struct s_map
 
 }	t_map;
 
+typedef struct s_butcher
+{
+	bool	butcher;
+}	t_butcher;
+
+typedef struct s_sprites
+{
+	double		x;
+	double		y;
+	int			texture;
+	u_int32_t 	buffer[WINDOW_GAME][WINDOW_WIDTH];
+	double		ZBuffer[WINDOW_WIDTH];
+	double		sprite_distance;
+	double		spritex;
+	double		spritey;
+	double		invdet;
+	double		transformx;
+	double		transformy;
+	int			spritescreenx;
+	int			sprite_height;
+	int			sprite_width;
+	int			draw_start_y;
+	int			draw_start_x;
+	int			draw_end_y;
+	int			draw_end_x;
+	int			stripe;
+	int			tex_x;
+	int			tex_y;
+}	t_sprites;
+
 typedef struct s_data
 {
 	char		**file;
@@ -200,6 +235,7 @@ typedef struct s_data
 	t_map		*map;
 	t_win		win;
 	t_img		*img;
+	t_sprites	*sprites;
 }	t_data;
 
 /*			INIT_GAME.C			*/

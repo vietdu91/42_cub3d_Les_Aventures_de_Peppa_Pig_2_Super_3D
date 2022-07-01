@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/01 10:21:17 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 16:03:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	assign_textx(t_player *p1)
 
 void	verline(t_data *data, int x, int y1, int y2)
 {
-	int	y;
+	int		y;
 
 	y = 0;
 	assign_textx(data->game->p1);

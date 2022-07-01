@@ -6,11 +6,19 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:55:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:17:27 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:41:25 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
+
+void	destroy_walls(t_data *data, t_texture *text)
+{
+	mlx_destroy_image(data->game->mlx_ptr, text->wall_no->mlx_img);
+	mlx_destroy_image(data->game->mlx_ptr, text->wall_so->mlx_img);
+	mlx_destroy_image(data->game->mlx_ptr, text->wall_we->mlx_img);
+	mlx_destroy_image(data->game->mlx_ptr, text->wall_ea->mlx_img);
+}
 
 void	free_img(t_game *game, t_img *img)
 {

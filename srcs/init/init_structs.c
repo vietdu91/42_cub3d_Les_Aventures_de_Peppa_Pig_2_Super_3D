@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 11:51:40 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 12:24:55 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,8 @@ t_data	*init_struct(t_data *data)
 	init_struct_game(data, data->game);
 	init_player(data->game->p1);
 	init_struct_map(data->map);
+	data->sprites = malloc(sizeof(t_sprites));
+	if (!data->sprites)
+		print_error_and_exit(ERR_MALLOC, data);
 	return (data);
 }

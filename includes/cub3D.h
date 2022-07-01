@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 17:50:11 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:25:40 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@
 # include <fcntl.h>
 # include <math.h>
 # include <stdbool.h>
+# include <stdint.h>
 # include "../mlx/mlx.h"
 # include "./init.h"
 # include "./game.h"
+# include "./sprites.h"
 # include "./free.h"
 # include "./images.h"
 # include "./utils.h"

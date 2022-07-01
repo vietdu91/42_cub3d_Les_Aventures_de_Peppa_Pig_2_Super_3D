@@ -6,11 +6,17 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/27 15:43:17 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:28:36 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
+
+void	free_sprites(t_sprites *sprites)
+{
+	if (sprites)
+		free(sprites);
+}
 
 void	free_maps(t_map *map)
 {

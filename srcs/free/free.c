@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 14:39:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/26 14:43:55 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:28:05 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	free_all(t_data *data)
 
 int	free_all_and_exit(t_data *data)
 {
+	free_sprites(data->sprites);
 	free_maps(data->map);
 	free_texture(data->game, data->game->texture);
 	free_img(data->game, data->img);

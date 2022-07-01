@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collect_celling_floor.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:06:26 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/10 21:53:06 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:38:48 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	check_collect_rgb_is_good(t_data *data, char **split)
 	while (split[i])
 	{
 		j = 0;
-		while(split[i][j])
+		while (split[i][j])
 		{
 			if (!is_digit(split[i][j]))
 			{

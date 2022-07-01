@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:17:38 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 17:05:25 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:39:05 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	check_line_is_infos(char *line)
 	return (1);
 }
 
-int collect_first_line_map(t_data *data, t_map *map, char **file)
+int	collect_first_line_map(t_data *data, t_map *map, char **file)
 {
 	int	a;
 
@@ -73,7 +73,7 @@ int collect_first_line_map(t_data *data, t_map *map, char **file)
 	return (0);
 }
 
-int collect_last_line_map(t_data *data, t_map *map, char **file)
+int	collect_last_line_map(t_data *data, t_map *map, char **file)
 {
 	int	a;
 
