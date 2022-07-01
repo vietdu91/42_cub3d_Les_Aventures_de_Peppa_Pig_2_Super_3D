@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 21:56:18 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/01 09:52:35 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 # define WINDOW_GAME 800
 # define MAP_WIDTH 400
 # define MAP_HEIGHT 200
-# define T_WIDTH 175
-# define T_HEIGHT 175
+# define T_WIDTH 150
+# define T_HEIGHT 150
 # define FOV 60
 
 enum	e_side
@@ -188,7 +188,7 @@ typedef struct s_map
 	int		size_y;
 	t_walls	*walls;
 	t_floor	*floor;
-	
+
 }	t_map;
 
 typedef struct s_data

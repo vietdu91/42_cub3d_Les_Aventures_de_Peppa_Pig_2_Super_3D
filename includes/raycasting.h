@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 19:19:05 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 10:02:38 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		draw_right_vector(t_data *data);
 
 int		colors(t_data *data, t_player *p1);
 void	img_pix_put(t_img *img, int x, int y, int color);
-void	assign_textx(t_player *p1, int x, int y);
+void	assign_textx(t_player *p1);
 void	verline(t_data *data, int x, int y1, int y2);
 
 /*				RAYCASTING.C			*/

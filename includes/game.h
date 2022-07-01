@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 19:36:23 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 10:09:46 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define OVERLAY_PANIC "./textures/Peppa_is_panic.xpm"
 
 # define BUTCHER_NO "./textures/paint_blood_wall.xpm"
-# define BUTCHER_SO "./textures/no_window_wall.xpm"
+# define BUTCHER_SO "./textures/no_window_wall_2.xpm"
 # define BUTCHER_WE "./textures/bad_pig_wall.xpm"
 # define BUTCHER_EA "./textures/you_re_next_wall.xpm"
 

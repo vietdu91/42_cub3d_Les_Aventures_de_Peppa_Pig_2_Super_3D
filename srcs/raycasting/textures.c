@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 19:35:18 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 09:21:58 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,29 +37,26 @@ int	get_text_rgb(char *addr, t_data *data, int add, int y)
 {
 	int	rgb;
 
-	rgb = addr[(int)(data->game->p1->textX * T_WIDTH) * \
-		(data->game->texture->wall_no->bpp >> 3) + add + \
-		(int)((y - data->game->p1->textStart * 1.0)	/ \
-		data->game->p1->lineHeight * T_HEIGHT) * \
-		data->game->texture->wall_no->line_len];
+	rgb = addr[(int)(data->game->p1->textX * T_WIDTH) \
+		* (data->game->texture->wall_no->bpp >> 3) \
+		+ add + (int)((y - data->game->p1->textStart * 1.0) \
+		/ data->game->p1->lineHeight * T_HEIGHT) * data->game->texture->wall_no->line_len];
 	return (rgb);
 }
 
 int	display_wall(t_data *data, int x, int *y, int y2)
 {
 	int		color;
-	int		r;
-	int		g;
-	int		b;
+	int		rgb[3];
 	char	*addr;
 
 	addr = set_wall_direction(data->game->texture, data->game->p1);
 	while (*y < y2)
 	{
-		r = get_text_rgb(addr, data, 2, *y);
-		g = get_text_rgb(addr, data, 1, *y);
-		b = get_text_rgb(addr, data, 0, *y);
-		color = rgb_to_hex_text(r, g, b);
+		rgb[0] = get_text_rgb(addr, data, 2, *y);
+		rgb[1] = get_text_rgb(addr, data, 1, *y);
+		rgb[2] = get_text_rgb(addr, data, 0, *y);
+		color = rgb_to_hex_text(rgb[0], rgb[1], rgb[2]);
 		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
 		(*y)++;
 	}
