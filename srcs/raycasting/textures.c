@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 16:50:59 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:54:33 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,10 @@ int	display_wall(t_data *data, int x, int *y, int y2)
 		rgb[1] = get_text_rgb(addr, data, 1, *y);
 		rgb[2] = get_text_rgb(addr, data, 0, *y);
 		color = rgb_to_hex_text(rgb[0], rgb[1], rgb[2]);
+		rgb_to_hex_text(rgb[0], rgb[1], rgb[2]);
 		(void)x;
-		// img_pix_put(data->game->screen, x, *y, color);
-		//mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
+		img_pix_put(data->game->screen, x, *y, color);
+		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
 		(*y)++;
 	}
 	return (0);

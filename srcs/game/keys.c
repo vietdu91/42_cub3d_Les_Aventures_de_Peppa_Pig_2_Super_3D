@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/02 19:05:51 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:47:11 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	move_player(t_data *data)
 
 	x = 0;
 	y = 0;
-	draw_player(data,data->game->p1->posX, data->game->p1->posY, BLACK);
 	draw_player(data,data->game->p1->posX, data->game->p1->posY, RED);
 	draw_map(data, x, y);
 	return (0);
@@ -34,8 +33,9 @@ int	key_release_main(int keysym, void *data)
 
 int	key_press(int key, t_data *data)
 {
-	// move_player(data);
 	// printf("salut posx = %f posY = %f\n", data->game->p1->posX, data->game->p1->posY);
+	if (data->game->p1->posX && data->game->p1->posY)
+		draw_player(data,data->game->p1->posX, data->game->p1->posY, BLACK);
 	if (key == KEY_W && data->game->step_of_game >= 3)
 		w_key(data);
 	else if (key == KEY_S && data->game->step_of_game >= 3)
@@ -59,5 +59,6 @@ int	key_press(int key, t_data *data)
 	else if (key == ESC)
 		free_all_and_exit(data);
 	move_player(data);
+	// move_player(data);
 	return (0);
 }

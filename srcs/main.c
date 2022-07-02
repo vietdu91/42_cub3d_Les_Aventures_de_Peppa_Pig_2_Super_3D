@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/02 19:44:48 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:54:44 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ int	game_running(t_data *data)
 		draw_end = line_Height / 2 + WINDOW_GAME / 2;
 		if (draw_end >= WINDOW_GAME)
 			draw_end = WINDOW_GAME - 1;
-		//init_sprites_zbuff(x, data->sprites, data->game->p1);
+		// init_sprites_zbuff(x, data->sprites, data->game->p1);
 		verline(data, x, draw_start, draw_end);
 		x++;
 	}
 	//sprite_casting(data, data->sprites, data->game->p1);
-	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
+	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr, \
 		data->game->screen->mlx_img, 0, 0);
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
-		data->img->mlx_img, 725, 800);
+		data->img->mlx_img, 729, 819);
 	return (0);
 }
 
@@ -76,7 +76,7 @@ int	game_start(t_data *data)
 	data->game->p1->posX = data->game->peppa->x_peppa;
 	data->game->p1->posY = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
-	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 400, 200);
+	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 450, 163); // mini_map
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
 	size_map(data, &data->map->size_x, &data->map->size_y);
 	create_img_of_walls(data, data->map->walls, data->game->texture);

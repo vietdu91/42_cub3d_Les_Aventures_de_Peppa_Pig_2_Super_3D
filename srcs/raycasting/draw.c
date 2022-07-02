@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/02 18:57:03 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:55:28 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	colors(t_data *data, t_player *p1)
 void	img_pix_put(t_img *img, int x, int y, int color)
 {
 	void	*pixel;
-	int		i;
+	// int		i;
 
-	i = img->bpp - 8;
+	// i = img->bpp - 8;
 	pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
 	*(unsigned int *) pixel = color;
 }
@@ -61,7 +61,7 @@ void	verline(t_data *data, int x, int y1, int y2)
 	{
 		// printf("%d\n", y);
 		img_pix_put(data->game->screen, x, y, data->game->texture->celling->hexa);
-		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
+		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, 
 		// data->game->texture->celling->hexa);
 		y++;
 	}
@@ -70,7 +70,7 @@ void	verline(t_data *data, int x, int y1, int y2)
 	while (y < WINDOW_GAME)
 	{
 		img_pix_put(data->game->screen, x, y, data->game->texture->floor->hexa);	
-		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
+		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y,  
 		// data->game->texture->floor->hexa);
 		y++;
 	}
