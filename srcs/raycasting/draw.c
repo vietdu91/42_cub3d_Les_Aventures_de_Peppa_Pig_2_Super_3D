@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/01 16:03:26 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/02 18:57:03 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	assign_textx(t_player *p1)
 void	verline(t_data *data, int x, int y1, int y2)
 {
 	int		y;
-
+	
 	y = 0;
 	assign_textx(data->game->p1);
 	if (data->game->peppa->pos_peppa == 'N' || \
@@ -59,16 +59,19 @@ void	verline(t_data *data, int x, int y1, int y2)
 		x = WINDOW_WIDTH - x - 1;
 	while (y < y1)
 	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
-		data->game->texture->celling->hexa);
+		// printf("%d\n", y);
+		img_pix_put(data->game->screen, x, y, data->game->texture->celling->hexa);
+		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
+		// data->game->texture->celling->hexa);
 		y++;
 	}
 	data->game->p1->textStart = y1;
 	display_wall(data, x, &y, y2);
 	while (y < WINDOW_GAME)
 	{
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
-		data->game->texture->floor->hexa);
+		img_pix_put(data->game->screen, x, y, data->game->texture->floor->hexa);	
+		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y, \
+		// data->game->texture->floor->hexa);
 		y++;
 	}
 }

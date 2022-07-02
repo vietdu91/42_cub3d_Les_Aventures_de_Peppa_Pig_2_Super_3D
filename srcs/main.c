@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 16:07:12 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/02 19:44:48 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	game_running(t_data *data)
 	}
 	//sprite_casting(data, data->sprites, data->game->p1);
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
+		data->game->screen->mlx_img, 0, 0);
+	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
 		data->img->mlx_img, 725, 800);
 	return (0);
 }
@@ -58,12 +60,17 @@ int loop(t_data *data)
 int	game_start(t_data *data)
 {
 	// t_img	*mini_map;
+	
 	data->game->step_of_game = 3;
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
 		data->game->overlay_happy->img, 0, 800);
 
 	// mini_map = NULL;
 	// mini_map = malloc (sizeof(t_img));
+	// data->game->screen->mlx_img = NULL;
+	data->game->screen->mlx_img = mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_GAME);
+	data->game->screen->addr = mlx_get_data_addr(data->game->screen->mlx_img, \
+	&data->game->screen->bpp, &data->game->screen->line_len, &data->game->screen->endian);
 
 	init_val(data->game->p1);
 	data->game->p1->posX = data->game->peppa->x_peppa;
