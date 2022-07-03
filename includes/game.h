@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 10:09:46 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:20:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int		game_start(t_data *data);
 
 void	introduction_of_game(t_data *data, t_game *game);
 void	credit_of_game(t_data *data, t_game *game);
+void	death_of_peppa_pig(t_data *data, t_game *game);
 
 /*          KEYS.C          */
 int		keys_main(int key_code, t_data *data);

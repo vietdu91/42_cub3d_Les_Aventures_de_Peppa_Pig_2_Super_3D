@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_celling_floor.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:28:40 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/02 23:30:07 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:44:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int i)
 int	check_path_arg_color_is_good(t_data *data, char *line_file, char **split)
 {
 	int	len;
-	// int	i;
 
-	// i = 1;
 	len = ft_strlen(line_file);
 	if (line_file[len - 1] == ',')
 	{

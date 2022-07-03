@@ -6,13 +6,13 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 14:14:04 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:47:30 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
 
-void	init_struct_malloc(t_data *data)
+void	init_struct_malloc_game(t_data *data)
 {
 	data->game = malloc(sizeof(t_game));
 	if (!data->game)
@@ -26,6 +26,11 @@ void	init_struct_malloc(t_data *data)
 	data->game->p1 = malloc(sizeof(t_player));
 	if (!data->game->p1)
 		print_error_and_exit(ERR_MALLOC, data);
+}
+
+void	init_struct_malloc(t_data *data)
+{
+	init_struct_malloc_game(data);
 	data->map = malloc(sizeof(t_map));
 	if (!data->map)
 		print_error_and_exit(ERR_MALLOC, data);
@@ -43,6 +48,8 @@ void	init_struct_malloc(t_data *data)
 		print_error_and_exit(ERR_MALLOC, data);
 }
 
+
+
 void	init_data(t_data *data)
 {
 	data->file = NULL;
@@ -50,13 +57,6 @@ void	init_data(t_data *data)
 	data->max_len_file = 0;
 	data->win.win_width = 0;
 	data->win.win_height = 0;
-}
-
-void	init_struct_peppa(t_peppa *peppa)
-{
-	peppa->check_peppa = 0;
-	peppa->x_peppa = 0;
-	peppa->y_peppa = 0;
 }
 
 void	init_player(t_player *p1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verifications.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 17:34:35 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/16 16:54:46 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:43:50 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	wall_touched(t_data *data, int s_x, int s_y, int dir)
 	else if ((x) % s_x  == 0 && dir == KEY_D)
 		return (is_a_space_or_is_wall(data->map->map[y / s_y]\
 		[(x + 1) / s_x]));
-	else if ((y) % s_y == 0 && dir == KEY_S )
+	else if ((y) % s_y == 0 && dir == KEY_S)
 		return (is_a_space_or_is_wall \
 		(data->map->map[(y + 2) / s_y][x / s_x]));
 	else if ((y) % s_y == 0 && dir == KEY_W)
@@ -46,7 +46,7 @@ int	vector_has_touched(t_data *data, int s_x, int s_y, int dir)
 		(data->map->map[y / s_y][(x - 1) / s_x]));
 	else if ((x) % s_x  == 0 && dir == KEY_D)
 		return (is_a_space_or_is_wall(data->map->map[y / s_y][(x + 1) / s_x]));
-	else if ((y) % s_y == 0 && dir == KEY_S )
+	else if ((y) % s_y == 0 && dir == KEY_S)
 		return (is_a_space_or_is_wall \
 		(data->map->map[(y + 2) / s_y][x / s_x]));
 	else if ((y) % s_y == 0 && dir == KEY_W)

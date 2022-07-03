@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 12:45:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 18:58:27 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ int		set_view_of_peppa(t_data *data, t_player *p1);
 
 int		set_view_of_peppa(t_data *data, t_player *p1);
 int		set_view_of_peppa_suite(t_data *data, t_player *p1);
+
+/*				SPRITES_MOVE.C			*/
+
+int 	sprites_move_backward(t_data *data, t_player *p1);
+int 	sprites_move_forward(t_data *data, t_player *p1);
+int		sprites_move(t_data *data, int a, t_player *p1);
 
 /*				TEXTURES.C				*/
 

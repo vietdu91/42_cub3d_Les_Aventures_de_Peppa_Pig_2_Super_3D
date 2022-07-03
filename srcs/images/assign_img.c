@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 10:33:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 17:12:24 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:44:30 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,6 @@ void	assign_butcher(t_data *data, t_game *game, t_sprites *sprites)
 	put_img_wall_to_mlx(data, BUTCHER, game->dylan_the_butcher);
 	if (!game->dylan_the_butcher)
 		print_error_and_exit(ERR_MLC_IMG, data);
-// 	while (y < game->dylan_the_butcher->width)
-// 	{
-// 		x = 0;
-// 		while (x < game->dylan_the_butcher->height)
-// 		{
-// 			sprites->tex[SPRITE_H * y + x] = \
-// 			game->dylan_the_butcher->addr[SPRITE_H * y + x];
-// 			x++;
-// 		}
-// 		y++;
-// 	}
 	while (y < game->dylan_the_butcher->width)
 	{
 		x = 0;

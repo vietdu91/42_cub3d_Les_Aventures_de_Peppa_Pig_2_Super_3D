@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:51:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 12:10:34 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:46:41 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ void	init_pic(t_pic *pic)
 	pic->height = 0;
 }
 
+void	init_struct_peppa(t_peppa *peppa)
+{
+	peppa->check_peppa = 0;
+	peppa->x_peppa = 0;
+	peppa->y_peppa = 0;
+}
+
 void	init_color(t_color *color)
 {
 	color->path = NULL;
@@ -27,7 +34,6 @@ void	init_color(t_color *color)
 	color->g = 0;
 	color->b = 0;
 }
-
 
 void	cub_init_sprites(t_data *data, t_sprites *sprites)
 {
@@ -42,7 +48,6 @@ void	cub_init_sprites(t_data *data, t_sprites *sprites)
 		sprites->tex[j] = 0;
 		j++;
 	}
-	
 }
 
 void	init_sprites(t_data *data, t_sprites *sprites)

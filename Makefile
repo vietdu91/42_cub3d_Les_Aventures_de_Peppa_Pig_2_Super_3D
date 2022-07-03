@@ -43,8 +43,11 @@ SRCS		= 	main.c \
 				raycasting/draw.c \
 				raycasting/raycasting.c \
 				raycasting/set_view.c \
-				raycasting/sprites.c \
 				raycasting/textures.c \
+				sprites/sprites_draw.c \
+				sprites/sprites_move.c \
+				sprites/sprites_place.c \
+				sprites/sprites.c \
 				utils/recognize_elements.c \
 				utils/utils_digits.c \
 				utils/utils_dtab.c \

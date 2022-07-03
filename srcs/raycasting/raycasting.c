@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 17:59:55 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 09:52:04 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 18:23:15 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,8 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 void	check_side(t_player *p1)
 {
 	if (p1->side == EA || p1->side == WE)
-		p1->perpWallDist = (p1->mapX - \
-		p1->posX + (1 - p1->stepX) / 2) / p1->rayDirX;
+		p1->perpWallDist = p1->sideDistX - p1->deltaDistX;
 	else
-		p1->perpWallDist = (p1->mapY - p1->posY + \
-		(1 - p1->stepY) / 2) / p1->rayDirY;
+		p1->perpWallDist = p1->sideDistY - p1->deltaDistY;
 	p1->lineHeight = (int)(WINDOW_HEIGHT / p1->perpWallDist);
 }

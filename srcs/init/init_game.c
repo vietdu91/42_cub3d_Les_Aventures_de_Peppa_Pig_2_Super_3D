@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 12:43:13 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 19:45:59 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ void	init_struct_game(t_data *data, t_game *game)
 	game->screen = malloc(sizeof(t_img));
 	if (!game->screen)
 		print_error_and_exit(ERR_MALLOC, data);
-	// game->screen = NULL;
 	init_img(game->screen);
 	if (!game->screen)
 		print_error_and_exit(ERR_MALLOC, data);
