@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 16:07:12 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 16:23:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	game_running(t_data *data)
 	int	line_Height;
 	int draw_start;
 	int	draw_end;
+	t_img	*img;
 
 	x = 0;
 	// printf("X : %f\n", data->game->p1->posX);
@@ -38,10 +39,12 @@ int	game_running(t_data *data)
 		if (draw_end >= WINDOW_GAME)
 			draw_end = WINDOW_GAME - 1;
 		//init_sprites_zbuff(x, data->sprites, data->game->p1);
-		verline(data, x, draw_start, draw_end);
+		img = verline(data, x, draw_start, draw_end);
 		x++;
 	}
 	//sprite_casting(data, data->sprites, data->game->p1);
+	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
+		img->mlx_img, 0, 0);
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
 		data->img->mlx_img, 725, 800);
 	return (0);
@@ -50,8 +53,6 @@ int	game_running(t_data *data)
 int loop(t_data *data)
 {
 	game_running(data);
-	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
-			data->img->mlx_img, 0, 0);
 	return (0);
 }
 

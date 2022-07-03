@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 12:13:33 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 16:25:38 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	get_text_rgb(char *addr, t_data *data, int add, int y)
 	return (rgb);
 }
 
-int	display_wall(t_data *data, int x, int *y, int y2)
+int	display_wall(t_data *data, t_img *img, int x, int *y, int y2)
 {
 	int		color;
 	int		rgb[3];
@@ -58,7 +58,8 @@ int	display_wall(t_data *data, int x, int *y, int y2)
 		rgb[1] = get_text_rgb(addr, data, 1, *y);
 		rgb[2] = get_text_rgb(addr, data, 0, *y);
 		color = rgb_to_hex_text(rgb[0], rgb[1], rgb[2]);
-		mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
+		img_pix_put(img, x, *y, color);
+	//	mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, *y, color);
 		(*y)++;
 	}
 	return (0);

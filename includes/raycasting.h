@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/01 10:02:38 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 16:22:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		draw_right_vector(t_data *data);
 int		colors(t_data *data, t_player *p1);
 void	img_pix_put(t_img *img, int x, int y, int color);
 void	assign_textx(t_player *p1);
-void	verline(t_data *data, int x, int y1, int y2);
+t_img	*verline(t_data *data, int x, int y1, int y2);
 
 /*				RAYCASTING.C			*/
 
@@ -44,7 +44,7 @@ int		set_view_of_peppa_suite(t_data *data, t_player *p1);
 
 char	*set_wall_direction(t_texture *text, t_player *peppa);
 int		get_text_rgb(char *addr, t_data *data, int add, int y);
-int		display_wall(t_data *data, int x, int *y, int y2);
+int		display_wall(t_data *data, t_img *img, int x, int *y, int y2);
 
 
 #endif
