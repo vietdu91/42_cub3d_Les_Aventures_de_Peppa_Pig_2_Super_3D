@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 18:37:25 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/02 19:53:19 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,15 @@ void	init_struct_game(t_data *data, t_game *game)
 	game->win_ptr = NULL;
 	game->step_of_game = 0;
 	game->good_or_bad = true;
+	game->screen = NULL;
+	game->screen = malloc(sizeof(t_img));
+	if (!game->screen)
+		print_error_and_exit(ERR_MALLOC, data);
+	// game->screen = NULL;
+	init_img(game->screen);
+
+	// if (!game->screen)
+	// 	print_error_and_exit(ERR_MALLOC, data);
 	init_pics(data, game);
 	init_texture(data, game->texture);
 	init_struct_peppa(game->peppa);

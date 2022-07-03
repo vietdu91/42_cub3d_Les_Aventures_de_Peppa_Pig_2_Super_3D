@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 14:28:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/01 16:44:37 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	free_pics(t_game *game, t_pic *pic)
 
 void	free_game_and_mlx(t_game *game)
 {
+	free_img(game, game->screen);
 	free_pics(game, game->intro);
 	free_pics(game, game->credit);
 	free_pics(game, game->game_over);

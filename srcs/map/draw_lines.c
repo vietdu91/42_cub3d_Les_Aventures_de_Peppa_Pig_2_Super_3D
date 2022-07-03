@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_lines.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/01 10:42:34 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:44:19 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,14 @@ void	draw_player(t_data *data, int x, int y, int color)
 	int	j;
 
 	j = -1;
-	x = data->game->p1->posX;
-	y = data->game->p1->posY;
-	// data->game->p1->posX = x;
-	// data->game->p1->posY = y;
-	// data->game->p1->posX = 12;
-	// data->game->p1->posY = 5;
+	x = data->game->p1->posX * data->map->size_x;
+	y = data->game->p1->posY * data->map->size_y;
 	while (j < 2)
 	{
 		i = 0;
 		while (i < 2)
 		{
-			img_pix_put(data->img, \
-			x + i, y + j, color);
+			img_pix_put(data->img, x + i, y + j, color);
 			i++;
 		}
 		j++;

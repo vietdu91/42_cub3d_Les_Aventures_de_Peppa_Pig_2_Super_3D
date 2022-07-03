@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:14:33 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/01 10:56:50 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 00:18:35 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ int	find_width(char **map)
 int	size_map(t_data *data, int *x, int *y)
 {
 	int	len_max;
-	int	direction;
+	// int	direction;
 
 	len_max = find_width(data->map->map);
-	*x = 300 / len_max;
-	*y = 200 / size_dtab(data->map->map);
+	*x = 450 / len_max;
+	*y = 163 / size_dtab(data->map->map);
 	draw_map(data, *x, *y);
-	direction = place_player(data, *x, *y);
+	// direction = place_player(data, *x, *y);
+	place_player(data, *x, *y);
 	return (0);
 }
 

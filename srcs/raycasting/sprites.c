@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprites.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:33:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 15:53:40 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/02 23:54:49 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	lowest_highest_height_pixel(t_sprites *sprites)
 	sprites->draw_end_y = sprites->sprite_height * 0.5 + WINDOW_GAME * 0.5;
 	if (sprites->draw_end_y >= WINDOW_GAME)
 		sprites->draw_end_y = WINDOW_GAME - 1;
+	return (0);
 }
 
 int	lowest_highest_width_pixel(t_sprites *sprites)
@@ -40,6 +41,7 @@ int	lowest_highest_width_pixel(t_sprites *sprites)
 	sprites->draw_end_x = sprites->sprite_width / 2 + sprites->spritescreenx;
 	if (sprites->draw_end_x >= WINDOW_GAME)
 		sprites->draw_end_x = WINDOW_GAME - 1;
+	return (0);
 }
 
 int	store_color_in_buffer(t_data *data, t_sprites *sprites)
@@ -58,12 +60,13 @@ int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 			y = sprites->draw_start_y;
 			while (y < sprites->draw_end_y)
 			{
-				define_texy(sprites, y);
+				// define_texy(sprites, y);
 				color = store_color(data, sprites, color);
 			//	draw_sprite(data, data->sprites-)
 			}
 		}
 	}
+	return (0);
 }
 
 int sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
@@ -80,6 +83,7 @@ int sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
 	lowest_highest_height_pixel(sprites);
 	lowest_highest_width_pixel(sprites);
 	store_color_in_buffer(data, sprites);
+	return (0);
 }
 
 int	init_sprites_zbuff(int x, t_sprites *sprites, t_player *p1)
