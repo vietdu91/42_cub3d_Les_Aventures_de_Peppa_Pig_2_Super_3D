@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 11:24:12 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 16:33:00 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ void	img_pix_put(t_img *img, int x, int y, int color)
 	// int		i;
 
 	// i = img->bpp - 8;
+	// printf("X : %d\n", x);
+	// if (x >= img->width || x < 0 || y >= img->height || y < 0)
+	// 	printf("prout\n");
 	pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
 	*(unsigned int *) pixel = color;
 }
@@ -50,8 +53,9 @@ void	assign_textx(t_player *p1)
 
 t_img	*verline(t_data *data, int x, int y1, int y2)
 {
-	t_img 	*img;
+	t_img 	*img = NULL;
 	int		y;
+
 	y = 0;
 	assign_textx(data->game->p1);
 	if (data->game->peppa->pos_peppa == 'N' || \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 00:47:11 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 17:21:01 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	key_release_main(int keysym, void *data)
 int	key_press(int key, t_data *data)
 {
 	// printf("salut posx = %f posY = %f\n", data->game->p1->posX, data->game->p1->posY);
-	if (data->game->p1->posX && data->game->p1->posY)
+	if (data->game->p1->posX && data->game->p1->posY && data->game->step_of_game >= 3)
 		draw_player(data,data->game->p1->posX, data->game->p1->posY, BLACK);
 	if (key == KEY_W && data->game->step_of_game >= 3)
 		w_key(data);
@@ -58,7 +58,7 @@ int	key_press(int key, t_data *data)
 		game_start(data);
 	else if (key == ESC)
 		free_all_and_exit(data);
-	move_player(data);
-	// move_player(data);
+	else if (data->game->step_of_game >= 3)
+		move_player(data);
 	return (0);
 }

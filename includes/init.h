@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 16:33:46 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 12:40:45 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,7 +155,7 @@ typedef struct s_game
 	t_pic		*intro;
 	t_pic		*credit;
 	t_pic		*game_over;
-	t_pic		*dylan_the_butcher;
+	t_img		*dylan_the_butcher;
 	t_pic		*overlay_happy;
 	t_pic		*overlay_scared;
 	t_pic		*overlay_panic;
@@ -197,13 +197,9 @@ typedef struct s_map
 
 }	t_map;
 
-typedef struct s_butcher
-{
-	bool	butcher;
-}	t_butcher;
-
 typedef struct s_sprites
 {
+	char		*path;
 	double		x;
 	double		y;
 	int			texture;
@@ -223,6 +219,7 @@ typedef struct s_sprites
 	int			draw_end_y;
 	int			draw_end_x;
 	int			stripe;
+	int			*tex;
 	int			tex_x;
 	int			tex_y;
 }	t_sprites;
@@ -265,5 +262,6 @@ void	init_struct_peppa(t_peppa *peppa);
 t_data	*init_struct(t_data *data);
 void	init_pic(t_pic *pic);
 void	init_color(t_color *color);
+void	init_sprites(t_data *data, t_sprites *sprites);
 
 #endif

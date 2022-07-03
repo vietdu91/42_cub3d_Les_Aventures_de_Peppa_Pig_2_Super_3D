@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/02 19:57:37 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 14:14:04 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ void	init_struct_malloc(t_data *data)
 		print_error_and_exit(ERR_MALLOC, data);
 	data->img = malloc(sizeof(t_img));
 	if (!data->img)
+		print_error_and_exit(ERR_MALLOC, data);
+	data->sprites = malloc(sizeof(t_sprites));
+	if (!data->sprites)
 		print_error_and_exit(ERR_MALLOC, data);
 }
 
@@ -82,10 +85,8 @@ t_data	*init_struct(t_data *data)
 	init_img(data->img);
 	init_data(data);
 	init_struct_game(data, data->game);
+	init_sprites(data, data->sprites);
 	init_player(data->game->p1);
 	init_struct_map(data->map);
-	data->sprites = malloc(sizeof(t_sprites));
-	if (!data->sprites)
-		print_error_and_exit(ERR_MALLOC, data);
 	return (data);
 }

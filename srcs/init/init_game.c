@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/02 19:53:19 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 12:43:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ void	init_pics(t_data *data, t_game *game)
 	init_pic(game->game_over);
 	if (!game->game_over)
 		print_error_and_exit(ERR_MALLOC, data);
-	game->dylan_the_butcher = malloc(sizeof(t_pic));
-	init_pic(game->dylan_the_butcher);
+	game->dylan_the_butcher = malloc(sizeof(t_img));
+	init_img(game->dylan_the_butcher);
 	if (!game->dylan_the_butcher)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_overlays(data, data->game);
@@ -73,9 +73,8 @@ void	init_struct_game(t_data *data, t_game *game)
 		print_error_and_exit(ERR_MALLOC, data);
 	// game->screen = NULL;
 	init_img(game->screen);
-
-	// if (!game->screen)
-	// 	print_error_and_exit(ERR_MALLOC, data);
+	if (!game->screen)
+		print_error_and_exit(ERR_MALLOC, data);
 	init_pics(data, game);
 	init_texture(data, game->texture);
 	init_struct_peppa(game->peppa);

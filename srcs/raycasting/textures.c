@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 11:24:18 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/03 11:26:19 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	display_wall(t_data *data, t_img *img, int x, int *y, int y2)
 	int		rgb[3];
 	char	*addr;
 
+	(void) img;
 	addr = set_wall_direction(data->game->texture, data->game->p1);
 	while (*y < y2)
 	{

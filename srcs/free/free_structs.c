@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 16:44:37 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/03 17:24:45 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	free_sprites(t_sprites *sprites)
 {
+	if (sprites->tex)
+		free(sprites->tex);
 	if (sprites)
 		free(sprites);
 }
@@ -48,11 +50,14 @@ void	free_pics(t_game *game, t_pic *pic)
 
 void	free_game_and_mlx(t_game *game)
 {
-	free_img(game, game->screen);
+	if (game->step_of_game >= 3)
+		free_img(game, game->screen);
+	else
+		free(game->screen);
 	free_pics(game, game->intro);
 	free_pics(game, game->credit);
 	free_pics(game, game->game_over);
-	free_pics(game, game->dylan_the_butcher);
+	free_img(game, game->dylan_the_butcher);
 	free_pics(game, game->overlay_happy);
 	free_pics(game, game->overlay_scared);
 	free_pics(game, game->overlay_panic);
