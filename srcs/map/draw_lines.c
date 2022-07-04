@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_lines.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 00:44:19 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:43:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	draw_bottom(t_data *data, int *x, int *y, int size_x)
 
 int	draw_right_wall(t_data *data, int *x, int *y, int size_y)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size_y)
@@ -60,11 +60,12 @@ void	draw_player(t_data *data, int x, int y, int color)
 	j = -1;
 	x = data->game->p1->posX * data->map->size_x;
 	y = data->game->p1->posY * data->map->size_y;
-	while (j < 2)
+	while (j < 3)
 	{
 		i = 0;
-		while (i < 2)
+		while (i < 3)
 		{
+			img_pix_put(data->img, data->sprites->x + i, data->sprites->y + j, VIOLET);
 			img_pix_put(data->img, x + i, y + j, color);
 			i++;
 		}

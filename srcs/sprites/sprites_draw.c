@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:08:18 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 20:08:52 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:20:16 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ int	define_texy(t_sprites *sprites, int y)
 	i = (y) * 256 - WINDOW_GAME * 128 + sprites->sprite_height * 128;
 	tex_y = ((i * SPRITE_H) / sprites->sprite_height) / 256;
 	return (tex_y);
+}
+
+int	define_texx(t_sprites *sprites)
+{
+	int	tex_x;
+
+	tex_x = (int)((256 * (sprites->stripe - (-sprites->sprite_width \
+	/ 2 + sprites->spritescreenx)) * SPRITE_W / sprites->sprite_width) / 256);
+	return (tex_x);
 }
 
 int	get_text_rgb_sprites(char *addr, t_data *data, int add, int y)
@@ -42,23 +51,23 @@ u_int32_t	store_color(t_sprites *sprites, u_int32_t color)
 
 int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 {
-	u_int32_t	color = 0;
+	u_int32_t	color;
 	int			y;
 
+	color = 0;
 	sprites->stripe = sprites->draw_start_x;
 	while (sprites->stripe < sprites->draw_end_x)
 	{
-		sprites->tex_x = (int)((256 * (sprites->stripe - (-sprites->sprite_width \
-		/ 2 + sprites->spritescreenx)) * SPRITE_W / sprites->sprite_width) / 256);
-		if (sprites->transformy > 0 && sprites->stripe > 0 && sprites->stripe < WINDOW_WIDTH \
-		&& sprites->transformy < sprites->ZBuffer[data->sprites->stripe])
+		if (sprites->transformy > 0 && sprites->stripe > 0 && \
+		sprites->stripe < WINDOW_WIDTH && sprites->transformy < \
+		sprites->ZBuffer[data->sprites->stripe])
 		{
+			sprites->tex_x = define_texx(sprites);
 			y = sprites->draw_start_y;
 			while (y < sprites->draw_end_y)
 			{
 				sprites->tex_y = define_texy(sprites, y);
 				color = store_color(sprites, color);
-				//draw_sprite(data, sprites->stripe, color, y, sprites);
 				if ((color & 0x00FFFFFF) != 0)
 					img_pix_put(data->game->screen, sprites->stripe, y, WHITE);
 				y++;

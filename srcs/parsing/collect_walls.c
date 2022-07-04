@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:23:42 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 11:45:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:16:39 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,11 @@ int	create_img_of_walls(t_data *data, t_walls *walls, t_texture *img)
 		if (data->game->step_of_game == 4)
 		{
 			destroy_walls(data, img);
-			data->game->texture->floor->hexa = ft_rgb_to_hex(data, img->floor->r, img->floor->g, img->floor->b);
-			data->game->texture->celling->hexa = ft_rgb_to_hex(data, img->celling->r, img->celling->g, img->celling->b);
+			data->game->texture->floor->hexa = \
+			ft_rgb_to_hex(data, img->floor->r, img->floor->g, img->floor->b);
+			data->game->texture->celling->hexa = \
+			ft_rgb_to_hex(data, img->celling->r, \
+			img->celling->g, img->celling->b);
 		}
 		if (walls->path_no)
 			put_img_wall_to_mlx(data, walls->path_no, img->wall_no);

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 16:33:00 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:30:04 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,7 @@ int	colors(t_data *data, t_player *p1)
 void	img_pix_put(t_img *img, int x, int y, int color)
 {
 	void	*pixel;
-	// int		i;
 
-	// i = img->bpp - 8;
-	// printf("X : %d\n", x);
-	// if (x >= img->width || x < 0 || y >= img->height || y < 0)
-	// 	printf("prout\n");
 	pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
 	*(unsigned int *) pixel = color;
 }
@@ -53,29 +48,27 @@ void	assign_textx(t_player *p1)
 
 t_img	*verline(t_data *data, int x, int y1, int y2)
 {
-	t_img 	*img = NULL;
+	t_img	*img;
 	int		y;
 
 	y = 0;
+	img = NULL;
 	assign_textx(data->game->p1);
 	if (data->game->peppa->pos_peppa == 'N' || \
 	data->game->peppa->pos_peppa == 'E')
 		x = WINDOW_WIDTH - x - 1;
 	while (y < y1)
 	{
-		// printf("%d\n", y);
-		img_pix_put(data->game->screen, x, y, data->game->texture->celling->hexa);
-		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y,
-		// data->game->texture->celling->hexa);
+		img_pix_put(data->game->screen, x, y, \
+		data->game->texture->celling->hexa);
 		y++;
 	}
 	data->game->p1->textStart = y1;
-	display_wall(data, img, x, &y, y2);
+	display_wall(data, x, &y, y2);
 	while (y < WINDOW_GAME)
 	{
-		img_pix_put(data->game->screen, x, y, data->game->texture->floor->hexa);
-		// mlx_pixel_put(data->game->mlx_ptr, data->game->win_ptr, x, y,
-		// data->game->texture->floor->hexa);
+		img_pix_put(data->game->screen, x, y, \
+		data->game->texture->floor->hexa);
 		y++;
 	}
 	return (img);

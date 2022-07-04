@@ -6,44 +6,21 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 20:01:33 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:38:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-int	game_running(t_data *data)
+int	game_impression(t_data *data)
 {
-	int x;
-	int	line_Height;
-	int draw_start;
-	int	draw_end;
-
-	x = 0;
-	while (x < WINDOW_WIDTH)
-	{
-		reset_values(data->game->p1, x);
-		step_manager(data->game->p1);
-		while (data->game->p1->hit == 0)
-			jump_next_map_square(data, data->game->p1);
-		check_side(data->game->p1);
-		line_Height = (int)(WINDOW_GAME / data->game->p1->perpWallDist);
-		draw_start = -line_Height / 2 + WINDOW_GAME / 2;
-		draw_end = line_Height / 2 + WINDOW_GAME / 2;
-		if (draw_end >= WINDOW_GAME)
-			draw_end = WINDOW_GAME - 1;
-		if (data->game->good_or_bad == false)
-			init_sprites_zbuff(x, data->sprites, data->game->p1);
-		verline(data, x, draw_start, draw_end);
-		x++;
-	}
 	if (data->game->good_or_bad == false)
 		sprite_casting(data, data->sprites, data->game->p1);
 	if (data->game->step_of_game != -1)
 	{
 		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr, \
 			data->game->screen->mlx_img, 0, 0);
-		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,\
+		mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr, \
 			data->img->mlx_img, 729, 819);
 	}
 	else
@@ -54,26 +31,51 @@ int	game_running(t_data *data)
 	return (0);
 }
 
-// int loop(t_data *data)
-// {
-// 	game_running(data);
-// 	return (0);
-// }
+int	game_running(t_data *data)
+{
+	int	x;
+	int	line_height;
+	int	draw_start;
+	int	draw_end;
+
+	x = 0;
+	while (x < WINDOW_WIDTH)
+	{
+		reset_values(data->game->p1, x);
+		step_manager(data->game->p1);
+		while (data->game->p1->hit == 0)
+			jump_next_map_square(data, data->game->p1);
+		check_side(data->game->p1);
+		line_height = (int)(WINDOW_GAME / data->game->p1->perpWallDist);
+		draw_start = -line_height / 2 + WINDOW_GAME / 2;
+		draw_end = line_height / 2 + WINDOW_GAME / 2;
+		if (draw_end >= WINDOW_GAME)
+			draw_end = WINDOW_GAME - 1;
+		if (data->game->good_or_bad == false)
+			init_sprites_zbuff(x, data->sprites, data->game->p1);
+		verline(data, x, draw_start, draw_end);
+		x++;
+	}
+	return (game_impression(data));
+}
 
 int	game_start(t_data *data)
 {
 	data->game->step_of_game = 3;
 	mlx_put_image_to_window(data->game->mlx_ptr, data->game->win_ptr,
 		data->game->overlay_happy->img, 0, 800);
-	data->game->screen->mlx_img = mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_GAME);
-	data->game->screen->addr = mlx_get_data_addr(data->game->screen->mlx_img, \
-	&data->game->screen->bpp, &data->game->screen->line_len, &data->game->screen->endian);
+	data->game->screen->mlx_img = \
+	mlx_new_image(data->game->mlx_ptr, WINDOW_WIDTH, WINDOW_GAME);
+	data->game->screen->addr = \
+	mlx_get_data_addr(data->game->screen->mlx_img, &data->game->screen->bpp, \
+	&data->game->screen->line_len, &data->game->screen->endian);
 	init_val(data->game->p1);
 	data->game->p1->posX = data->game->peppa->x_peppa;
 	data->game->p1->posY = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 450, 163);
-	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, &data->img->line_len, &data->img->endian);
+	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, \
+	&data->img->line_len, &data->img->endian);
 	size_map(data, &data->map->size_x, &data->map->size_y);
 	create_img_of_walls(data, data->map->walls, data->game->texture);
 	mlx_loop_hook(data->game->mlx_ptr, &game_running, data);

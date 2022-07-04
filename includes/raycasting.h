@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 18:58:27 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:28:32 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		sprites_move(t_data *data, int a, t_player *p1);
 
 char	*set_wall_direction(t_texture *text, t_player *peppa);
 int		get_text_rgb(char *addr, t_data *data, int add, int y);
-int		display_wall(t_data *data, t_img *img, int x, int *y, int y2);
+int		display_wall(t_data *data, int x, int *y, int y2);
 int		rgb_to_hex_text(int red, int green, int blue);
 
 

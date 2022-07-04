@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:47:30 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:22:20 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ void	init_struct_malloc(t_data *data)
 	if (!data->sprites)
 		print_error_and_exit(ERR_MALLOC, data);
 }
-
-
 
 void	init_data(t_data *data)
 {

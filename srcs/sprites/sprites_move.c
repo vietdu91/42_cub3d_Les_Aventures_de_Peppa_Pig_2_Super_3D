@@ -6,13 +6,13 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 18:49:17 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:27:08 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:20:32 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-int sprites_move_backward(t_data *data, t_player *p1)
+int	sprites_move_backward(t_data *data, t_player *p1)
 {
 	int	x;
 	int	y;
@@ -32,7 +32,7 @@ int sprites_move_backward(t_data *data, t_player *p1)
 	return (0);
 }
 
-int sprites_move_forward(t_data *data, t_player *p1)
+int	sprites_move_forward(t_data *data, t_player *p1)
 {
 	int	x;
 	int	y;

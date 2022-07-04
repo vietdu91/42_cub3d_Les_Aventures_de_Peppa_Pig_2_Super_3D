@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 19:44:03 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:16:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,12 @@ int	draw_map(t_data *data, int size_x, int size_y)
 				while (++z < size_y)
 					distinct_walls(data, &x, y + z, size_x);
 			}
-			else
-			{
-				draw_bottom(data, &x, &y, size_x);
-				draw_right_wall(data, &x, &y, size_y);
-			}
 			x += size_x;
 		}
 		y += size_y;
 	}
 	return (0);
 }
-
 
 int	convert_map_to_lines(t_data *data, char **map)
 {

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 17:49:45 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:41:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,46 +104,32 @@ typedef struct s_player
 	double	planeY;
 	double	time;
 	double	oldtime;
-	// tuto youtube;
 	double	px;
 	double	py;
 	double	pdx;
 	double	pdy;
-	double	pa; // player angle;
+	double	pa;
 	double	rayDirX;
 	double	rayDirY;
-
-	//length of ray from current position to next x or y-side
 	double	sideDistX;
 	double	sideDistY;
-
-	//length of ray from one x or y-side to next x or y-side
 	double	deltaDistX;
 	double	deltaDistY;
 	double	perpWallDist;
-
-	//which box of the map we're in
 	int		mapX;
 	int		mapY;
-
-	//what direction to step in x or y-direction (either +1 or -1)
 	int 	stepX;
 	int 	stepY;
-	int		hit; //was there a wall hit?
-	int		side; // was a NS or a EW wall hit?
-
-	double	cameraX; //x-coordinate in camera space
-
+	int		hit;
+	int		side;
+	double	cameraX;
 	int		lineHeight;
-
 	double	textStart;
 	double	textX;
-
 	double	rotSpeed;
 	double	moveSpeed;
-
-	double oldDirX;
-	double oldPlaneX;
+	double 	oldDirX;
+	double 	oldPlaneX;
 }	t_player;
 
 typedef struct s_game

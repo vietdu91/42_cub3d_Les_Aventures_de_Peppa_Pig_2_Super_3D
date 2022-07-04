@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 12:14:44 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 20:12:00 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:18:59 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int 		sprite_projection(t_data *data, t_sprites *sprites, t_player *p1);
 int			lowest_highest_height_pixel(t_sprites *sprites);
 int			lowest_highest_width_pixel(t_sprites *sprites);
 
+int			define_texx(t_sprites *sprites);
 int	   		define_texy(t_sprites *sprites, int y);
 int			get_text_rgb_sprites(char *addr, t_data *data, int add, int y);
 u_int32_t	store_color(t_sprites *sprites, u_int32_t color);

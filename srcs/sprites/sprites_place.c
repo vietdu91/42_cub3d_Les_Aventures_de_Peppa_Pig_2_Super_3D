@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:09:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 20:09:44 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:20:39 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,3 @@ int	assign_place_of_butcher(t_data *data, t_sprites *sprites, t_player *p1)
 		first_zero_of_map(data->map, sprites);
 	return (0);
 }
-

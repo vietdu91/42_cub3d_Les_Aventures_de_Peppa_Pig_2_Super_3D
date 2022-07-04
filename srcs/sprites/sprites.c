@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:33:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 20:09:35 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:22:14 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	lowest_highest_height_pixel(t_sprites *sprites)
 int	lowest_highest_width_pixel(t_sprites *sprites)
 {
 	sprites->sprite_width = abs((int)(WINDOW_GAME / sprites->transformy));
-	sprites->draw_start_x = -sprites->sprite_width * 0.5 + sprites->spritescreenx;
+	sprites->draw_start_x = -sprites->sprite_width * \
+	0.5 + sprites->spritescreenx;
 	if (sprites->draw_start_x < 0)
 		sprites->draw_start_x = 0;
 	sprites->draw_end_x = sprites->sprite_width / 2 + sprites->spritescreenx;
@@ -36,8 +37,7 @@ int	lowest_highest_width_pixel(t_sprites *sprites)
 	return (0);
 }
 
-
-int sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
+int	sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
 {
 	sprites->spritex = sprites->x - p1->posX;
 	sprites->spritey = sprites->y - p1->posY;
