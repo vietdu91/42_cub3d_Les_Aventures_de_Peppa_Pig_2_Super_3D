@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 10:52:36 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 19:38:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,33 @@ int	place_player(t_data *data, int size_x, int size_y)
 	return (0);
 }
 
+int    draw_map_background(t_data *data)
+{
+	int	i;
+	int	j;
+	int	x;
+	int	y;
+	int	z;
+
+	i = -1;
+	y = 0;
+	while (data->map->map[++i])
+	{
+		(void)z;
+		(void)x;
+		(void)j;
+		y += data->map->size_y;
+	}
+	while (y < 163)
+	{
+		z = -1;
+		while (++z < 450)
+			img_pix_put(data->img, z, y, VIOLET);
+		y++;
+	}
+	return (0);
+}
+
 int	draw_map(t_data *data, int size_x, int size_y)
 {
 	int	x;
@@ -75,6 +102,7 @@ int	draw_map(t_data *data, int size_x, int size_y)
 		}
 		y += size_y;
 	}
+	draw_map_background(data);
 	return (0);
 }
 

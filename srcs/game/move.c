@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 20:12:07 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 19:29:53 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 19:45:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	w_key(t_data *data)
 {
 	if (data->map->map[(int)(data->game->p1->pos_y) + check_nope_wall(data->game->p1, 'y')] \
 	[(int)(data->game->p1->pos_x \
-	+ data->game->p1->dir_y * data->game->p1->move_speed) + check_nope_wall(data->game->p1, 'x')] != '1')
+	+ data->game->p1->dir_x * data->game->p1->move_speed) + check_nope_wall(data->game->p1, 'x')] != '1')
 		data->game->p1->pos_x += data->game->p1->dir_x * \
 		data->game->p1->move_speed;
-	if (data->map->map[(int)(data->game->p1->pos_y + data->game->p1->dir_x * \
+	if (data->map->map[(int)(data->game->p1->pos_y + data->game->p1->dir_y * \
 	data->game->p1->move_speed) + check_nope_wall(data->game->p1, 'y')][(int)(data->game->p1->pos_x) + check_nope_wall(data->game->p1, 'x')] != '1')
 		data->game->p1->pos_y += data->game->p1->dir_y * \
 		data->game->p1->move_speed;
