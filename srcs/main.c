@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:38:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 14:34:38 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	game_running(t_data *data)
 		while (data->game->p1->hit == 0)
 			jump_next_map_square(data, data->game->p1);
 		check_side(data->game->p1);
-		line_height = (int)(WINDOW_GAME / data->game->p1->perpWallDist);
+		line_height = (int)(WINDOW_GAME / data->game->p1->perp_wall_dist);
 		draw_start = -line_height / 2 + WINDOW_GAME / 2;
 		draw_end = line_height / 2 + WINDOW_GAME / 2;
 		if (draw_end >= WINDOW_GAME)
@@ -70,8 +70,8 @@ int	game_start(t_data *data)
 	mlx_get_data_addr(data->game->screen->mlx_img, &data->game->screen->bpp, \
 	&data->game->screen->line_len, &data->game->screen->endian);
 	init_val(data->game->p1);
-	data->game->p1->posX = data->game->peppa->x_peppa;
-	data->game->p1->posY = data->game->peppa->y_peppa;
+	data->game->p1->pos_x = data->game->peppa->x_peppa;
+	data->game->p1->pos_y = data->game->peppa->y_peppa;
 	set_view_of_peppa(data, data->game->p1);
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 450, 163);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, \

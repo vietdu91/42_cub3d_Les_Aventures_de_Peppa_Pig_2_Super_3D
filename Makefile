@@ -112,7 +112,7 @@ DEP		= $(OBJS:.o=.d)
 
 	# Flags #
 
-FLAGS		= 	-g -Wall -Werror -Wextra
+FLAGS		= 	-g3 -Wall -Werror -Wextra -fsanitize=address
 FL_MLX		=	-ldl -lmlx -Lmlx -lm -lXext -lX11 -Imlx mlx/libmlx.a
 
 	# Rules #

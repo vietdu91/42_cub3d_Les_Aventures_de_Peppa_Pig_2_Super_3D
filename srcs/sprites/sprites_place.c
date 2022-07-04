@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:09:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:20:39 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 17:11:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	sort_sprites_from_far(t_sprites *sprites, t_player *p1)
 {
-	sprites->sprite_distance = ((p1->posX - sprites->x) * \
-	(p1->posX - sprites->x) + (p1->posY - sprites->y) * \
-	(p1->posY - sprites->y));
+	sprites->sprite_distance = ((p1->pos_x - sprites->x) * \
+	(p1->pos_x - sprites->x) + (p1->pos_y - sprites->y) * \
+	(p1->pos_y - sprites->y));
 	return (0);
 }
 
@@ -61,17 +61,17 @@ int	last_zero_of_map(t_map *map, t_sprites *sprites)
 				sprites->y = i;
 				return (1);
 			}
-			j++;
+			j--;
 		}
-		i++;
+		i--;
 	}
 	return (0);
 }
 
 int	assign_place_of_butcher(t_data *data, t_sprites *sprites, t_player *p1)
 {
-	if ((p1->posX >= (data->map->max_len_map / 4)) && \
-	(p1->posY >= (data->map->lines_map / 4)))
+	if ((p1->pos_x >= (data->map->max_len_map / 4)) && \
+	(p1->pos_y >= (data->map->lines_map / 4)))
 		last_zero_of_map(data->map, sprites);
 	else
 		first_zero_of_map(data->map, sprites);

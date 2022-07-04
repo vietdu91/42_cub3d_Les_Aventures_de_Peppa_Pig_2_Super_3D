@@ -6,15 +6,12 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/24 09:16:10 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:08:06 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
-
-// It's impossible to map out a route to your destination if you don't know where you're starting from.
-// Notre cerveau cartographie le monde. Cette carte est souvent déformée, mais c'est une carte avec des entrées sensorielles immédiates constantes.
 
 # define ERR_L_ARG "Error\nI think there is something missing... \
 Your self-esteem?\n"
@@ -34,8 +31,10 @@ encule de pie!\n"
 # define ERR_ID_FC_MISS "Error\nYour ID of floor celling in map is missing, \
 encule de pie!\n"
 # define ERR_MAP "Error\nPas de map, ca derape !\n"
-# define ERR_MAP_MANY_LINES "Error\nWOOOOW, you've a BIG height under your trousers\n"
-# define ERR_MAP_MANY_LEN "Error\nWOOOOW, you've a BIG width under your trousers\n"
+# define ERR_MAP_MANY_LINES "Error\nWOOOOW, you've a \
+BIG height under your trousers\n"
+# define ERR_MAP_MANY_LEN "Error\nWOOOOW, you've a BIG width under \
+your trousers\n"
 # define ERR_MAP_CLOSE "Error\nIl convient de fermer les yeux lorsque ceux-ci \
 révèlent les pensées\n"
 # define ERR_MAP_LINE "Error\nAll you need is the plan, the road map, and the \
@@ -57,7 +56,8 @@ distracted by your beautiful neighbour!\n"
 # define ERR_MALLOC "Error\nOur memory is not a more perfect world than the \
 universe\n"
 # define ERR_MLC_IMG "Error\nNo good path, no good pic of dick\n"
-# define NO_ENV "Error\nOn est rien sans l'environnement... Sauvons la planete !\n"
+# define NO_ENV "Error\nOn est rien sans l'environnement... \
+Sauvons la planete !\n"
 
 /*			PRINT_ERROR.C		*/
 

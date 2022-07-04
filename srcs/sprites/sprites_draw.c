@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:08:18 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:20:16 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:06:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	get_text_rgb_sprites(char *addr, t_data *data, int add, int y)
 	rgb = addr[(int)(data->sprites->stripe * SPRITE_W) \
 		* (data->game->dylan_the_butcher->bpp >> 3) \
 		+ add + (int)((y - data->sprites->draw_start_x * 1.0) \
-		/ (int)(WINDOW_HEIGHT / data->game->p1->perpWallDist) * SPRITE_H) \
+		/ (int)(WINDOW_HEIGHT / data->game->p1->perp_wall_dist) * SPRITE_H) \
 		*data->game->dylan_the_butcher->line_len];
 	return (rgb);
 }
@@ -60,7 +60,7 @@ int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 	{
 		if (sprites->transformy > 0 && sprites->stripe > 0 && \
 		sprites->stripe < WINDOW_WIDTH && sprites->transformy < \
-		sprites->ZBuffer[data->sprites->stripe])
+		sprites->z_buffer[data->sprites->stripe])
 		{
 			sprites->tex_x = define_texx(sprites);
 			y = sprites->draw_start_y;

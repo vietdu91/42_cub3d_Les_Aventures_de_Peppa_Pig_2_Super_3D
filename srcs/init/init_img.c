@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:39:42 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/03 19:46:09 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:05:20 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,22 @@ int	init_img(t_img *img)
 
 void	init_val(t_player *p1)
 {
-	p1->posX = 0;
-	p1->posY = 0;
-	p1->dirX = 0;
-	p1->dirY = 0;
-	p1->planeX = 0;
-	p1->planeY = 0;
-	p1->moveSpeed = 0.3;
-	p1->rotSpeed = 0.15;
-	p1->cameraX = 0;
-	p1->mapX = 0;
-	p1->mapY = 0;
-	p1->deltaDistX = 0;
-	p1->deltaDistY = 0;
+	p1->pos_x = 0;
+	p1->pos_y = 0;
+	p1->dir_x = 0;
+	p1->dir_y = 0;
+	p1->plane_x = 0;
+	p1->plane_y = 0;
+	p1->move_speed = 0.3;
+	p1->rot_speed = 0.15;
+	p1->camera_x = 0;
+	p1->map_x = 0;
+	p1->map_y = 0;
+	p1->delta_dist_x = 0;
+	p1->delta_dist_y = 0;
 	p1->hit = 0;
-	p1->rayDirX = 0;
-	p1->rayDirY = 0;
+	p1->raydir_x = 0;
+	p1->raydir_y = 0;
 }
 
 void	init_texture(t_data *data, t_texture *text)

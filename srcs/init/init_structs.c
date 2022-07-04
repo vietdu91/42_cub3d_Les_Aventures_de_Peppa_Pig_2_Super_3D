@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:22:20 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:48 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void	init_data(t_data *data)
 
 void	init_player(t_player *p1)
 {
-	p1->posX = 0;
-	p1->posY = 0;
-	p1->dirX = 0;
-	p1->dirY = 0;
-	p1->planeX = 0;
-	p1->planeY = 0;
+	p1->pos_x = 0;
+	p1->pos_y = 0;
+	p1->dir_x = 0;
+	p1->dir_y = 0;
+	p1->plane_x = 0;
+	p1->plane_y = 0;
 	p1->time = 0;
 	p1->oldtime = 0;
 	p1->px = 0;

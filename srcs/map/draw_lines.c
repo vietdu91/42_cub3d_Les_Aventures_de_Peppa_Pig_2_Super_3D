@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 10:43:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:14 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,15 @@ void	draw_player(t_data *data, int x, int y, int color)
 	int	j;
 
 	j = -1;
-	x = data->game->p1->posX * data->map->size_x;
-	y = data->game->p1->posY * data->map->size_y;
+	x = data->game->p1->pos_x * data->map->size_x;
+	y = data->game->p1->pos_y * data->map->size_y;
 	while (j < 3)
 	{
 		i = 0;
 		while (i < 3)
 		{
-			img_pix_put(data->img, data->sprites->x + i, data->sprites->y + j, VIOLET);
+			// if (data->game->good_or_bad == false)
+			// 	img_pix_put(data->img, data->sprites->x + i, data->sprites->y + j, VIOLET);
 			img_pix_put(data->img, x + i, y + j, color);
 			i++;
 		}

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:20:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:06:46 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,10 @@ int		key_release_main(int keysym, void *data);
 int		angle_manager(int keysim, t_player *p1);
 int		key_press(int key, t_data *data);
 
-
 /*			CAMERA.C		*/
 
 void	right_key(t_data *data);
 void	left_key(t_data *data);
-
 
 /*			MOVE.C			*/
 

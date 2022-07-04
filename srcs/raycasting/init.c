@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 20:45:45 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/30 18:40:11 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,46 +16,46 @@ void	translate_direction_player(t_player *p1, char c)
 {
 	if (c == 'N')
 	{
-		p1->dirX = p1->posX;
-		p1->dirY = p1->posY - 2;
+		p1->dir_x = p1->pos_x;
+		p1->dir_y = p1->pos_y - 2;
 	}
 	else if (c == 'S')
 	{
-		p1->dirX = p1->posX;
-		p1->dirY = p1->posY + 2;
+		p1->dir_x = p1->pos_x;
+		p1->dir_y = p1->pos_y + 2;
 	}
 	else if (c == 'W')
 	{
-		p1->dirX = p1->posX - 2;
-		p1->dirY = p1->posY;
+		p1->dir_x = p1->pos_x - 2;
+		p1->dir_y = p1->pos_y;
 	}
 	else if (c == 'E')
 	{
-		p1->dirX = p1->posX + 2;
-		p1->dirY = p1->posY;
+		p1->dir_x = p1->pos_x + 2;
+		p1->dir_y = p1->pos_y;
 	}
 }
 
 int	draw_first_vector(t_data *data, int size_x, int size_y, int direction)
 {
-	data->game->p1->dirY = data->game->p1->posY;
-	data->game->p1->dirX = data->game->p1->posX;
+	data->game->p1->dir_y = data->game->p1->pos_y;
+	data->game->p1->dir_x = data->game->p1->pos_x;
 	if (direction == 'N')
 		while (vector_has_touched(data, size_x, size_y, KEY_W) < 0)
-			img_pix_put(data->img, data->game->p1->posX, \
-			(data->game->p1->dirY--), GREEN);
+			img_pix_put(data->img, data->game->p1->pos_x, \
+			(data->game->p1->dir_y--), GREEN);
 	else if (direction == 'S')
 		while (vector_has_touched(data, size_x, size_y, KEY_S) < 0)
-			img_pix_put(data->img, data->game->p1->posX, \
-			(data->game->p1->dirY++), GREEN);
+			img_pix_put(data->img, data->game->p1->pos_x, \
+			(data->game->p1->dir_y++), GREEN);
 	else if (direction == 'E')
 		while (vector_has_touched(data, size_x, size_y, KEY_D) < 0)
-			img_pix_put(data->img, data->game->p1->dirX++, \
-			(data->game->p1->posY), GREEN);
+			img_pix_put(data->img, data->game->p1->dir_x++, \
+			(data->game->p1->pos_y), GREEN);
 	else if (direction == 'W')
 		while (vector_has_touched(data, size_x, size_y, KEY_A) < 0)
-			img_pix_put(data->img, data->game->p1->dirX--, \
-			(data->game->p1->posY), GREEN);
+			img_pix_put(data->img, data->game->p1->dir_x--, \
+			(data->game->p1->pos_y), GREEN);
 	return (0);
 }
 

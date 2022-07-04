@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:06:57 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 11:43:33 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:08:24 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@
 
 int	game_start(t_data *data);
 int	game_running(t_data *data);
-int loop(t_data *data);
+int	loop(t_data *data);
 
 #endif

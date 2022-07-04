@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:41:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:06:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,12 +96,12 @@ typedef struct s_peppa
 
 typedef struct s_player
 {
-	double	posX;
-	double	posY;
-	double	dirX;
-	double	dirY;
-	double	planeX;
-	double	planeY;
+	double	pos_x;
+	double	pos_y;
+	double	dir_x;
+	double	dir_y;
+	double	plane_x;
+	double	plane_y;
 	double	time;
 	double	oldtime;
 	double	px;
@@ -109,27 +109,27 @@ typedef struct s_player
 	double	pdx;
 	double	pdy;
 	double	pa;
-	double	rayDirX;
-	double	rayDirY;
-	double	sideDistX;
-	double	sideDistY;
-	double	deltaDistX;
-	double	deltaDistY;
-	double	perpWallDist;
-	int		mapX;
-	int		mapY;
-	int 	stepX;
-	int 	stepY;
+	double	raydir_x;
+	double	raydir_y;
+	double	side_dist_x;
+	double	side_dist_y;
+	double	delta_dist_x;
+	double	delta_dist_y;
+	double	perp_wall_dist;
+	int		map_x;
+	int		map_y;
+	int		step_x;
+	int		step_y;
 	int		hit;
 	int		side;
-	double	cameraX;
-	int		lineHeight;
-	double	textStart;
-	double	textX;
-	double	rotSpeed;
-	double	moveSpeed;
-	double 	oldDirX;
-	double 	oldPlaneX;
+	double	camera_x;
+	int		line_height;
+	double	text_start;
+	double	text_x;
+	double	rot_speed;
+	double	move_speed;
+	double	olddir_x;
+	double	oldplane_x;
 }	t_player;
 
 typedef struct s_game
@@ -189,8 +189,8 @@ typedef struct s_sprites
 	double		x;
 	double		y;
 	int			texture;
-	u_int32_t 	buffer[WINDOW_GAME][WINDOW_WIDTH];
-	double		ZBuffer[WINDOW_WIDTH];
+	u_int32_t	buffer[WINDOW_GAME][WINDOW_WIDTH];
+	double		z_buffer[WINDOW_WIDTH];
 	double		sprite_distance;
 	double		spritex;
 	double		spritey;

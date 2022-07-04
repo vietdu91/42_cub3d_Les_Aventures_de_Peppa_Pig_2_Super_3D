@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 18:49:17 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:20:32 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:14 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	sprites_move_backward(t_data *data, t_player *p1)
 	if (x != '1')
 	{
 		data->sprites->x = data->sprites->x - \
-		((data->sprites->x - p1->posX) * 0.02);
+		((data->sprites->x - p1->pos_x) * 0.02);
 		data->sprites->y = data->sprites->y - \
-		((data->sprites->y - p1->posY) * 0.02);
+		((data->sprites->y - p1->pos_y) * 0.02);
 		if ((int)data->sprites->spritex == 0 && \
 		(int)data->sprites->spritey == 0)
 			return (0);
@@ -42,9 +42,9 @@ int	sprites_move_forward(t_data *data, t_player *p1)
 	if (x != '1')
 	{
 		data->sprites->x = data->sprites->x - \
-		((data->sprites->x - p1->posX) * 0.01);
+		((data->sprites->x - p1->pos_x) * 0.01);
 		data->sprites->y = data->sprites->y - \
-		((data->sprites->y - p1->posY) * 0.01);
+		((data->sprites->y - p1->pos_y) * 0.01);
 		if ((int)data->sprites->spritex == 0 && \
 		(int)data->sprites->spritey == 0)
 		{

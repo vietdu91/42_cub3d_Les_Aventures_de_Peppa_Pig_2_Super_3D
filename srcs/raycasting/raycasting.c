@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 17:59:55 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 18:23:15 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 17:13:00 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,40 @@
 
 void	reset_values(t_player *p1, int x)
 {
-	p1->cameraX = 2 * x / (double)WINDOW_WIDTH - 1;
-	p1->rayDirX = p1->dirX + p1->planeX * p1->cameraX;
-	p1->rayDirY = p1->dirY + p1->planeY * p1->cameraX;
-	p1->mapX = (int)p1->posX;
-	p1->mapY = (int)p1->posY;
-	p1->deltaDistX = fabs(1 / p1->rayDirX);
-	p1->deltaDistY = fabs(1 / p1->rayDirY);
+	p1->camera_x = 2 * x / (double)WINDOW_WIDTH - 1;
+	p1->raydir_x = p1->dir_x + p1->plane_x * p1->camera_x;
+	p1->raydir_y = p1->dir_y + p1->plane_y * p1->camera_x;
+	p1->map_x = (int)p1->pos_x;
+	p1->map_y = (int)p1->pos_y;
+	p1->delta_dist_x = fabs(1 / p1->raydir_x);
+	p1->delta_dist_y = fabs(1 / p1->raydir_y);
 	p1->hit = 0;
-	p1->textX = 0;
-	p1->textStart = 0;
-	p1->lineHeight = 0;
+	p1->text_x = 0;
+	p1->text_start = 0;
+	p1->line_height = 0;
 }
 
 void	step_manager(t_player *p1)
 {
-	if (p1->rayDirX < 0)
+	if (p1->raydir_x < 0)
 	{
-		p1->stepX = -1;
-		p1->sideDistX = (p1->posX - p1->mapX) * p1->deltaDistX;
+		p1->step_x = -1;
+		p1->side_dist_x = (p1->pos_x - p1->map_x) * p1->delta_dist_x;
 	}
 	else
 	{
-		p1->stepX = 1;
-		p1->sideDistX = (p1->mapX + 1.0 - p1->posX) * p1->deltaDistX;
+		p1->step_x = 1;
+		p1->side_dist_x = (p1->map_x + 1.0 - p1->pos_x) * p1->delta_dist_x;
 	}
-	if (p1->rayDirY < 0)
+	if (p1->raydir_y < 0)
 	{
-		p1->stepY = -1;
-		p1->sideDistY = (p1->posY - p1->mapY) * p1->deltaDistY;
+		p1->step_y = -1;
+		p1->side_dist_y = (p1->pos_y - p1->map_y) * p1->delta_dist_y;
 	}
 	else
 	{
-		p1->stepY = 1;
-		p1->sideDistY = (p1->mapY + 1.0 - p1->posY) * p1->deltaDistY;
+		p1->step_y = 1;
+		p1->side_dist_y = (p1->map_y + 1.0 - p1->pos_y) * p1->delta_dist_y;
 	}
 }
 
@@ -55,26 +55,28 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 {
 	while (p1->hit == 0)
 	{
-		if (p1->sideDistX < p1->sideDistY)
+		if (p1->side_dist_x < p1->side_dist_y)
 		{
-			p1->sideDistX += p1->deltaDistX;
-			p1->mapX += p1->stepX;
-			if (p1->rayDirX > 0)
+			p1->side_dist_x += p1->delta_dist_x;
+			if (p1->map_x > 0)
+				p1->map_x += p1->step_x;
+			if (p1->raydir_x > 0)
 				p1->side = EA;
 			else
 				p1->side = WE;
 		}
 		else
 		{
-			p1->sideDistY += p1->deltaDistY;
-			p1->mapY += p1->stepY;
-			p1->side = 1;
-			if (p1->rayDirY > 0)
+			p1->side_dist_y += p1->delta_dist_y;
+			if (p1->map_y > 0)
+				p1->map_y += p1->step_y;
+			if (p1->raydir_y > 0)
 				p1->side = SO;
 			else
 				p1->side = NO;
 		}
-		if (data->map->map[p1->mapY][p1->mapX] == '1')
+	//	printf("MAP Y : %d == MAP X : %d\n", p1->map_y, p1->map_x);
+		if (data->map->map[p1->map_y][p1->map_x] == '1')
 			p1->hit = 1;
 	}
 }
@@ -82,8 +84,8 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 void	check_side(t_player *p1)
 {
 	if (p1->side == EA || p1->side == WE)
-		p1->perpWallDist = p1->sideDistX - p1->deltaDistX;
+		p1->perp_wall_dist = p1->side_dist_x - p1->delta_dist_x;
 	else
-		p1->perpWallDist = p1->sideDistY - p1->deltaDistY;
-	p1->lineHeight = (int)(WINDOW_HEIGHT / p1->perpWallDist);
+		p1->perp_wall_dist = p1->side_dist_y - p1->delta_dist_y;
+	p1->line_height = (int)(WINDOW_HEIGHT / p1->perp_wall_dist);
 }

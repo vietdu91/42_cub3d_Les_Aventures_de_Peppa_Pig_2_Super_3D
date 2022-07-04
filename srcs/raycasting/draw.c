@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 10:30:04 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:05:00 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	colors(t_data *data, t_player *p1)
 {
 	int	color;
 
-	if (data->map->map[p1->mapY][p1->mapX] == '1')
+	if (data->map->map[p1->map_y][p1->map_x] == '1')
 		color = RED;
-	else if (data->map->map[p1->mapY][p1->mapX] == '0')
+	else if (data->map->map[p1->map_y][p1->map_x] == '0')
 		color = BLUE;
-	else if (is_player(data->map->map[p1->mapY][p1->mapX]) == OKAY)
+	else if (is_player(data->map->map[p1->map_y][p1->map_x]) == OKAY)
 		return (0);
 	else
 		color = WHITE;
@@ -37,13 +37,13 @@ void	img_pix_put(t_img *img, int x, int y, int color)
 	*(unsigned int *) pixel = color;
 }
 
-void	assign_textx(t_player *p1)
+void	assign_text_x(t_player *p1)
 {
 	if (p1->side == EA || p1->side == WE)
-		p1->textX = p1->posY + p1->perpWallDist * p1->rayDirY;
+		p1->text_x = p1->pos_y + p1->perp_wall_dist * p1->raydir_y;
 	else
-		p1->textX = p1->posX + p1->perpWallDist * p1->rayDirX;
-	p1->textX -= floor(p1->textX);
+		p1->text_x = p1->pos_x + p1->perp_wall_dist * p1->raydir_x;
+	p1->text_x -= floor(p1->text_x);
 }
 
 t_img	*verline(t_data *data, int x, int y1, int y2)
@@ -53,7 +53,7 @@ t_img	*verline(t_data *data, int x, int y1, int y2)
 
 	y = 0;
 	img = NULL;
-	assign_textx(data->game->p1);
+	assign_text_x(data->game->p1);
 	if (data->game->peppa->pos_peppa == 'N' || \
 	data->game->peppa->pos_peppa == 'E')
 		x = WINDOW_WIDTH - x - 1;
@@ -63,7 +63,7 @@ t_img	*verline(t_data *data, int x, int y1, int y2)
 		data->game->texture->celling->hexa);
 		y++;
 	}
-	data->game->p1->textStart = y1;
+	data->game->p1->text_start = y1;
 	display_wall(data, x, &y, y2);
 	while (y < WINDOW_GAME)
 	{

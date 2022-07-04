@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:26:24 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:14 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	move_player(t_data *data)
 
 	x = 0;
 	y = 0;
-	draw_player(data, data->game->p1->posX, data->game->p1->posY, RED);
+	draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, RED);
 	draw_map(data, x, y);
 	return (0);
 }
@@ -50,9 +50,9 @@ int	key_press_two(int key, t_data *data)
 
 int	key_press(int key, t_data *data)
 {
-	if (data->game->p1->posX && data->game->p1->posY \
+	if (data->game->p1->pos_x && data->game->p1->pos_y \
 	&& data->game->step_of_game >= 3)
-		draw_player(data, data->game->p1->posX, data->game->p1->posY, RED);
+		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, RED);
 	if (key == KEY_W && data->game->step_of_game >= 3)
 		w_key(data);
 	else if (key == KEY_S && data->game->step_of_game >= 3)

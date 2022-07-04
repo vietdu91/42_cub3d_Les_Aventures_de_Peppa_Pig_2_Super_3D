@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:33:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 10:22:14 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:06:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ int	lowest_highest_width_pixel(t_sprites *sprites)
 
 int	sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
 {
-	sprites->spritex = sprites->x - p1->posX;
-	sprites->spritey = sprites->y - p1->posY;
-	sprites->invdet = 1.0 / (p1->planeX * p1->dirY - p1->dirX * p1->planeY);
-	sprites->transformx = sprites->invdet * (p1->dirY * sprites->spritex \
-	- p1->dirX * sprites->spritey);
-	sprites->transformy = sprites->invdet * (-p1->planeY * sprites->spritex \
-	+ p1->planeX * sprites->spritey);
+	sprites->spritex = sprites->x - p1->pos_x;
+	sprites->spritey = sprites->y - p1->pos_y;
+	sprites->invdet = 1.0 / (p1->plane_x * p1->dir_y - p1->dir_x * p1->plane_y);
+	sprites->transformx = sprites->invdet * (p1->dir_y * sprites->spritex \
+	- p1->dir_x * sprites->spritey);
+	sprites->transformy = sprites->invdet * (-p1->plane_y * sprites->spritex \
+	+ p1->plane_x * sprites->spritey);
 	sprites->spritescreenx = (int)(WINDOW_WIDTH / 2) * (1 + sprites->transformx \
 	/ sprites->transformy);
 	lowest_highest_height_pixel(sprites);
@@ -56,7 +56,7 @@ int	sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
 
 int	init_sprites_zbuff(int x, t_sprites *sprites, t_player *p1)
 {
-	sprites->ZBuffer[x] = p1->perpWallDist;
+	sprites->z_buffer[x] = p1->perp_wall_dist;
 	return (0);
 }
 

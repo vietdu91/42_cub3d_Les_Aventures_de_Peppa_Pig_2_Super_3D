@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 10:28:32 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 11:05:00 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		draw_right_vector(t_data *data);
 
 int		colors(t_data *data, t_player *p1);
 void	img_pix_put(t_img *img, int x, int y, int color);
-void	assign_textx(t_player *p1);
+void	assign_text_x(t_player *p1);
 t_img	*verline(t_data *data, int x, int y1, int y2);
 
 /*				RAYCASTING.C			*/
@@ -42,8 +42,8 @@ int		set_view_of_peppa_suite(t_data *data, t_player *p1);
 
 /*				SPRITES_MOVE.C			*/
 
-int 	sprites_move_backward(t_data *data, t_player *p1);
-int 	sprites_move_forward(t_data *data, t_player *p1);
+int		sprites_move_backward(t_data *data, t_player *p1);
+int		sprites_move_forward(t_data *data, t_player *p1);
 int		sprites_move(t_data *data, int a, t_player *p1);
 
 /*				TEXTURES.C				*/
@@ -52,6 +52,5 @@ char	*set_wall_direction(t_texture *text, t_player *peppa);
 int		get_text_rgb(char *addr, t_data *data, int add, int y);
 int		display_wall(t_data *data, int x, int *y, int y2);
 int		rgb_to_hex_text(int red, int green, int blue);
-
 
 #endif

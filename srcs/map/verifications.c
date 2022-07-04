@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 17:34:35 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 10:15:32 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 10:57:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	wall_touched(t_data *data, int s_x, int s_y, int dir)
 	int	x;
 	int	y;
 
-	x = data->game->p1->posX;
-	y = data->game->p1->posY;
+	x = data->game->p1->pos_x;
+	y = data->game->p1->pos_y;
 	if ((x) % s_x == 0 && dir == KEY_A)
 		return (is_a_space_or_is_wall \
 		(data->map->map[y / s_y][(x - 1) / s_x]));
@@ -39,8 +39,8 @@ int	vector_has_touched(t_data *data, int s_x, int s_y, int dir)
 	int	x;
 	int	y;
 
-	x = data->game->p1->dirX;
-	y = data->game->p1->dirY;
+	x = data->game->p1->dir_x;
+	y = data->game->p1->dir_y;
 	if ((x) % s_x == 0 && dir == KEY_A)
 		return (is_a_space_or_is_wall \
 		(data->map->map[y / s_y][(x - 1) / s_x]));
