@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 14:34:38 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 17:39:08 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int	game_start(t_data *data)
 	mlx_get_data_addr(data->game->screen->mlx_img, &data->game->screen->bpp, \
 	&data->game->screen->line_len, &data->game->screen->endian);
 	init_val(data->game->p1);
-	data->game->p1->pos_x = data->game->peppa->x_peppa;
-	data->game->p1->pos_y = data->game->peppa->y_peppa;
+	data->game->p1->pos_x = data->game->peppa->x_peppa + 0.5;
+	data->game->p1->pos_y = data->game->peppa->y_peppa + 0.5;
 	set_view_of_peppa(data, data->game->p1);
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 450, 163);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, \

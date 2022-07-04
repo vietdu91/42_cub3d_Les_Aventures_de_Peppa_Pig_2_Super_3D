@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:39:42 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 11:05:20 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/04 18:43:21 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	init_val(t_player *p1)
 	p1->dir_y = 0;
 	p1->plane_x = 0;
 	p1->plane_y = 0;
-	p1->move_speed = 0.3;
+	p1->move_speed = 0.2;
 	p1->rot_speed = 0.15;
 	p1->camera_x = 0;
 	p1->map_x = 0;
