@@ -6,14 +6,13 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:13:06 by dyoula            #+#    #+#             */
-/*   Updated: 2022/06/18 20:11:42 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:49:21 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAP_H
 # define MAP_H
 
-int		convert_map_to_lines(t_data *data, char **map);
 int		render(t_data *data);
 int		draw_map(t_data *data, int size_x, int size_y);
 int		place_player(t_data *data, int size_x, int size_y);

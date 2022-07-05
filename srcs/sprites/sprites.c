@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprites.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:33:04 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 11:06:29 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:43:11 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	sprite_projection(t_data *data, t_sprites *sprites, t_player *p1)
 	- p1->dir_x * sprites->spritey);
 	sprites->transformy = sprites->invdet * (-p1->plane_y * sprites->spritex \
 	+ p1->plane_x * sprites->spritey);
-	sprites->spritescreenx = (int)(WINDOW_WIDTH / 2) * (1 + sprites->transformx \
-	/ sprites->transformy);
+	sprites->spritescreenx = (int)(WINDOW_WIDTH / 2) \
+	*((sprites->transformx / sprites->transformy + 1));
 	lowest_highest_height_pixel(sprites);
 	lowest_highest_width_pixel(sprites);
 	store_color_in_buffer(data, sprites);

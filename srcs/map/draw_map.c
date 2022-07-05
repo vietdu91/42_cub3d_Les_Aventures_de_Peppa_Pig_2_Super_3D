@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:04:04 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 19:38:29 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:56:13 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	place_player(t_data *data, int size_x, int size_y)
 	return (0);
 }
 
-int    draw_map_background(t_data *data)
+int	draw_map_background(t_data *data)
 {
 	int	i;
 	int	j;
@@ -102,13 +102,5 @@ int	draw_map(t_data *data, int size_x, int size_y)
 		}
 		y += size_y;
 	}
-	draw_map_background(data);
-	return (0);
-}
-
-int	convert_map_to_lines(t_data *data, char **map)
-{
-	(void)data;
-	(void)map;
-	return (0);
+	return (draw_map_background(data));
 }

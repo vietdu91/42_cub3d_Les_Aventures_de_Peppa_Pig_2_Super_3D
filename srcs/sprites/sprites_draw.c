@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprites_draw.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:08:18 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 19:10:27 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:28:20 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 			while (y < sprites->draw_end_y)
 			{
 				sprites->tex_y = define_texy(sprites, y);
-				//color = store_color(sprites, color);
-			//	if ((color & 0x00FFFFFF) != 0)
+				color = store_color(sprites, color);
+				if ((color & 0x00FFFFFF) != 0)
 					img_pix_put(data->game->screen, sprites->stripe, y, WHITE);
 				y++;
 			}

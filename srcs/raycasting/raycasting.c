@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycasting.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 17:59:55 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 20:59:47 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:21:53 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,17 @@ void	step_manager(t_player *p1)
 	}
 }
 
+void	else_jump_next_map_square(t_player *p1)
+{
+	p1->side_dist_y += p1->delta_dist_y;
+	if (p1->map_y > 0)
+		p1->map_y += p1->step_y;
+	if (p1->raydir_y > 0)
+		p1->side = SO;
+	else
+		p1->side = NO;
+}
+
 void	jump_next_map_square(t_data *data, t_player *p1)
 {
 	while (p1->hit == 0)
@@ -66,18 +77,9 @@ void	jump_next_map_square(t_data *data, t_player *p1)
 				p1->side = WE;
 		}
 		else
-		{
-			p1->side_dist_y += p1->delta_dist_y;
-			if (p1->map_y > 0)
-				p1->map_y += p1->step_y;
-			if (p1->raydir_y > 0)
-				p1->side = SO;
-			else
-				p1->side = NO;
-		}
-		//printf("MAP Y : %d == MAP X : %d\n", p1->map_y, p1->map_x);
-		if (p1->map_y < 0 || p1->map_x < 0 || p1->map_y >= data->map->lines_map || \
-		p1->map_x >= data->map->max_len_map)
+			else_jump_next_map_square(p1);
+		if (p1->map_y < 0 || p1->map_x < 0 || p1->map_y >= \
+		data->map->lines_map || p1->map_x >= data->map->max_len_map)
 			p1->hit = 1;
 		else if (data->map->map[p1->map_y][p1->map_x] == '1')
 			p1->hit = 1;
