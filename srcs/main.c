@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 17:39:08 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 19:47:07 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,12 @@ int	main(int argc, char **argv)
 		data->game->mlx_ptr = mlx_init();
 		if (!data->game->mlx_ptr)
 			print_error_and_exit(NO_ENV, data);
-		check_extension_cub(argv[1], data);
-		check_file(argv, data);
-		check_map(data, data->map);
+
+		if (check_parsing(argv, data))
+		{
+			free_parsing_failed(data);
+			return (1);
+		}
 		assign_img_intro(data, data->game);
 		assign_img_overlay(data, data->game);
 		init_mlx_and_window(data, data->game, &data->win);

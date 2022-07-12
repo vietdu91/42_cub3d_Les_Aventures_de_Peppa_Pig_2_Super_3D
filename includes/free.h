@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 14:38:52 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 12:25:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 19:50:21 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 
 int		free_all(t_data *data);
 int		free_all_and_exit(t_data *data);
+
+/*			FREE_FAILED_PARSING.C */
+int		check_parsing(char **argv, t_data *data);
+void	free_forest(t_data *data);
+int		free_parsing_failed(t_data *data);
 
 /*			FREE_IMG.C			*/
 

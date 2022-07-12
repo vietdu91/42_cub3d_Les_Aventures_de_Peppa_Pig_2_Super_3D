@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_file.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:43:59 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/23 12:02:42 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 19:02:52 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,23 +35,24 @@ int	check_extension_cub(char *str, t_data *data)
 	int		b;
 	char	*path;
 
+	(void)data;
 	a = 0;
 	b = 0;
 	path = CUB;
 	while (str[a] && str[a] != '.')
 		a++;
 	if (!str[a])
-		return (print_error_and_exit(ERR_CUB, data));
+		return (1);
 	else if (!a)
-		return (print_error_and_exit(ERR_CUB, data));
+		return (1);
 	while (str[a + b] && path[b])
 	{
 		if (str[a + b] == path[b])
 			b++;
 		else
-			return (print_error_and_exit(ERR_CUB, data));
+			return (1);
 	}
 	if (b == 4 && str[a + b] == '\0' && path[b] == '\0')
 		return (0);
-	return (print_error_and_exit(ERR_CUB, data));
+	return (1);
 }

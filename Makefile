@@ -14,6 +14,7 @@ SRCS		= 	main.c \
 				check/check_rgb.c \
 				check/check_walls.c \
 				errors/print_error.c \
+				free/free_failed_parsing.c \
 				free/free.c \
 				free/free_img.c \
 				free/free_structs.c \

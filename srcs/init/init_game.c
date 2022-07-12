@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:45:59 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 19:28:53 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	init_struct_game(t_data *data, t_game *game)
 	game->step_of_game = 0;
 	game->good_or_bad = true;
 	game->screen = NULL;
+	// game->dylan_the_butcher = NULL;
 	game->screen = malloc(sizeof(t_img));
 	if (!game->screen)
 		print_error_and_exit(ERR_MALLOC, data);
