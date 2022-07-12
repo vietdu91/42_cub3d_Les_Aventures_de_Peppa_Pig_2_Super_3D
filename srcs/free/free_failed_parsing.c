@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 19:46:44 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/12 19:48:59 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/12 20:04:22 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	free_forest(t_data *data)
 		free(data->game->dylan_the_butcher);
 	free_pics(data->game, data->game->overlay_happy);
 	free_pics(data->game, data->game->overlay_scared);
-	free_pics(data->game, data->game->overlay_panic);	
+	free_pics(data->game, data->game->overlay_panic);
 }
 
 int	free_parsing_failed(t_data *data)

@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:08:18 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/12 18:36:19 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/12 20:04:33 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,6 @@ int	get_text_rgb_sprites(char *addr, t_data *data, int add, int y)
 	return (rgb);
 }
 
-// u_int32_t	store_color(t_sprites *sprites, u_int32_t color)
-// {
-// 	color = sprites->tex[SPRITE_W * sprites->tex_y + sprites->tex_x];
-// 	return (color);
-// }
-
 int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 {
 	u_int32_t	color;
@@ -67,7 +61,6 @@ int	store_color_in_buffer(t_data *data, t_sprites *sprites)
 			while (y < sprites->draw_end_y)
 			{
 				sprites->tex_y = define_texy(sprites, y);
-				// color = store_color(sprites, color);
 				if ((color & 0x00FFFFFF) != 0)
 					img_pix_put(data->game->screen, sprites->stripe, y, WHITE);
 				y++;

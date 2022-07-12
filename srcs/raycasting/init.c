@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 20:45:45 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 21:23:55 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 20:06:35 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,10 @@ int	draw_right_vector(t_data *data)
 
 	(void)data;
 	i = 0;
-	printf("salut right vector\n");
-	printf("2 * PI / 3 = %f\n", 2 * PI / 3);
 	{
 		while (i < 2 * PI / 3)
 		{
 			i += 0.1;
-			printf("i = %f\n", i);
 		}
 	}
 	return (0);
