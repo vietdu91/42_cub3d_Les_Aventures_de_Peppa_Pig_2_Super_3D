@@ -6,7 +6,7 @@
 /*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/12 20:07:02 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/12 20:12:13 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	move_player(t_data *data)
 int	key_release_main(int keysym, void *data)
 {
 	(void)data;
+	(void)keysym;
 	return (0);
 }
 

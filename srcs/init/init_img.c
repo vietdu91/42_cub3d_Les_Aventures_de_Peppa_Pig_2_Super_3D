@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_img.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:39:42 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 18:43:21 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/12 20:35:13 by dyoula           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	init_img(t_img *img)
 {
+	img->mlx_img = NULL;
 	img->bpp = 0;
 	img->line_len = 0;
 	img->endian = 0;
