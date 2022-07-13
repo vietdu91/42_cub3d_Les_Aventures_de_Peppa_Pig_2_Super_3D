@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 10:46:42 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:51:53 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		check_celling_floor(t_data *data, char **file);
 /*			CHECK_FILE.C		    */
 
 int		check_file(char **argv, t_data *data);
-int		check_extension_cub(char *str, t_data *data);
+int		check_extension_cub(char *str);
 
 /*			CHECK_MAP.C				*/
 
@@ -50,11 +50,12 @@ int		check_good_order_in_file(t_data *data, char **file);
 
 int		check_peppa_is_not_in_void(t_data *data, t_peppa *peppa, char **map);
 int		check_position_of_peppa(t_data *data, t_peppa *peppa, char **map);
+int		zero_is_not_in_void(t_data *data, int y, int x, char **map);
 
 /*			CHECK_RGB.C				*/
 
 int		check_color(int n);
-int		ft_rgb_to_hex(t_data *data, int r, int g, int b);
+int		ft_rgb_to_hex(int r, int g, int b);
 
 /*          CHECK_WALLS.C           */
 
@@ -63,5 +64,6 @@ int		check_good_path_wall(t_data *data, t_walls *walls, char *line_file, \
 		char *type);
 int		are_check_all_walls_is_ok(t_data *data, t_walls *walls);
 int		check_walls(t_data *data, char **file);
+bool	inverse_bool_wall(bool check);
 
 #endif

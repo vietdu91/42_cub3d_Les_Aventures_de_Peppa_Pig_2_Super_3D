@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 20:12:07 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/05 14:18:40 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:29:33 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ void	w_key(t_data *data)
 	double	x2;
 	double	y2;
 
+	if (data->game->p1->pos_x && data->game->p1->pos_y \
+	&& data->game->step_of_game >= 3)
+		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, BLACK);
 	x1 = (data->game->p1->pos_x + data->game->p1->dir_x \
 	* data->game->p1->move_speed);
 	y2 = (data->game->p1->pos_y + data->game->p1->dir_y \
@@ -40,6 +43,9 @@ void	s_key(t_data *data)
 	double	x2;
 	double	y2;
 
+	if (data->game->p1->pos_x && data->game->p1->pos_y \
+	&& data->game->step_of_game >= 3)
+		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, BLACK);
 	x1 = (data->game->p1->pos_x - data->game->p1->dir_x \
 	* data->game->p1->move_speed);
 	y2 = (data->game->p1->pos_y - data->game->p1->dir_y \
@@ -61,6 +67,9 @@ void	a_key(t_data *data)
 	double	x2;
 	double	y2;
 
+	if (data->game->p1->pos_x && data->game->p1->pos_y \
+	&& data->game->step_of_game >= 3)
+		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, BLACK);
 	x1 = (data->game->p1->pos_x + data->game->p1->dir_y \
 	* data->game->p1->move_speed);
 	y2 = (data->game->p1->pos_y - data->game->p1->dir_x \
@@ -82,6 +91,9 @@ void	d_key(t_data *data)
 	double	x2;
 	double	y2;
 
+	if (data->game->p1->pos_x && data->game->p1->pos_y \
+	&& data->game->step_of_game >= 3)
+		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, BLACK);
 	x1 = (data->game->p1->pos_x - data->game->p1->dir_y \
 	* data->game->p1->move_speed);
 	y2 = (data->game->p1->pos_y + data->game->p1->dir_x \

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:28:40 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:44:43 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 15:17:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int i)
 	if (!ft_strncmp(file[i], id, 1))
 	{
 		if (!is_space(file[i][1]))
-			print_error_and_exit(ERR_ID_FC, data);
+			print_error_pars_and_exit(ERR_ID_FC, data);
 		return (0);
 	}
 	return (-1);
@@ -32,7 +32,7 @@ int	check_path_arg_color_is_good(t_data *data, char *line_file, char **split)
 	if (line_file[len - 1] == ',')
 	{
 		free_d_tab(split);
-		print_error_and_exit(ERR_NB_ARG_COLOR, data);
+		print_error_pars_and_exit(ERR_NB_ARG_COLOR, data);
 	}
 	return (0);
 }
@@ -48,7 +48,7 @@ char *type)
 	if (!split[1] || split[2])
 	{
 		free_d_tab(split);
-		print_error_and_exit(ERR_NB_ARG_COLOR, data);
+		print_error_pars_and_exit(ERR_NB_ARG_COLOR, data);
 	}
 	if (!ft_strcmp(type, "C"))
 		color->path = ft_strdup(split[1]);
@@ -62,7 +62,7 @@ char *type)
 int	are_check_all_floor_celling_is_ok(t_data *data, t_floor *floor)
 {
 	if (!floor->check_floor || !floor->check_celling)
-		return (print_error_and_exit(ERR_ID_FC_MISS, data));
+		return (print_error_pars_and_exit(ERR_ID_FC_MISS, data));
 	return (0);
 }
 

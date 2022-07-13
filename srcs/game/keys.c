@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:39:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/12 20:12:13 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:29:10 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,6 @@ int	key_press_two(int key, t_data *data)
 
 int	key_press(int key, t_data *data)
 {
-	if (data->game->p1->pos_x && data->game->p1->pos_y \
-	&& data->game->step_of_game >= 3)
-		draw_player(data, data->game->p1->pos_x, data->game->p1->pos_y, BLACK);
 	if (key == KEY_W && data->game->step_of_game >= 3)
 		w_key(data);
 	else if (key == KEY_S && data->game->step_of_game >= 3)

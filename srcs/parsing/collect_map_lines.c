@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:17:38 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 11:39:05 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 15:16:29 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	collect_gap_of_first_and_last_line(t_data *data, int first, int last)
 {
 	data->map->lines_map = (last + 1) - first;
 	if (data->map->lines_map < 3)
-		print_error_and_exit(ERR_MAP_TOO_STRONG, data);
+		print_error_pars_and_exit(ERR_MAP_TOO_STRONG, data);
 	return (0);
 }
 
@@ -58,6 +58,8 @@ int	collect_first_line_map(t_data *data, t_map *map, char **file)
 	a = -1;
 	while (++a <= data->lines_file)
 	{
+		if (!file[a])
+			print_error_pars_and_exit(ERR_MAP, data);
 		if (!check_line_is_infos(file[a]))
 			continue ;
 		if (!check_line_is_empty(file[a]))
@@ -68,7 +70,7 @@ int	collect_first_line_map(t_data *data, t_map *map, char **file)
 			return (0);
 		}
 		else
-			print_error_and_exit(ERR_MAP_FIRST_LINE, data);
+			print_error_pars_and_exit(ERR_MAP_FIRST_LINE, data);
 	}
 	return (0);
 }
@@ -88,7 +90,7 @@ int	collect_last_line_map(t_data *data, t_map *map, char **file)
 			return (0);
 		}
 		else
-			print_error_and_exit(ERR_MAP_LAST_LINE, data);
+			print_error_pars_and_exit(ERR_MAP_LAST_LINE, data);
 	}
 	return (0);
 }

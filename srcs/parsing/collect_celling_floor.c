@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:06:26 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/01 11:38:48 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 15:15:59 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	check_collect_rgb_is_good(t_data *data, char **split)
 			if (!is_digit(split[i][j]))
 			{
 				free_d_tab(split);
-				print_error_and_exit(ERR_NB_ARG_COLOR, data);
+				print_error_pars_and_exit(ERR_NB_ARG_COLOR, data);
 			}
 			j++;
 		}
@@ -63,12 +63,17 @@ int	collect_rgb(t_data *data, t_color *color)
 	if (!split[0] || !split[1] || !split[2] || split[3])
 	{
 		free_d_tab(split);
-		print_error_and_exit(ERR_NB_NB_COLOR, data);
+		print_error_pars_and_exit(ERR_NB_NB_COLOR, data);
 	}
 	color->r = ft_atoi(split[0]);
 	color->g = ft_atoi(split[1]);
 	color->b = ft_atoi(split[2]);
-	color->hexa = ft_rgb_to_hex(data, color->r, color->g, color->b);
+	color->hexa = ft_rgb_to_hex(color->r, color->g, color->b);
+	if (color->hexa == -1)
+	{
+		free_d_tab(split);
+		print_error_pars_and_exit(ERR_COLOR, data);
+	}
 	free_d_tab(split);
 	return (0);
 }

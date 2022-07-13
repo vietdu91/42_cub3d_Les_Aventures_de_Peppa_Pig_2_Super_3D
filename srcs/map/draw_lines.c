@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_lines.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:23:55 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/05 14:33:45 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/13 16:36:26 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,6 @@ void	draw_player(t_data *data, int x, int y, int color)
 		i = 0;
 		while (i < 3)
 		{
-			if (data->game->good_or_bad == false)
-				img_pix_put(data->img, data->sprites->x + i, \
-				data->sprites->y + j, VIOLET);
 			img_pix_put(data->img, x + i, y + j, color);
 			i++;
 		}

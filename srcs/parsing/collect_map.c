@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:05:36 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 19:23:56 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 15:16:36 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	**save_map(t_data *data, t_map *map)
 	{
 		mappy[i] = ft_calloc(map->max_len_map + 1, sizeof(char));
 		if (!mappy[i])
-			print_error_and_exit(ERR_MALLOC, data);
+			print_error_pars_and_exit(ERR_MALLOC, data);
 		i++;
 	}
 	mappy[i] = 0;
@@ -45,7 +45,7 @@ int	collect_map(t_data *data, t_map *map)
 	map->map = save_map(data, map);
 	i = map->first_line;
 	if (!map->map)
-		return (print_error_and_exit(ERR_MAP, data));
+		return (print_error_pars_and_exit(ERR_MAP, data));
 	k = 0;
 	while (i <= map->last_line)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_failed_parsing.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 19:46:44 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/12 20:04:22 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:58:16 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	check_parsing(char **argv, t_data *data)
 {
-	if (check_extension_cub(argv[1], data))
-		return (1);
+	if (check_extension_cub(argv[1]))
+		return (print_error_pars_and_exit(ERR_CUB, data));
 	if (check_file(argv, data))
 		return (1);
 	if (check_map(data, data->map))

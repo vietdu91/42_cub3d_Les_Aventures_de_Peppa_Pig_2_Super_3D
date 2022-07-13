@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 10:31:50 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 11:08:06 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 13:56:43 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ Sauvons la planete !\n"
 
 int			print_error(char *error);
 int			print_error_and_exit(char *error, t_data *data);
+int			print_error_pars_and_exit(char *error, t_data *data);
 void		check_error_arg(int argc);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:10:23 by emtran            #+#    #+#             */
-/*   Updated: 2022/05/13 10:51:51 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 15:16:14 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	**save_file(t_data	*data)
 	{
 		file[i] = ft_calloc(data->max_len_file + 1, sizeof(char));
 		if (!file[i])
-			print_error_and_exit(ERR_MALLOC, data);
+			print_error_pars_and_exit(ERR_MALLOC, data);
 		i++;
 	}
 	file[i] = 0;
@@ -44,7 +44,7 @@ int	collect_nb_lines_file(t_data *data, int fd)
 		if (ret < 0)
 		{
 			close(fd);
-			return (print_error_and_exit(ERR_READ, data));
+			return (print_error_pars_and_exit(ERR_READ, data));
 		}
 		if (ft_strlen(line) > data->max_len_file)
 			data->max_len_file = ft_strlen(line);
@@ -88,12 +88,12 @@ int	collect_file(t_data *data, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	data->file = save_file(data);
 	if (!data->file || fd < 0)
-		return (print_error_and_exit(ERR_FILE, data));
+		return (print_error_pars_and_exit(ERR_FILE, data));
 	while (ret)
 	{
 		ret = print_file(data, fd, i);
 		if (ret < 0)
-			print_error_and_exit(ERR_READ, data);
+			print_error_pars_and_exit(ERR_READ, data);
 		i++;
 	}
 	close(fd);

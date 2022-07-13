@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:40:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/06/30 10:42:15 by emtran           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:11:25 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	second_check_map_is_close(t_data *data, char **map)
 		if (has_str_only_spaces(map[y]))
 			if (!has_str_only_walls(map[y - 1]) || \
 			!has_str_only_walls(map[y + 1]))
-				print_error_and_exit(ERR_MAP_CLOSE, data);
+				print_error_pars_and_exit(ERR_MAP_CLOSE, data);
 	}
 	return (0);
 }
@@ -42,7 +42,8 @@ int	check_map_is_close(t_data *data, char **map)
 			{
 				if (is_space(map[y - 1][x]) || is_space(map[y + 1][x])
 				|| is_space(map[y][x - 1]) || is_space(map[y][x + 1]))
-					print_error_and_exit(ERR_MAP_CLOSE, data);
+					print_error_pars_and_exit(ERR_MAP_CLOSE, data);
+				zero_is_not_in_void(data, y, x, map);
 			}
 		}
 	}
@@ -61,7 +62,7 @@ int	check_letters_of_map(t_data *data, char **map)
 		x = -1;
 		while (map[y][++x])
 			if (!is_good_value_and_walls(map[y][x]))
-				print_error_and_exit(ERR_CHAR, data);
+				print_error_pars_and_exit(ERR_CHAR, data);
 	}
 	return (0);
 }
@@ -80,7 +81,7 @@ int	check_first_and_last_letters_of_line(t_data *data, char **map)
 		while (is_space(map[y][x]))
 			x--;
 		if (map[y][x] != '1' && !is_space(map[y][x]) && map[y][x] != '\0')
-			print_error_and_exit(ERR_MAP_CLOSE, data);
+			print_error_pars_and_exit(ERR_MAP_CLOSE, data);
 	}
 	y = -1;
 	while (map[++y])
@@ -89,7 +90,7 @@ int	check_first_and_last_letters_of_line(t_data *data, char **map)
 		while (is_space(map[y][x]))
 			x++;
 		if (map[y][x] != '1' && !is_space(map[y][x]) && map[y][x] != '\0')
-			print_error_and_exit(ERR_MAP_CLOSE, data);
+			print_error_pars_and_exit(ERR_MAP_CLOSE, data);
 	}
 	return (0);
 }
