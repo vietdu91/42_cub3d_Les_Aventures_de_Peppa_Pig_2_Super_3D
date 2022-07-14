@@ -1,0 +1,1329 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Jul 14 11:15:32 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# makefile (from 'Makefile', line 106)
+GRIS = \033[0;100m
+ 
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 66)
+INCLUDES = includes/cub3D.h
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /mnt/nfs/homes/emtran/.Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /mnt/nfs/homes/emtran/Desktop/42_cub3d
+# makefile (from 'Makefile', line 82)
+PINK = \033[0;35m
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 72)
+RED_B = \033[1;31m
+# makefile (from 'Makefile', line 73)
+L_RED = \033[0;91m
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 117)
+FL_MLX = -ldl -lmlx -Lmlx -lm -lXext -lX11 -Imlx mlx/libmlx.a
+# environment
+_ = /usr/bin/code
+# makefile (from 'Makefile', line 79)
+BLUE = \033[0;34m
+# environment
+JOURNAL_STREAM = 9:2193602
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/emtran/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# makefile (from 'Makefile', line 83)
+L_PINK = \033[0;95m
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/40120/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 111)
+OBJS := objs/main.o objs/check/check_celling_floor.o objs/check/check_file.o objs/check/check_map.o objs/check/check_order_in_file.o objs/check/check_peppa.o objs/check/check_rgb.o objs/check/check_walls.o objs/errors/print_error.o objs/free/free_failed_parsing.o objs/free/free.o objs/free/free_img.o objs/free/free_structs.o objs/free/free_utils.o objs/game/camera.o objs/game/introduction.o objs/game/keys.o objs/game/move.o objs/game/transformation.o objs/images/assign_img.o objs/images/map.o objs/init/init_game.o objs/init/init_img.o objs/init/init_map.o objs/init/init_structs.o objs/init/init_structs2.o objs/map/draw_map.o objs/map/draw_lines.o objs/map/verifications.o objs/maths/find_size.o objs/parsing/collect_celling_floor.o objs/parsing/collect_file.o objs/parsing/collect_map.o objs/parsing/collect_map_lines.o objs/parsing/collect_walls.o objs/raycasting/init.o objs/raycasting/draw.o objs/raycasting/raycasting.o objs/raycasting/set_view.o objs/raycasting/textures.o objs/sprites/sprites_draw.o objs/sprites/sprites_move.o objs/sprites/sprites_place.o objs/sprites/sprites.o objs/utils/recognize_elements.o objs/utils/utils_digits.o objs/utils/utils_dtab.o objs/utils/utils_gnl.o objs/utils/utils_is.o objs/utils/utils_is2.o objs/utils/utils_mem.o objs/utils/utils_split.o objs/utils/utils_split_charset.o objs/utils/utils_str.o objs/utils/utils_str2.o objs/utils/utils_str3.o objs/utils/utils_write.o
+# environment
+MANAGERPID = 486661
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/40120/vscode-ipc-95cc8a71-7dc0-4ecd-8232-53bc3bc6463b.sock
+# environment
+VSCODE_CWD = /mnt/nfs/homes/emtran/Desktop/42_cub3d
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session8
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_40120_YQXcKs
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 78)
+L_YELLOW = \033[0;93m
+# environment
+PATH = /mnt/nfs/homes/emtran/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'Makefile', line 97)
+L_VERT = \033[0;102m
+# environment
+GPG_AGENT_INFO = /run/user/40120/gnupg/S.gpg-agent:0:1
+# makefile (from 'Makefile', line 112)
+DEP = $(OBJS:.o=.d)
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+SESSION_MANAGER = local/e1r3p10.clusters.42paris.fr:@/tmp/.ICE-unix/487180,unix/e1r3p10.clusters.42paris.fr:/tmp/.ICE-unix/487180
+# makefile (from 'Makefile', line 102)
+ROSE = \033[0;45m
+# environment
+XDG_RUNTIME_DIR = /run/user/40120
+# makefile (from 'Makefile', line 88)
+D_GREY = \033[0;90m
+# makefile (from 'Makefile', line 96)
+VERT = \033[0;42m
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = 04cf54e5a0024bc1873a935397326849
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/emtran
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/40120/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 487833
+# makefile (from 'Makefile', line 94)
+ROUGE = \033[0;41m
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /mnt/nfs/homes/emtran/Desktop/42_cub3d
+# makefile (from 'Makefile', line 87)
+GREY = \033[0;37m
+# makefile (from 'Makefile', line 75)
+GREEN_B = \033[1;32m
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 487145
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'Makefile', line 74)
+GREEN = \033[0;32m
+# environment
+GTK_MODULES = gail:atk-bridge
+# makefile (from 'Makefile', line 80)
+BLUE_B = \033[1;34m
+# makefile (from 'Makefile', line 81)
+L_BLUE = \033[0;94m
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /mnt/nfs/homes/emtran
+# makefile (from 'Makefile', line 105)
+L_CYAN = \033[0;106m
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/emtran/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+LOGNAME = emtran
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /mnt/nfs/homes/emtran/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 99)
+L_JAUNE = \033[0;103m
+# environment
+MAKELEVEL := 0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 8)
+SRCS = main.c check/check_celling_floor.c check/check_file.c check/check_map.c check/check_order_in_file.c check/check_peppa.c check/check_rgb.c check/check_walls.c errors/print_error.c free/free_failed_parsing.c free/free.c free/free_img.c free/free_structs.c free/free_utils.c game/camera.c game/introduction.c game/keys.c game/move.c game/transformation.c images/assign_img.c images/map.c init/init_game.c init/init_img.c init/init_map.c init/init_structs.c init/init_structs2.c map/draw_map.c map/draw_lines.c map/verifications.c maths/find_size.c parsing/collect_celling_floor.c parsing/collect_file.c parsing/collect_map.c parsing/collect_map_lines.c parsing/collect_walls.c raycasting/init.c raycasting/draw.c raycasting/raycasting.c raycasting/set_view.c raycasting/textures.c sprites/sprites_draw.c sprites/sprites_move.c sprites/sprites_place.c sprites/sprites.c utils/recognize_elements.c utils/utils_digits.c utils/utils_dtab.c utils/utils_gnl.c utils/utils_is.c utils/utils_is2.c utils/utils_mem.c utils/utils_split.c utils/utils_split_charset.c utils/utils_str.c utils/utils_str2.c utils/utils_str3.c utils/utils_write.c 
+# environment
+SHLVL = 2
+# makefile (from 'Makefile', line 89)
+WHITE = \033[0;97m
+# makefile (from 'Makefile', line 84)
+SKY = \033[0;36m
+# environment
+IM_CONFIG_PHASE = 1
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = emtran
+# makefile (from 'Makefile', line 100)
+BLEU = \033[0;44m
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 103)
+L_ROSE = \033[0;105m
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/nfs/homes/emtran/Desktop
+# makefile (from 'Makefile', line 98)
+JAUNE = \033[0;43m
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/40120/vscode-014d0f24-1.68.1-main.sock
+# makefile (from 'Makefile', line 71)
+RED = \033[0;31m
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from 'Makefile', line 70)
+BLACK = \033[0;30m
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 77)
+YELLOW = \033[0;33m
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 104)
+CYAN = \033[0;46m
+# makefile (from 'Makefile', line 95)
+L_ROUGE = \033[0;101m
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# makefile (from 'Makefile', line 5)
+COMPILER = cc
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 107)
+BLANC = \033[0;107m
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 90)
+RESET = \e[0m
+# makefile (from 'Makefile', line 93)
+NOIR = \033[0;40m
+# makefile (from 'Makefile', line 69)
+DEFAULT = \033[0;39m
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+ 
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/21014a42_7531_42bc_b10b_e91ea947a522
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.150
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 116)
+FLAGS = -g3 -Wall -Werror -Wextra -o3
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 85)
+SKY_B = \033[1;36m
+# makefile (from 'Makefile', line 2)
+NAME = cub3D
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 76)
+L_GREEN = \033[0;92m
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+DOCKER_HOST = unix:///run/user/40120/docker.sock
+# environment
+VSCODE_PID = 487833
+# makefile (from 'Makefile', line 101)
+L_BLEU = \033[0;104m
+# variable set hash-table stats:
+# Load=157/1024=15%, Rehash=0, Collisions=25/197=13%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 55, inode 238848934): 10 files, no impossibilities.
+# srcs (device 55, inode 238850066): 6 files, no impossibilities so far.
+
+# 16 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+objs/%.o: srcs/%.c
+#  recipe to execute (from 'Makefile', line 204):
+					@mkdir -p $(dir $@)
+					@${COMPILER} -MMD ${FLAGS} -I includes -o $@ -c $<
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+objs/utils/utils_dtab.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_digits.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/sprites/sprites.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/init/init_structs2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_mem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+includes/cub3D.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/raycasting/raycasting.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+objs/main.o: srcs/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := objs/main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := srcs/main.c
+# automatic
+# | := 
+# automatic
+# < := srcs/main.c
+# automatic
+# ^ := srcs/main.c
+# automatic
+# ? := srcs/main.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  recipe to execute (from 'Makefile', line 204):
+					@mkdir -p $(dir $@)
+					@${COMPILER} -MMD ${FLAGS} -I includes -o $@ -c $<
+
+# Not a target:
+objs/map/draw_lines.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_str2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/raycasting/set_view.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: cub3D
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 121):
+			@printf "$(L_PINK)<3 <3 $(RESET)"
+			@printf "$(RED_B)Manu et Dim le sang$(RESET)"
+			@printf "$(L_PINK) <3 <3 \n$(RESET)"
+
+# Not a target:
+objs/utils/recognize_elements.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free_structs.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/free/free_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_is2.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+.PHONY: all norme clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/init/init_game.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/camera.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_split.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/errors/print_error.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/map/draw_map.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/sprites/sprites_place.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+cub3D: objs/main.o objs/check/check_celling_floor.o objs/check/check_file.o objs/check/check_map.o objs/check/check_order_in_file.o objs/check/check_peppa.o objs/check/check_rgb.o objs/check/check_walls.o objs/errors/print_error.o objs/free/free_failed_parsing.o objs/free/free.o objs/free/free_img.o objs/free/free_structs.o objs/free/free_utils.o objs/game/camera.o objs/game/introduction.o objs/game/keys.o objs/game/move.o objs/game/transformation.o objs/images/assign_img.o objs/images/map.o objs/init/init_game.o objs/init/init_img.o objs/init/init_map.o objs/init/init_structs.o objs/init/init_structs2.o objs/map/draw_map.o objs/map/draw_lines.o objs/map/verifications.o objs/maths/find_size.o objs/parsing/collect_celling_floor.o objs/parsing/collect_file.o objs/parsing/collect_map.o objs/parsing/collect_map_lines.o objs/parsing/collect_walls.o objs/raycasting/init.o objs/raycasting/draw.o objs/raycasting/raycasting.o objs/raycasting/set_view.o objs/raycasting/textures.o objs/sprites/sprites_draw.o objs/sprites/sprites_move.o objs/sprites/sprites_place.o objs/sprites/sprites.o objs/utils/recognize_elements.o objs/utils/utils_digits.o objs/utils/utils_dtab.o objs/utils/utils_gnl.o objs/utils/utils_is.o objs/utils/utils_is2.o objs/utils/utils_mem.o objs/utils/utils_split.o objs/utils/utils_split_charset.o objs/utils/utils_str.o objs/utils/utils_str2.o objs/utils/utils_str3.o objs/utils/utils_write.o includes/cub3D.h
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 126):
+			@make -C ./mlx
+			${COMPILER} ${FLAGS} -I includes ${OBJS} -o $(NAME) $(FL_MLX)
+			@printf "\n$(GREEN)████████████████████████████████████████████████████████  ✨ ✨ ✨  C'EST MERVEILLEUSEMENT BIEN COMPILE  ✨ ✨ ✨  █████████████████████████████████████████████$(RESET)"
+			@printf	"\n\n\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                                                                                                                                                                $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)    $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                                  $(RESET)$(GRIS)  $(RESET)$(NOIR)        $(RESET)$(GRIS)  $(RESET)$(NOIR)                                                                                                                  $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(ROSE)  $(RESET)$(GRIS)        $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(ROSE)  $(RESET)$(GRIS)        $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                            $(RESET)$(ROUGE)                        $(RESET)$(NOIR)                                                                                                            $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(ROUGE)                        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(ROUGE)                        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                            $(RESET)$(ROUGE)                        $(RESET)$(NOIR)                                                                                                            $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(ROUGE)                    $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)                      $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)        $(RESET)$(ROSE)    $(RESET)$(GRIS)  $(RESET)$(ROSE)    $(RESET)$(ROUGE)      $(RESET)$(NOIR)        $(RESET)$(ROUGE)      $(RESET)$(ROSE)    $(RESET)$(GRIS)  $(RESET)$(ROSE)    $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)                      $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                      $(RESET)$(ROSE)  $(RESET)$(NOIR)            $(RESET)$(ROSE)        $(RESET)$(NOIR)            $(RESET)$(ROSE)  $(RESET)$(NOIR)                                                        $(RESET)$(JAUNE)                $(RESET)$(NOIR)                              $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)  $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROSE)        $(RESET)$(NOIR)  $(RESET)$(GRIS)              $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(JAUNE)                $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)  $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)              $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                              $(RESET)$(ROSE)          $(RESET)$(NOIR)    $(RESET)$(ROSE)    $(RESET)$(NOIR)                                                                  $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)                              $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(ROSE)                    $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)              $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(JAUNE)                $(RESET)$(NOIR)    $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(ROSE)        $(RESET)$(BLEU)  $(RESET)$(ROSE)            $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)              $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(JAUNE)                $(RESET)$(NOIR)    $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                              $(RESET)$(ROSE)      $(RESET)$(BLANC)    $(RESET)$(ROSE)  $(RESET)$(BLEU)  $(RESET)$(ROSE)      $(RESET)$(NOIR)                                                                            $(RESET)$(JAUNE)    $(RESET)$(NOIR)                              $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)  $(RESET)$(ROSE)    $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(BLANC)    $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)            $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)    $(RESET)$(ROSE)        $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)$(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)            $(RESET)$(NOIR)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+ 
+			@printf "$(NOIR)                              $(RESET)$(ROSE)    $(RESET)$(NOIR)    $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(ROUGE)  $(RESET)$(NOIR)                                                                $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)                              $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)    $(RESET)$(ROSE)  $(RESET)$(NOIR)      $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)              $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(JAUNE)                    $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(NOIR)  $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)          $(RESET)$(GRIS)                $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(JAUNE)                    $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                                                                                                          $(RESET)$(BLANC)    $(RESET)$(BLEU)    $(RESET)$(BLANC)    $(RESET)$(JAUNE)    $(RESET)$(BLANC)    $(RESET)$(BLEU)    $(RESET)$(ROUGE)  $(RESET)$(BLEU)  $(RESET)$(BLANC)    $(RESET)$(NOIR)                      $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(BLANC)    $(RESET)$(BLEU)    $(RESET)$(BLANC)    $(RESET)$(JAUNE)    $(RESET)$(BLANC)    $(RESET)$(BLEU)        $(RESET)$(BLANC)    $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(BLANC)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)  $(RESET)$(BLANC)          $(RESET)$(ROUGE)  $(RESET)$(BLEU)        $(RESET)$(BLANC)        $(RESET)$(GRIS)      $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                                                                                                      $(RESET)$(BLANC)        $(RESET)$(BLEU)    $(RESET)$(BLANC)        $(RESET)$(BLANC)    $(RESET)$(BLEU)  $(RESET)$(ROUGE)  $(RESET)$(BLEU)    $(RESET)$(BLANC)        $(RESET)$(NOIR)                  $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(BLANC)  $(RESET)$(ROUGE)  $(RESET)$(BLANC)    $(RESET)$(BLEU)                            $(RESET)$(BLANC)        $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)        $(RESET)$(NOIR)                                        $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)      $(RESET)$(BLANC)    $(RESET)$(BLANC)    $(RESET)$(BLEU)    $(RESET)$(ROUGE)  $(RESET)$(BLEU)                      $(RESET)$(BLANC)        $(RESET)$(GRIS)        $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)\n"
+			@printf "$(NOIR)                      $(RESET)$(ROSE)          $(RESET)$(BLANC)              $(RESET)$(ROSE)            $(RESET)$(NOIR)                                            $(RESET)$(BLANC)    $(RESET)$(NOIR)    $(RESET)$(BLEU)  $(RESET)$(ROUGE)  $(RESET)$(BLEU)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)              $(RESET)$(NOIR)    $(RESET)$(BLANC)    $(RESET)$(NOIR)              $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)           $(RESET)$(NOIR)  $(RESET)$(ROSE)             $(RESET)$(BLANC)  $(RESET)$(ROUGE)          $(RESET)$(BLANC)  $(RESET)$(ROSE)            $(RESET)$(NOIR)  $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(BLANC)    $(RESET)$(GRIS)    $(RESET)$(BLEU)                $(RESET)$(ROUGE)    $(RESET)$(BLEU)        $(RESET)$(GRIS)    $(RESET)$(BLANC)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)             $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(ROUGE)  $(RESET)$(JAUNE)          $(RESET)$(ROUGE)  $(RESET)$(ROSE)          $(RESET)$(NOIR)    $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)$(NOIR)  $(RESET)$(JAUNE)    $(RESET)$(GRIS)    $(RESET)$(BLEU)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)        $(RESET)$(GRIS)    $(RESET)$(JAUNE)    $(RESET)$(GRIS)  $(RESET)$(NOIR)  $(RESET)$(GRIS)          $(RESET)\n"
+			@printf "$(NOIR)                     $(RESET)$(ROSE)           $(RESET)$(BLANC)  $(RESET)$(ROUGE)          $(RESET)$(BLANC)  $(RESET)$(ROSE)          $(RESET)$(NOIR)                                              $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(BLEU)      $(RESET)$(ROUGE)          $(RESET)$(BLEU)            $(RESET)$(NOIR)    $(RESET)$(JAUNE)    $(RESET)$(NOIR)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                            $(RESET)$(JAUNE)    $(RESET)$(ROUGE)    $(RESET)$(BLEU)      $(RESET)$(ROUGE)            $(RESET)$(BLEU)          $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)         $(RESET)$(NOIR)        $(RESET)$(BLANC)  $(RESET)$(NOIR)      $(RESET)$(ROSE)    $(RESET)$(NOIR)    $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                            $(RESET)$(JAUNE)    $(RESET)$(ROUGE)    $(RESET)$(BLEU)  $(RESET)$(ROUGE)  $(RESET)$(BLEU)  $(RESET)$(ROUGE)            $(RESET)$(BLEU)          $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)       $(RESET)$(NOIR)          $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                            $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(BLEU)        $(RESET)$(ROUGE)          $(RESET)$(BLEU)          $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(ROUGE)  $(RESET)$(NOIR)    $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                            $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(BLEU)          $(RESET)$(ROUGE)        $(RESET)$(BLEU)    $(RESET)$(ROUGE)  $(RESET)$(BLEU)    $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(NOIR)    $(RESET)$(ROUGE)      $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                            $(RESET)$(JAUNE)    $(RESET)$(NOIR)  $(RESET)$(ROUGE)  $(RESET)$(BLEU)      $(RESET)$(ROUGE)  $(RESET)$(BLEU)                    $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(ROUGE)  $(RESET)$(NOIR)    $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROSE)        $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                          $(RESET)$(NOIR)  $(RESET)$(JAUNE)    $(RESET)$(ROUGE)    $(RESET)$(BLEU)          $(RESET)$(ROUGE)      $(RESET)$(BLEU)            $(RESET)$(ROUGE)    $(RESET)$(JAUNE)    $(RESET)$(ROUGE)              $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)       $(RESET)$(NOIR)          $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(NOIR)  $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                        $(RESET)$(NOIR)      $(RESET)$(ROUGE)      $(RESET)$(BLEU)    $(RESET)$(ROUGE)  $(RESET)$(BLEU)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)    $(RESET)$(ROUGE)  $(RESET)$(BLEU)      $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                      $(RESET)$(NOIR)      $(RESET)$(ROUGE)        $(RESET)$(BLEU)      $(RESET)$(ROUGE)    $(RESET)$(BLEU)        $(RESET)$(ROUGE)    $(RESET)$(BLEU)      $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                    $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(ROUGE)          $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                  $(RESET)$(GRIS)        $(RESET)$(ROUGE)          $(RESET)$(BLEU)        $(RESET)$(ROUGE)      $(RESET)$(BLEU)        $(RESET)$(ROUGE)  $(RESET)$(BLEU)    $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)            $(RESET)$(NOIR)  $(RESET)$(ROSE)          $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                $(RESET)$(GRIS)            $(RESET)$(ROUGE)        $(RESET)$(BLEU)        $(RESET)$(ROUGE)      $(RESET)$(BLEU)      $(RESET)$(ROUGE)    $(RESET)$(BLEU)    $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)    $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(JAUNE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)        $(RESET)$(NOIR)  $(RESET)$(ROUGE)                              $(RESET)$(GRIS)                $(RESET)$(ROUGE)      $(RESET)$(BLEU)          $(RESET)$(ROUGE)        $(RESET)$(BLEU)          $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(JAUNE)  $(RESET)$(NOIR)  $(RESET)$(JAUNE)    $(RESET)$(NOIR)    $(RESET)$(ROSE)      $(RESET)$(NOIR)    $(RESET)$(ROUGE)                            $(RESET)$(GRIS)                    $(RESET)$(ROUGE)    $(RESET)$(BLEU)            $(RESET)$(ROUGE)      $(RESET)$(BLEU)          $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(NOIR)  $(RESET)$(JAUNE)  $(RESET)$(NOIR)  $(RESET)$(JAUNE)  $(RESET)$(NOIR)  $(RESET)$(JAUNE)    $(RESET)$(NOIR)  $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                          $(RESET)$(GRIS)                $(RESET)$(ROUGE)  $(RESET)$(GRIS)  $(RESET)$(ROUGE)      $(RESET)$(BLEU)            $(RESET)$(ROUGE)      $(RESET)$(BLEU)          $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)         $(RESET)$(NOIR)  $(RESET)$(JAUNE)  $(RESET)$(NOIR)      $(RESET)$(BLANC)  $(RESET)$(NOIR)    $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                        $(RESET)$(GRIS)    $(RESET)$(NOIR)  $(RESET)$(GRIS)        $(RESET)$(ROUGE)  $(RESET)$(GRIS)    $(RESET)$(ROUGE)        $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)         $(RESET)$(NOIR)    $(RESET)$(BLANC)            $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                        $(RESET)$(GRIS)              $(RESET)$(ROUGE)    $(RESET)$(GRIS)  $(RESET)$(ROUGE)        $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(ROSE)  $(RESET)$(ROUGE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                          $(RESET)$(GRIS)          $(RESET)$(ROUGE)  $(RESET)$(GRIS)    $(RESET)$(ROUGE)          $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)  $(RESET)$(NOIR)        $(RESET)$(BLANC)    $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(ROSE)  $(RESET)$(ROUGE)    $(RESET)$(NOIR)  $(RESET)$(ROUGE)                            $(RESET)$(GRIS)            $(RESET)$(ROUGE)            $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)           $(RESET)$(BLANC)              $(RESET)$(NOIR)  $(RESET)$(BLANC)  $(RESET)$(ROSE)  $(RESET)$(ROUGE)    $(RESET)$(NOIR)  $(RESET)$(ROUGE)                              $(RESET)$(GRIS)        $(RESET)$(ROUGE)              $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)  $(RESET)$(ROSE)         $(RESET)$(NOIR)                $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)  $(RESET)$(NOIR)  $(RESET)$(ROSE)  $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                $(RESET)$(GRIS)      $(RESET)$(ROUGE)              $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                 $(RESET)$(NOIR)  $(RESET)$(ROSE)             $(RESET)$(BLANC)              $(RESET)$(ROSE)    $(RESET)$(NOIR)  $(RESET)$(ROSE)      $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                $(RESET)$(GRIS)  $(RESET)$(ROUGE)                $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                 $(RESET)$(NOIR)  $(RESET)$(ROSE)             $(RESET)$(BLANC)              $(RESET)$(ROSE)            $(RESET)$(NOIR)  $(RESET)$(ROUGE)                                                  $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                   $(RESET)$(NOIR)                                       $(RESET)$(ROUGE)                                                    $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+			@printf "$(ROUGE)                                                                                                              $(RESET)$(BLEU)                            $(RESET)$(ROUGE)                      $(RESET)\n"
+		 	@printf "\n\n$(SKY)█████████████████████████████████████████████████████████  😊 😊 😊  PENSEE DU JOUR POUR TE FAIRE SOURIRE  😊 😊 😊  ███████████████████████████████████████████$(RESET)"
+			@printf "\n\n$(BLUE_B)If it bleeds 🩸, we can kill it 💀 !\n\n$(RESET)"
+			@printf "$(YELLOW)============$(RESET)"
+			@printf "\e[38;5;227m============$(RESET)"
+			@printf "\e[38;5;228m============$(RESET)"
+			@printf "\e[38;5;229m============$(RESET)"
+			@printf "\e[38;5;230m============$(RESET)"
+			@printf "\e[38;5;231m============\n$(RESET)"
+			@printf "$(GREEN)La vie passe, la moulinette trepasse !\n\n$(RESET)"
+
+# Not a target:
+objs/parsing/collect_walls.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/move.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/free/free.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/parsing/collect_celling_floor.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/raycasting/draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/check/check_order_in_file.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/images/map.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_gnl.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_str3.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/sprites/sprites_draw.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/parsing/collect_map.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/parsing/collect_file.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_write.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-14 11:15:19.169698752
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+objs/init/init_structs.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+srcs/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-14 11:15:19.303698611
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+objs/utils/utils_split_charset.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_dtab.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_digits.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free_img.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/sprites/sprites.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/maths/find_size.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_walls.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/raycasting/textures.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_celling_floor.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/game/keys.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/raycasting/draw.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_str.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/map/verifications.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/map/draw_lines.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free_structs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+objs/check/check_peppa.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_rgb.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_is2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/images/assign_img.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/game/camera.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+norme:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 208):
+			@norminette srcs/*
+			@norminette includes/*
+			@printf "$(YELLOW)\nLa normalité est une expérience plus extrême que ce que les gens veulent communément admettre.\n$(RESET)"
+			@printf "$(YELLOW)============$(RESET)"
+			@printf "\e[38;5;227m============$(RESET)"
+			@printf "\e[38;5;228m============$(RESET)"
+			@printf "\e[38;5;229m============$(RESET)"
+			@printf "\e[38;5;230m============$(RESET)"
+			@printf "\e[38;5;231m============\n$(RESET)"
+			@printf "$(GREEN)La vie passe, la norminette trepasse !\n$(RESET)"
+
+# Not a target:
+objs/errors/print_error.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/map/draw_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/sprites/sprites_place.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/transformation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/parsing/collect_map_lines.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+fclean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 231):
+			@make -C ./mlx clean
+			rm -f ${OBJS}
+			rm -f ${NAME}
+			rm -rf objs
+			@printf "$(YELLOW)\nAu fond, est-ce que ranger ça ne revient pas un peu à foutre le bordel dans son désordre ? \n$(RESET)"
+			@printf "$(YELLOW)============$(RESET)"
+			@printf "\e[38;5;227m============$(RESET)"
+			@printf "\e[38;5;228m============$(RESET)"
+			@printf "\e[38;5;229m============$(RESET)"
+			@printf "\e[38;5;230m============$(RESET)"
+			@printf "\e[38;5;231m============\n$(RESET)"
+			@printf "$(GREEN)Que la paix regne sur ton foyer\n\n$(RESET)"
+
+# Not a target:
+objs/game/move.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/init/init_img.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/images/map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_gnl.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_str3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/sprites/sprites_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/parsing/collect_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/parsing/collect_file.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/introduction.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/raycasting/init.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/init/init_structs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/transformation.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/free/free_failed_parsing.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/maths/find_size.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/check/check_walls.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/raycasting/textures.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/check/check_celling_floor.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/game/keys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_str.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/sprites/sprites_move.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/map/verifications.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 245):
+			@printf "$(YELLOW)\nAimer, désirer, c’est aussi souffrir, et être prêt à recommencer... \n$(RESET)"
+			@printf "\e[38;5;227m============$(RESET)"
+			@printf "\e[38;5;228m============$(RESET)"
+			@printf "\e[38;5;229m============$(RESET)"
+			@printf "\e[38;5;230m============$(RESET)"
+			@printf "\e[38;5;231m============\n$(RESET)"
+
+# Not a target:
+objs/init/init_map.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_is.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_map.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_peppa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+objs/check/check_file.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_rgb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/images/assign_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/init/init_structs2.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_mem.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/parsing/collect_map_lines.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/init/init_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/raycasting/raycasting.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/main.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/utils_str2.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/raycasting/set_view.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/utils/recognize_elements.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/free/free_utils.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/init/init_game.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/game/introduction.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_split.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/raycasting/init.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/parsing/collect_walls.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/parsing/collect_celling_floor.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/free/free_failed_parsing.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/check/check_order_in_file.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/sprites/sprites_move.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/init/init_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_write.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 220):
+			@make -C ./mlx clean
+			rm -f ${OBJS}
+			@printf "$(YELLOW)\nAu fond, est-ce que ranger ça ne revient pas un peu à foutre le bordel dans son désordre ? \n$(RESET)"
+			@printf "$(YELLOW)============$(RESET)"
+			@printf "\e[38;5;227m============$(RESET)"
+			@printf "\e[38;5;228m============$(RESET)"
+			@printf "\e[38;5;229m============$(RESET)"
+			@printf "\e[38;5;230m============$(RESET)"
+			@printf "\e[38;5;231m============\n$(RESET)"
+			@printf "$(GREEN)Que la paix regne sur ton foyer\n\n$(RESET)"
+
+# Not a target:
+objs/utils/utils_is.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/check/check_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils_split_charset.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+objs/check/check_file.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=126/1024=12%, Rehash=0, Collisions=14/264=5%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 144 / storage = 3056 B / avg = 21 B
+# current buf: size = 8162 B / used = 3056 B / count = 144 / avg = 21 B
+
+# strcache performance: lookups = 225 / hit rate = 36%
+# hash-table stats:
+# Load=144/8192=2%, Rehash=0, Collisions=2/225=1%
+# Finished Make data base on Thu Jul 14 11:15:32 2022
+
+ 

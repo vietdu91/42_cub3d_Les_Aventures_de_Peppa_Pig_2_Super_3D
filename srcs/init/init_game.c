@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/12 20:04:45 by dyoula           ###   ########.fr       */
+/*   Updated: 2022/07/14 11:20:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	init_mlx_and_window(t_data *data, t_game *game, t_win *window)
 	window->win_height = WINDOW_HEIGHT;
 	window->win_width = WINDOW_WIDTH;
 	game->win_ptr = mlx_new_window(game->mlx_ptr, window->win_width, \
-	window->win_height, "CUB3D SA MERE LA PUTA");
+	window->win_height, "BIENVENUE DANS LA DEMEURE DE PEPPA !!!");
 	if (game->win_ptr == NULL)
 		return (-1);
 	return (0);
